@@ -1,0 +1,64 @@
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-08.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-10.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-12.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/05-services/mature-tree-relocation/rayat-najd-mature-tree-relocation-01.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-02.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-05.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-06.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-09.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-10.webp",
+    { en: "Commercial Centers", ar: "المراكز التجارية", img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-07.webp" },
+    { en: "Government Projects", ar: "المشاريع الحكومية", img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-08.webp" },
+    { en: "Municipality Projects", ar: "مشاريع الأمانات والبلديات", img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-10.webp" },
+    { en: "Parks", ar: "الحدائق", img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-13.webp" },
+    { en: "Residential Communities", ar: "المجمعات السكنية", img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-12.webp" },
+    { en: "Sports Facilities", ar: "المرافق الرياضية", img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-15.webp" }
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-projects.webp"
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-trees.webp"
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-03.webp"
+              image="https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-04.webp"
+              image="https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-05.webp"
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-02.webp"
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-06.webp"
+              image="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-09.webp"
+              image="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-10.webp"
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-15.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-02.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-03.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-04.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-05.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-01.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/native-drought-tolerant/rayat-najd-native-drought-tolerant-tree-05.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/rayat-najd-tree-sapling-nursery-01.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-11.webp",
+               <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/01-brand/logo/rayatnajd-logo.png" alt="Rayat Najd Logo" className="w-[75%] h-[75%] object-contain" />
+               <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/01-brand/logo/rayatnajd-logo.png" alt="Rayat Najd Logo" className="w-[75%] h-[75%] object-contain relative z-10 transition-transform duration-700 group-hover:scale-110 drop-shadow-sm" />
+         <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-services.webp" alt="Lavender" className="w-full h-full object-cover" />
+         <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-trees.webp" alt="Orange Tree" className="w-full h-full object-cover" />
+               <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/utility/rayat-najd-website-qr-code-01.png" alt="QR Code" className="w-full h-full border-none bg-white object-contain" />
+         <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-05.webp" alt="Yucca" className="w-full h-full object-cover" />
+         <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-03.webp" alt="Washingtonia Palm" className="w-full h-full object-cover" />
+               <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-01.webp" alt="Logistics" className="w-full h-full object-cover border-none" />
+            <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-07.webp" alt="Chairman or Executive View" className="w-full h-full object-cover rounded-lg" />
+           <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-08.webp" alt="Nursery" className="w-full h-full object-cover opacity-15 mix-blend-multiply" />
+                   <img src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/12-shared-assets/government-partner-logos/rayat-najd-partner-logo-06.png" alt="Vision 2030" className="w-full h-full object-contain filter grayscale mix-blend-multiply opacity-80" />
+      <Section className="bg-brand-beige border-b border-brand-warm/10" pageNumber={startPageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-12.webp">
+    <Section className="bg-brand-beige !mb-0" pageNumber={pageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-04.webp">
+      <Section className="bg-brand-beige relative border-b border-brand-warm/10" pageNumber={startPageNumber} bgType="leaves" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-about.webp">
+      <Section className="bg-brand-forest border-b border-white/20" pageNumber={startPageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-09.webp">
+      <Section className="bg-brand-forest text-brand-beige border-y border-white/20 relative" pageNumber={startPageNumber + 1} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-02.webp">
+    <Section className="bg-brand-forest text-brand-beige border-y border-white/20 relative" pageNumber={startPageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-14.webp">
+      <Section className="bg-brand-light border-b border-brand-warm/10" pageNumber={startPageNumber + 1} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-10.webp">
+      <Section className="bg-white border-b border-brand-warm/10" pageNumber={startPageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-services.webp">
+      <Section className="bg-white border-b border-brand-warm/10" pageNumber={startPageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-05.webp">
+       <Section className="bg-white !mb-0 border-b border-brand-warm/10" pageNumber={startPageNumber} bgType="pattern" bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-04.webp">
+        src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-hero.webp" 
+             src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/hero-selects/rayat-najd-hero-banner-nursery-01.webp"
+    { title: "Irrigation", titleAr: "الري", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-11.webp" },
+    { title: "Maintenance", titleAr: "الصيانة", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-07.webp" },
+    { title: "Nurseries", titleAr: "المشاتل", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-04.webp" },
+    { title: "Palms", titleAr: "النخيل", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-03.webp" }
+    { title: "Plants", titleAr: "النباتات", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-10.webp" },
+    { title: "Projects", titleAr: "المشاريع", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-03.webp" },
+    { title: "Sustainability", titleAr: "الاستدامة", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-13.webp" },
+    { title: "Trees", titleAr: "الأشجار", src: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/rayat-najd-tree-sapling-nursery-01.webp" },

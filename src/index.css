@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  /* Master Design Tokens */
+  --color-brand-dark: #4A3426; /* Secondary Color: Dark Brown */
+  --color-brand-warm: #6B4423;
+  --color-brand-olive: #556B2F;
+  --color-brand-forest: #1F5A46; /* Primary Color: Forest Green */
+  --color-brand-beige: #F9F8F4; /* Background: Warm White */
+  --color-brand-light: #F8F9FA;
+  --color-brand-gold: #B8933D; /* Accent Color: Luxury Gold */
+  
+  --radius-primary: 16px;
+  --radius-large: 24px;
+}
+
+body {
+  background-color: #d1d5db;
+  color: var(--color-brand-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen {
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    overflow-x: auto;
+  }
+  #root {
+    width: 297mm;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite linear;
+}
+
+.shadow-3d {
+  box-shadow:
+    0 10px 30px -10px rgba(31, 90, 70, 0.15),
+    0 20px 25px -5px rgba(31, 90, 70, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px rgba(0,0,0,0.05),
+    2px 4px 12px rgba(184, 147, 61, 0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.shadow-3d-hover {
+  transition: all 0.5s ease;
+}
+.shadow-3d-hover:hover {
+  box-shadow:
+    0 20px 40px -10px rgba(31, 90, 70, 0.25),
+    0 30px 40px -5px rgba(31, 90, 70, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px rgba(0,0,0,0.05),
+    4px 8px 20px rgba(184, 147, 61, 0.2);
+  transform: translateY(-5px);
+}
+
+.text-shadow-3d {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2), 0px 4px 10px rgba(31, 90, 70, 0.15);
+}
+
+.icon-shadow-3d {
+  filter: drop-shadow(2px 4px 6px rgba(31, 90, 70, 0.2)) drop-shadow(0px 2px 2px rgba(184, 147, 61, 0.2));
+}
+
+.show-grid::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image:
+    repeating-linear-gradient(transparent, transparent 23px, rgba(184, 147, 61, 0.3) 23px, rgba(184, 147, 61, 0.3) 24px),
+    repeating-linear-gradient(90deg, rgba(31, 90, 70, 0.05) 0px, rgba(31, 90, 70, 0.05) calc(100% / 12 - 20px), transparent calc(100% / 12 - 20px), transparent calc(100% / 12));
+  background-size: 100% 24px, 100% 100%;
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+  
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+.pdf-export-mode .no-print {
+  display: none !important;
+}
+
+.pdf-export-mode section {
+  page-break-inside: avoid;
+}
+
+/* Master Typography System */
+@layer components {
+  .typo-eyebrow {
+    @apply text-[18px] font-medium tracking-[0.3em] uppercase text-brand-gold leading-[1.2];
+  }
+  .typo-h1 {
+    @apply text-[32px] font-semibold text-brand-forest leading-[1.2] mb-[24px];
+  }
+  .typo-h2 {
+    @apply text-[24px] font-medium text-brand-forest mt-[32px] mb-[16px];
+  }
+  .typo-h3 {
+    @apply text-[20px] font-medium text-brand-dark mb-[12px];
+  }
+  .typo-h4 {
+    @apply text-[16px] font-medium text-brand-olive;
+  }
+  .typo-body-ar {
+    @apply font-arabic text-[15px] font-normal leading-[28px] max-w-[70ch] mb-[18px] last:mb-0;
+  }
+  .typo-body-en {
+    @apply font-sans text-[14px] font-normal leading-[28px] max-w-[70ch] mb-[18px] last:mb-0;
+  }
+  .typo-caption {
+    @apply text-[11px] font-normal text-gray-500;
+  }
+  .typo-image-label {
+    @apply text-[12px] font-medium text-brand-dark;
+  }
+  .typo-stat-num {
+    @apply text-[42px] font-bold text-brand-forest;
+  }
+  .typo-stat-label {
+    @apply text-[14px] font-medium text-brand-dark;
+  }
+  .typo-list {
+    @apply text-[15px] leading-[1.8] space-y-[10px];
+  }
+  .typo-table-th {
+    @apply text-[16px] font-semibold text-brand-forest text-left;
+  }
+  .typo-table-td {
+    @apply text-[14px] font-normal text-brand-dark;
+  }
+  
+/* Master Landscape Page System */
+  .landscape-page {
+    @apply relative w-[297mm] h-[210mm] mx-auto bg-white overflow-hidden shrink-0;
+  }
+  .landscape-content {
+    @apply relative z-10 flex flex-col w-full h-full;
+    padding: 14mm 20mm 18mm 20mm; /* top: 14mm, left/right: 20mm, bottom: 18mm */
+  }
+  .catalog-page {
+    @apply pt-[14mm] pb-[18mm] px-[20mm];
+  }
+}
+
+/* Safe Area Debug Mode */
+.show-safe-areas .landscape-page::after {
+  content: '';
+  position: absolute;
+  top: 14mm;
+  left: 20mm;
+  right: 20mm;
+  bottom: 18mm;
+  border: 1px dashed rgba(184, 147, 61, 0.7);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.show-safe-areas .landscape-page::before {
+  content: 'SAFE AREA (20mm / 14mm / 18mm) | FOOTER ZONE: 12mm';
+  position: absolute;
+  top: 2mm;
+  left: 20mm;
+  font-size: 8px;
+  font-family: monospace;
+  color: rgba(184, 147, 61, 0.8);
+  pointer-events: none;
+  z-index: 9999;
+}
+

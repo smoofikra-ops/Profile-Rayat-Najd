@@ -1,0 +1,8 @@
+{
+  "name": "Horzental  Profile and catalog Rayat Najd",
+  "description": "A luxury, bilingual, print-ready product catalog for Rayat Najd landscaping and nursery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

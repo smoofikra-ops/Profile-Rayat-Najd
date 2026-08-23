@@ -1,0 +1,518 @@
+[
+  {
+    "category": "Palm Trees",
+    "itemCount": 5,
+    "items": [
+      {
+        "en": "Date Palm",
+        "ar": "نخيل التمر",
+        "sci": "Phoenix dactylifera",
+        "img": "MISSING"
+      },
+      {
+        "en": "Washingtonia robusta",
+        "ar": "واشنطونيا روبستا",
+        "sci": "Washingtonia robusta",
+        "img": "MISSING"
+      },
+      {
+        "en": "Washingtonia filifera",
+        "ar": "واشنطونيا فيليفيرا",
+        "sci": "Washingtonia filifera",
+        "img": "MISSING"
+      },
+      {
+        "en": "Canary Island Date",
+        "ar": "النخيل الكناري",
+        "sci": "Phoenix canariensis",
+        "img": "MISSING"
+      },
+      {
+        "en": "Royal Palm",
+        "ar": "النخل الملوكي",
+        "sci": "Roystonea regia",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Shade Trees",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Pongam Tree",
+        "ar": "بونجاميا (كارانج)",
+        "sci": "Pongamia pinnata",
+        "img": "MISSING"
+      },
+      {
+        "en": "Umbrella Tree",
+        "ar": "تيرمينال-يا مانتالي",
+        "sci": "Terminalia mantaly",
+        "img": "MISSING"
+      },
+      {
+        "en": "Indian Rosewood",
+        "ar": "دالبيرجيا سيسو",
+        "sci": "Dalbergia sissoo",
+        "img": "MISSING"
+      },
+      {
+        "en": "Big-Leaf Mahogany",
+        "ar": "سويتينيا ماكروفيلا",
+        "sci": "Swietenia macrophylla",
+        "img": "MISSING"
+      },
+      {
+        "en": "Neem",
+        "ar": "النيم",
+        "sci": "Azadirachta indica",
+        "img": "MISSING"
+      },
+      {
+        "en": "Casuarina",
+        "ar": "الكازورينا",
+        "sci": "Casuarina equisetifolia",
+        "img": "MISSING"
+      },
+      {
+        "en": "Ficus nitida",
+        "ar": "فيكس نيتيدا",
+        "sci": "Ficus microcarpa",
+        "img": "MISSING"
+      },
+      {
+        "en": "Ficus religiosa",
+        "ar": "فيكس لسان العصفور",
+        "sci": "Ficus religiosa",
+        "img": "MISSING"
+      },
+      {
+        "en": "Lubakh",
+        "ar": "اللبخ",
+        "sci": "Albizia lebbeck",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Native Trees",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Ghaf",
+        "ar": "الغاف",
+        "sci": "Prosopis cineraria",
+        "img": "MISSING"
+      },
+      {
+        "en": "Farsetia burtoniae",
+        "ar": "فارسيتيا بورتونيا",
+        "sci": "Farsetia burtoniae",
+        "img": "MISSING"
+      },
+      {
+        "en": "Samar",
+        "ar": "السمر",
+        "sci": "Vachellia tortilis",
+        "img": "MISSING"
+      },
+      {
+        "en": "Najdi Talh",
+        "ar": "الطلح النجدي",
+        "sci": "Vachellia gerrardii",
+        "img": "MISSING"
+      },
+      {
+        "en": "Salam",
+        "ar": "السلم",
+        "sci": "Vachellia flava",
+        "img": "MISSING"
+      },
+      {
+        "en": "Sayal",
+        "ar": "السيال",
+        "sci": "Vachellia tortilis subsp. raddiana",
+        "img": "MISSING"
+      },
+      {
+        "en": "Qarad",
+        "ar": "القرض",
+        "sci": "Vachellia nilotica",
+        "img": "MISSING"
+      },
+      {
+        "en": "Sidr",
+        "ar": "السدر",
+        "sci": "Ziziphus spina-christi",
+        "img": "MISSING"
+      },
+      {
+        "en": "Athel Tamarisk",
+        "ar": "الأثل",
+        "sci": "Tamarix aphylla",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Ornamental Trees",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Kurrajong",
+        "ar": "براكيكيتون",
+        "sci": "Brachychiton populneus",
+        "img": "MISSING"
+      },
+      {
+        "en": "Pink Shower Tree",
+        "ar": "كاسيا جافانيكا",
+        "sci": "Cassia javanica",
+        "img": "MISSING"
+      },
+      {
+        "en": "Geiger Tree",
+        "ar": "كورديا سيبستينا",
+        "sci": "Cordia sebestena",
+        "img": "MISSING"
+      },
+      {
+        "en": "Peltophorum",
+        "ar": "بيلتوفوروم",
+        "sci": "Peltophorum pterocarpum",
+        "img": "MISSING"
+      },
+      {
+        "en": "Tipuana tipu",
+        "ar": "تيبوانا تيبو",
+        "sci": "Tipuana tipu",
+        "img": "MISSING"
+      },
+      {
+        "en": "Poinciana",
+        "ar": "البونسيانا",
+        "sci": "Delonix regia",
+        "img": "MISSING"
+      },
+      {
+        "en": "Jacaranda",
+        "ar": "الجاكرندا",
+        "sci": "Jacaranda mimosifolia",
+        "img": "MISSING"
+      },
+      {
+        "en": "Tabebuia",
+        "ar": "التابوبيا",
+        "sci": "Tabebuia rosea",
+        "img": "MISSING"
+      },
+      {
+        "en": "Acacia Glauca",
+        "ar": "الأكاسيا جلوكا",
+        "sci": "Senna surattensis",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Shrubs & Plants",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Yellow Bells",
+        "ar": "التيكوما",
+        "sci": "Tecoma stans",
+        "img": "MISSING"
+      },
+      {
+        "en": "French Lavender",
+        "ar": "اللافندر الفرنسي",
+        "sci": "Lavandula dentata",
+        "img": "MISSING"
+      },
+      {
+        "en": "Rosemary",
+        "ar": "إكليل الجبل",
+        "sci": "Salvia rosmarinus",
+        "img": "MISSING"
+      },
+      {
+        "en": "Cardboard Palm",
+        "ar": "زاميا فورفوراسيا",
+        "sci": "Zamia furfuracea",
+        "img": "MISSING"
+      },
+      {
+        "en": "Lantana",
+        "ar": "اللانتانا",
+        "sci": "Lantana camara",
+        "img": "MISSING"
+      },
+      {
+        "en": "Crown of Thorns",
+        "ar": "تاج المسيح",
+        "sci": "Euphorbia milii",
+        "img": "MISSING"
+      },
+      {
+        "en": "Peacock Flower",
+        "ar": "برية الطاووس",
+        "sci": "Caesalpinia pulcherrima",
+        "img": "MISSING"
+      },
+      {
+        "en": "Chinese Hibiscus",
+        "ar": "الكركديه",
+        "sci": "Hibiscus rosa-sinensis",
+        "img": "MISSING"
+      },
+      {
+        "en": "Oleander",
+        "ar": "الدفلة",
+        "sci": "Nerium oleander",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Ground Covers",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Moss Rose",
+        "ar": "الفرفحين",
+        "sci": "Portulaca grandiflora",
+        "img": "MISSING"
+      },
+      {
+        "en": "Winged Sea Lavender",
+        "ar": "ليمونيوم لوباتوم",
+        "sci": "Limonium lobatum",
+        "img": "MISSING"
+      },
+      {
+        "en": "White Mexican Petunia",
+        "ar": "رويليا سيمبلكس",
+        "sci": "Ruellia simplex",
+        "img": "MISSING"
+      },
+      {
+        "en": "European Sea-Heath",
+        "ar": "فرانكينيا",
+        "sci": "Frankenia pulverulenta",
+        "img": "MISSING"
+      },
+      {
+        "en": "Umbrella Sedge",
+        "ar": "السعد المظلي",
+        "sci": "Cyperus alternifolius",
+        "img": "MISSING"
+      },
+      {
+        "en": "Sand Couch Grass",
+        "ar": "سبوروبولوس فيرجينيكوس",
+        "sci": "Sporobolus virginicus",
+        "img": "MISSING"
+      },
+      {
+        "en": "Fever Root",
+        "ar": "رويليا توبيروزا",
+        "sci": "Ruellia tuberosa",
+        "img": "MISSING"
+      },
+      {
+        "en": "Beach Morning Glory",
+        "ar": "صباح الخير الشاطئي",
+        "sci": "Ipomoea pes-caprae",
+        "img": "MISSING"
+      },
+      {
+        "en": "Treasure Flower",
+        "ar": "الجازانيا",
+        "sci": "Gazania rigens",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Seasonal Plants",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Barbary Nut",
+        "ar": "موريا سيسيرينكيوم",
+        "sci": "Moraea sisyrinchium",
+        "img": "MISSING"
+      },
+      {
+        "en": "Common Zinnia",
+        "ar": "الزينيا",
+        "sci": "Zinnia elegans",
+        "img": "MISSING"
+      },
+      {
+        "en": "Cockscomb",
+        "ar": "عرف الديك",
+        "sci": "Celosia cristata",
+        "img": "MISSING"
+      },
+      {
+        "en": "African Marigold",
+        "ar": "القطيفة",
+        "sci": "Tagetes erecta",
+        "img": "MISSING"
+      },
+      {
+        "en": "Sunflower",
+        "ar": "عباد الشمس",
+        "sci": "Helianthus annuus",
+        "img": "MISSING"
+      },
+      {
+        "en": "Pansy",
+        "ar": "البانسيه",
+        "sci": "Viola wittrockiana",
+        "img": "MISSING"
+      },
+      {
+        "en": "China Aster",
+        "ar": "الأستر",
+        "sci": "Callistephus chinensis",
+        "img": "MISSING"
+      },
+      {
+        "en": "Garden Mum",
+        "ar": "الأقحوان",
+        "sci": "Chrysanthemum morifolium",
+        "img": "MISSING"
+      },
+      {
+        "en": "Petunia",
+        "ar": "البيتونيا",
+        "sci": "Petunia hybrida",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Desert Plants",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Saad Sedge",
+        "ar": "السعد",
+        "sci": "Cyperus conglomeratus",
+        "img": "MISSING"
+      },
+      {
+        "en": "Harmal",
+        "ar": "الحرمل",
+        "sci": "Rhazya stricta",
+        "img": "MISSING"
+      },
+      {
+        "en": "Syrian Rue",
+        "ar": "الحرمل السوري",
+        "sci": "Peganum harmala",
+        "img": "MISSING"
+      },
+      {
+        "en": "Ghada",
+        "ar": "الغضا",
+        "sci": "Haloxylon persicum",
+        "img": "MISSING"
+      },
+      {
+        "en": "Arta",
+        "ar": "الأرطى",
+        "sci": "Calligonum comosum",
+        "img": "MISSING"
+      },
+      {
+        "en": "Arfaj",
+        "ar": "العرفج",
+        "sci": "Rhanterium epapposum",
+        "img": "MISSING"
+      },
+      {
+        "en": "Arak (Miswak)",
+        "ar": "الأراك (شجرة السواك)",
+        "sci": "Salvadora persica",
+        "img": "MISSING"
+      },
+      {
+        "en": "Shih (Wormwood)",
+        "ar": "الشيح",
+        "sci": "Artemisia sieberi",
+        "img": "MISSING"
+      },
+      {
+        "en": "Qaysoum",
+        "ar": "القيصوم",
+        "sci": "Achillea fragrantissima",
+        "img": "MISSING"
+      }
+    ]
+  },
+  {
+    "category": "Climbing Plants",
+    "itemCount": 9,
+    "items": [
+      {
+        "en": "Bougainvillea",
+        "ar": "الجهنمية",
+        "sci": "Bougainvillea spectabilis",
+        "img": "MISSING"
+      },
+      {
+        "en": "Royal Jasmine",
+        "ar": "الياسمين الملكي",
+        "sci": "Jasminum grandiflorum",
+        "img": "MISSING"
+      },
+      {
+        "en": "Indian Jasmine",
+        "ar": "الياسمين الهندي",
+        "sci": "Jasminum sambac",
+        "img": "MISSING"
+      },
+      {
+        "en": "Cape Plumbago",
+        "ar": "بلمبجو",
+        "sci": "Plumbago auriculata",
+        "img": "MISSING"
+      },
+      {
+        "en": "Star Jasmine",
+        "ar": "الياسمين النجمي",
+        "sci": "Trachelospermum jasminoides",
+        "img": "MISSING"
+      },
+      {
+        "en": "Creeping Fig",
+        "ar": "فيكس الجداري الزاحف",
+        "sci": "Ficus pumila",
+        "img": "MISSING"
+      },
+      {
+        "en": "Blue Trumpet Vine",
+        "ar": "الثنبرجيا",
+        "sci": "Thunbergia grandiflora",
+        "img": "MISSING"
+      },
+      {
+        "en": "Golden Trumpet",
+        "ar": "البوق الذهبي",
+        "sci": "Allamanda cathartica",
+        "img": "MISSING"
+      },
+      {
+        "en": "Coral Vine",
+        "ar": "كرمة المرجان",
+        "sci": "Antigonon leptopus",
+        "img": "MISSING"
+      }
+    ]
+  }
+]
