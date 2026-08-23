@@ -1,4 +1,4 @@
-import { Section } from '../ui/Layouts';
+import { Section, EditableText } from '../ui/Layouts';
 
 interface Section00IndexProps {
   pageNumber: number;
@@ -24,102 +24,191 @@ interface Section00IndexProps {
     achievements: string;
     gallery: string;
     contact: string;
-  }
+  };
 }
 
-const IndexCard = ({ titleEn, titleAr, range, isSub = false, highlight = false }: { titleEn: string; titleAr: string; range: string; isSub?: boolean; highlight?: boolean }) => (
-  <div className={`flex items-stretch justify-between w-full px-2 py-1 rounded-md border ${highlight ? 'border-brand-gold/50 bg-white/90 shadow-sm' : isSub ? 'border-brand-warm/25 bg-white/50' : 'border-brand-gold/20 bg-white/70 shadow-sm'}`}>
-    <div className="flex flex-col justify-center flex-grow pr-2.5 text-left border-r border-brand-warm/25">
-       <span className="font-arabic text-brand-dark text-[12.5px] font-bold text-right leading-tight" dir="rtl">{titleAr}</span>
-       <span className="font-sans text-brand-dark/70 text-[9px] tracking-wider uppercase leading-tight">{titleEn}</span>
+interface IndexRowProps {
+  titleAr: string;
+  titleEn: string;
+  range: string;
+  isSpecial?: boolean;
+}
+
+function IndexRow({ titleAr, titleEn, range, isSpecial = false }: IndexRowProps) {
+  return (
+    <div className={`flex items-center justify-between px-3 py-1 rounded-lg border transition-all duration-200 ${
+      isSpecial 
+        ? 'bg-white/90 border-brand-gold/40 shadow-xs' 
+        : 'bg-white/70 hover:bg-white border-brand-warm/15 shadow-xs'
+    }`}>
+      {/* Arabic and English Titles on the right side in RTL */}
+      <div className="flex flex-col text-right justify-center">
+        <span className="font-arabic text-brand-forest font-bold text-[12px] leading-tight" dir="rtl">
+          {titleAr}
+        </span>
+        <span className="font-sans text-brand-dark/75 text-[8.5px] uppercase tracking-wider font-semibold leading-tight mt-0.5" dir="ltr">
+          {titleEn}
+        </span>
+      </div>
+
+      {/* Page Number Badge on the left edge in RTL */}
+      <div className="flex items-center justify-center shrink-0 pl-1" dir="ltr">
+        <span className="font-sans text-brand-forest font-bold text-[11px] px-2 py-0.5 rounded bg-brand-gold/15 border border-brand-gold/30 tabular-nums">
+          {range}
+        </span>
+      </div>
     </div>
-    
-    <div className="flex flex-col items-center justify-center w-[48px] shrink-0 pl-1.5">
-       <span className="font-sans text-[7.5px] text-brand-gold uppercase tracking-[0.1em]">{range.includes('–') ? 'Pages' : 'Page'}</span>
-       <span className="font-sans text-brand-dark font-bold text-[11.5px] leading-none">{range}</span>
+  );
+}
+
+interface GroupHeaderProps {
+  num?: string;
+  titleAr: string;
+  titleEn: string;
+}
+
+function GroupHeader({ num, titleAr, titleEn }: GroupHeaderProps) {
+  return (
+    <div className="flex items-center justify-between border-b border-brand-gold/40 pb-1 mb-1.5 pt-0.5">
+      <div className="flex items-center gap-2">
+        {num && (
+          <span className="w-5 h-5 rounded-full bg-brand-forest text-brand-gold font-sans font-bold text-[9px] flex items-center justify-center shrink-0">
+            {num}
+          </span>
+        )}
+        <span className="font-arabic text-brand-forest font-bold text-[13px]" dir="rtl">
+          {titleAr}
+        </span>
+      </div>
+      <span className="font-sans text-brand-dark/65 font-bold text-[8.5px] uppercase tracking-widest" dir="ltr">
+        {titleEn}
+      </span>
     </div>
-  </div>
-);
+  );
+}
 
 export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
   return (
     <Section 
-      className="bg-brand-beige relative overflow-hidden" 
+      className="bg-brand-beige border-b border-brand-warm/10" 
       pageNumber={pageNumber} 
-      bgType="none"
-      bgImage="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-08.webp"
+      bgType="pattern"
     >
-       <div className="w-full h-full flex flex-col justify-between py-1">
-          {/* Header */}
-          <div className="flex items-center justify-between border-b border-brand-gold/30 pb-2 mb-2">
-             <div className="flex items-center gap-3">
-               <h1 className="font-arabic text-brand-dark text-2xl font-bold">فهرس المحتويات</h1>
-               <span className="text-brand-gold/50">•</span>
-               <h2 className="font-sans text-brand-gold text-xs tracking-[0.2em] uppercase font-bold">Table of Contents</h2>
-             </div>
-             <span className="text-brand-dark/50 text-[10px] uppercase tracking-widest font-sans">Rayat Najd Corporate Profile</span>
+      <div className="flex flex-col h-full justify-between py-2" dir="rtl">
+        {/* Top Header */}
+        <div className="flex items-center justify-between border-b border-brand-gold/30 pb-2 mb-2">
+          <div className="flex items-center gap-3">
+            <EditableText as="h1" className="font-arabic text-brand-forest text-2xl font-bold !mb-0">
+              فهرس المحتويات
+            </EditableText>
+            <span className="text-brand-gold/60 text-lg font-sans">•</span>
+            <EditableText as="h2" className="font-sans text-brand-gold text-xs tracking-[0.2em] uppercase font-bold !mb-0" dir="ltr">
+              Table of Contents
+            </EditableText>
+          </div>
+          <div className="text-left" dir="ltr">
+            <span className="text-brand-dark/60 text-[9.5px] uppercase tracking-widest font-sans font-semibold">
+              Rayat Najd Corporate Profile & Botanical Catalog
+            </span>
+          </div>
+        </div>
+
+        {/* 2-Column Continuous RTL Executive Grid */}
+        <div className="grid grid-cols-2 gap-5 items-stretch my-auto flex-1">
+          
+          {/* ========================================================================= */}
+          {/* RIGHT COLUMN (FIRST READING COLUMN IN RTL) */}
+          {/* ========================================================================= */}
+          <div className="flex flex-col justify-between h-full gap-3">
+            {/* GROUP 01: CORPORATE PROFILE */}
+            <div className="flex flex-col gap-1">
+              <GroupHeader 
+                num="01" 
+                titleAr="الملف التعريفي للشركة" 
+                titleEn="Corporate Profile" 
+              />
+              <div className="flex flex-col gap-1">
+                <IndexRow titleAr="نبذة عن الشركة" titleEn="Company Overview" range={pages.about} />
+                <IndexRow titleAr="لماذا رايات نجد" titleEn="Why Rayat Najd" range={pages.whyUs} />
+                <IndexRow titleAr="الخدمات" titleEn="Our Services" range={pages.services} />
+                <IndexRow titleAr="المشاتل والقدرات التشغيلية" titleEn="Nurseries & Operational Capabilities" range={pages.nurseries} />
+                <IndexRow titleAr="القدرات المتكاملة" titleEn="Integrated Capabilities" range={pages.capabilities} isSpecial={true} />
+              </div>
+            </div>
+
+            {/* GROUP 02: PLANT CATALOG (PART 1) */}
+            <div className="flex flex-col gap-1">
+              <GroupHeader 
+                num="02" 
+                titleAr="الكتالوج النباتي" 
+                titleEn="Plant Catalog" 
+              />
+              <div className="flex flex-col gap-1">
+                <IndexRow titleAr="مدخل الكتالوج النباتي" titleEn="Plant Catalog Overview" range={pages.productsCover} isSpecial={true} />
+                <IndexRow titleAr="أشجار النخيل" titleEn="Palm Trees" range={pages.palmTrees} />
+                <IndexRow titleAr="أشجار الظل" titleEn="Shade Trees" range={pages.shadeTrees} />
+                <IndexRow titleAr="الأشجار المحلية" titleEn="Native Trees" range={pages.nativeTrees} />
+                <IndexRow titleAr="أشجار الزينة" titleEn="Ornamental Trees" range={pages.ornamentalTrees} />
+              </div>
+            </div>
           </div>
 
-          {/* Grid Layout */}
-          <div className="flex flex-row w-full gap-5 flex-grow">
-             
-             {/* Left Column: Corporate & Capabilities */}
-             <div className="flex flex-col w-1/2 gap-1 justify-between h-full">
-                <div>
-                    <h3 className="font-sans text-brand-dark text-[9.5px] tracking-widest uppercase border-b border-brand-dark/10 pb-0.5 mb-1 flex justify-between font-bold">
-                      <span>Corporate Profile</span>
-                      <span className="font-arabic">الملف التعريفي</span>
-                    </h3>
-                    <div className="flex flex-col gap-1">
-                        <IndexCard titleEn="Company Overview" titleAr="نبذة عن الشركة" range={pages.about} />
-                        <IndexCard titleEn="Why Rayat Najd" titleAr="لماذا رايات نجد" range={pages.whyUs} />
-                        <IndexCard titleEn="Our Services" titleAr="الخدمات" range={pages.services} />
-                        <IndexCard titleEn="Nurseries & Operational Capabilities" titleAr="المشاتل والقدرات التشغيلية" range={pages.nurseries} />
-                        <IndexCard titleEn="Integrated Capabilities" titleAr="القدرات المتكاملة" range={pages.capabilities} highlight={true} />
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 className="font-sans text-brand-dark text-[9.5px] tracking-widest uppercase border-b border-brand-dark/10 pb-0.5 mb-1 flex justify-between font-bold">
-                      <span>Corporate Evidence & Contact</span>
-                      <span className="font-arabic">الأعمال والتواصل</span>
-                    </h3>
-                    <div className="flex flex-col gap-1">
-                        <IndexCard titleEn="Projects" titleAr="المشاريع" range={pages.projects} />
-                        <IndexCard titleEn="Process" titleAr="منهجية العمل" range={pages.process} />
-                        <IndexCard titleEn="Quality" titleAr="الجودة" range={pages.quality} />
-                        <IndexCard titleEn="Achievements" titleAr="الإنجازات" range={pages.achievements} />
-                        <IndexCard titleEn="Gallery" titleAr="معرض الصور" range={pages.gallery} />
-                        <IndexCard titleEn="Contact" titleAr="التواصل" range={pages.contact} highlight={true} />
-                    </div>
-                </div>
-             </div>
+          {/* ========================================================================= */}
+          {/* LEFT COLUMN (SECOND READING COLUMN IN RTL) */}
+          {/* ========================================================================= */}
+          <div className="flex flex-col justify-between h-full gap-3">
+            {/* GROUP 02 (CONTINUED): PLANT CATALOG (PART 2) */}
+            <div className="flex flex-col gap-1">
+              <GroupHeader 
+                titleAr="الكتالوج النباتي (تتمة)" 
+                titleEn="Plant Catalog (Cont.)" 
+              />
+              <div className="flex flex-col gap-1">
+                <IndexRow titleAr="الشجيرات والنباتات" titleEn="Shrubs & Plants" range={pages.shrubs} />
+                <IndexRow titleAr="مغطيات التربة" titleEn="Ground Covers" range={pages.groundCovers} />
+                <IndexRow titleAr="النباتات الموسمية" titleEn="Seasonal Plants" range={pages.seasonal} />
+                <IndexRow titleAr="النباتات الصحراوية" titleEn="Desert Plants" range={pages.desert} />
+                <IndexRow titleAr="النباتات المتسلقة" titleEn="Climbing Plants" range={pages.climbing} />
+              </div>
+            </div>
 
-             {/* Right Column: Plant Catalog */}
-             <div className="flex flex-col w-1/2 gap-1 justify-between h-full">
-                <div>
-                  <h3 className="font-sans text-brand-dark text-[9.5px] tracking-widest uppercase border-b border-brand-dark/10 pb-0.5 mb-1 flex justify-between font-bold">
-                    <span>Plant Catalog</span>
-                    <span className="font-arabic">الكتالوج النباتي</span>
-                  </h3>
-                  <IndexCard titleEn="Plant Catalog Overview" titleAr="مدخل الكتالوج النباتي" range={pages.productsCover} highlight={true} />
-                </div>
-                
-                <div className="flex flex-col gap-1 pl-3 border-l-2 border-brand-gold/30 ml-1">
-                   <IndexCard titleEn="Palm Trees" titleAr="أشجار النخيل" range={pages.palmTrees} isSub={true} />
-                   <IndexCard titleEn="Shade Trees" titleAr="أشجار الظل" range={pages.shadeTrees} isSub={true} />
-                   <IndexCard titleEn="Native Trees" titleAr="الأشجار المحلية" range={pages.nativeTrees} isSub={true} />
-                   <IndexCard titleEn="Ornamental Trees" titleAr="أشجار الزينة" range={pages.ornamentalTrees} isSub={true} />
-                   <IndexCard titleEn="Shrubs & Plants" titleAr="الشجيرات والنباتات" range={pages.shrubs} isSub={true} />
-                   <IndexCard titleEn="Ground Covers" titleAr="مغطيات التربة" range={pages.groundCovers} isSub={true} />
-                   <IndexCard titleEn="Seasonal Plants" titleAr="النباتات الموسمية" range={pages.seasonal} isSub={true} />
-                   <IndexCard titleEn="Desert Plants" titleAr="النباتات الصحراوية" range={pages.desert} isSub={true} />
-                   <IndexCard titleEn="Climbing Plants" titleAr="النباتات المتسلقة" range={pages.climbing} isSub={true} />
-                </div>
-             </div>
+            {/* GROUP 03: PROJECTS & CORPORATE PERFORMANCE */}
+            <div className="flex flex-col gap-1">
+              <GroupHeader 
+                num="03" 
+                titleAr="المشاريع والأداء المؤسسي" 
+                titleEn="Projects & Corporate Performance" 
+              />
+              <div className="flex flex-col gap-1">
+                <IndexRow titleAr="المشاريع" titleEn="Projects" range={pages.projects} isSpecial={true} />
+                <IndexRow titleAr="منهجية العمل" titleEn="Process" range={pages.process} />
+                <IndexRow titleAr="الجودة" titleEn="Quality" range={pages.quality} />
+                <IndexRow titleAr="الإنجازات" titleEn="Achievements" range={pages.achievements} />
+                <IndexRow titleAr="معرض الصور" titleEn="Gallery" range={pages.gallery} />
+              </div>
+            </div>
 
+            {/* GROUP 04: CONTACT */}
+            <div className="flex flex-col gap-1">
+              <GroupHeader 
+                num="04" 
+                titleAr="التواصل" 
+                titleEn="Contact" 
+              />
+              <div className="flex flex-col gap-1">
+                <IndexRow titleAr="التواصل والمعلومات الرسمية" titleEn="Corporate Contact & Directory" range={pages.contact} isSpecial={true} />
+              </div>
+            </div>
           </div>
-       </div>
+
+        </div>
+
+        {/* Footer Navigation Bar */}
+        <div className="flex items-center justify-between pt-2 border-t border-brand-warm/15 text-[9px] text-brand-dark/55 uppercase tracking-widest font-sans" dir="ltr">
+          <span className="font-semibold text-brand-forest">Rayat Najd Corporate Profile • Document Index & Navigation</span>
+          <span className="font-arabic font-semibold text-brand-forest" dir="rtl">فهرس المحتويات والمراجع الرسمية — شركة رايات نجد</span>
+        </div>
+      </div>
     </Section>
   );
 }

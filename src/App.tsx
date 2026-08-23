@@ -39,7 +39,7 @@ export default function App() {
     nurseries: 2,
     capabilities: 9, // SectionCapabilities generates 9 pages
     products: 19,    // Section05Products generates 1 (cover) + 9 categories * 2 = 19 pages
-    projects: 1,
+    projects: 3,     // Section06Projects generates 3 pages (Projects 1-6, Projects 7-12, Project 13 + Regional coverage)
     process: 1,
     quality: 1,
     achievements: 1,
