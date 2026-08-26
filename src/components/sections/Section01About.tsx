@@ -179,77 +179,77 @@ export function Section01About({ startPageNumber = 1 }: { startPageNumber?: numb
           <div className="grid grid-cols-3 gap-4 my-auto items-stretch">
             
             {/* Panel 1: Strategic Alignment & Vision 2030 */}
-            <div className="bg-white p-5 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+            <div className="card-surface card-surface-hover p-5 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3 border-b border-brand-warm/15 pb-2">
-                  <span className="w-7 h-7 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center">01</span>
+                  <span className="card-number-badge !w-7 !h-7 !text-xs">01</span>
                   <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Saudi_Vision_2030_logo.svg" 
                     alt="Vision 2030" 
                     className="h-7 mix-blend-multiply opacity-85" 
                   />
                 </div>
-                <EditableText as="h3" className="text-brand-forest font-sans text-sm font-bold mb-1">Strategic Alignment</EditableText>
-                <EditableText as="h4" className="text-brand-forest font-arabic text-sm font-bold mb-2.5 text-right" dir="rtl">المواءمة الاستراتيجية (رؤية 2030)</EditableText>
+                <EditableText as="h3" className="card-title-en text-sm mb-1">Strategic Alignment</EditableText>
+                <EditableText as="h4" className="card-title-ar text-sm mb-2.5" dir="rtl">المواءمة الاستراتيجية (رؤية 2030)</EditableText>
                 
                 <div className="space-y-2 border-t border-brand-warm/10 pt-2">
-                  <EditableText as="p" className="text-brand-dark/80 font-sans text-[10.5px] leading-relaxed text-justify">
+                  <EditableText as="p" className="card-body-en text-[10.5px] leading-relaxed text-justify">
                     Actively supporting the Saudi Green Initiative and Quality of Life Program by expanding vegetative cover and sustainable urban ecosystems.
                   </EditableText>
-                  <EditableText as="p" className="text-brand-dark/80 font-arabic text-[11.5px] leading-relaxed text-right" dir="rtl">
+                  <EditableText as="p" className="card-body-ar text-[11.5px] leading-relaxed" dir="rtl">
                     المساهمة المباشرة في مستهدفات مبادرة السعودية الخضراء وبرنامج جودة الحياة من خلال تنمية الغطاء النباتي المستدام.
                   </EditableText>
                 </div>
               </div>
-              <div className="mt-3 pt-2 border-t border-brand-warm/10 text-center text-[9px] uppercase tracking-widest text-brand-gold font-bold">
+              <div className="mt-3 pt-2 border-t border-brand-warm/10 text-center card-tag-gold">
                 Saudi Vision 2030
               </div>
             </div>
 
             {/* Panel 2: Corporate Vision */}
-            <div className="bg-white p-5 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+            <div className="card-surface card-surface-hover p-5 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3 border-b border-brand-warm/15 pb-2">
-                  <span className="w-7 h-7 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center">02</span>
+                  <span className="card-number-badge !w-7 !h-7 !text-xs">02</span>
                   <span className="text-[10px] uppercase tracking-widest text-brand-forest font-sans font-bold">Corporate Vision</span>
                 </div>
-                <EditableText as="h3" className="text-brand-forest font-sans text-sm font-bold mb-1">Our Vision</EditableText>
-                <EditableText as="h4" className="text-brand-forest font-arabic text-sm font-bold mb-2.5 text-right" dir="rtl">رؤيتنا</EditableText>
+                <EditableText as="h3" className="card-title-en text-sm mb-1">Our Vision</EditableText>
+                <EditableText as="h4" className="card-title-ar text-sm mb-2.5" dir="rtl">رؤيتنا</EditableText>
                 
                 <div className="space-y-2 border-t border-brand-warm/10 pt-2">
-                  <EditableText as="p" className="text-brand-dark/80 font-sans text-[10.5px] leading-relaxed text-justify">
+                  <EditableText as="p" className="card-body-en text-[10.5px] leading-relaxed text-justify">
                     To be the Kingdom's premier integrated landscape and plant supply authority, recognized for horticultural precision and large-scale delivery.
                   </EditableText>
-                  <EditableText as="p" className="text-brand-dark/80 font-arabic text-[11.5px] leading-relaxed text-right" dir="rtl">
+                  <EditableText as="p" className="card-body-ar text-[11.5px] leading-relaxed" dir="rtl">
                     أن نكون الشريك الرائد والأول في المملكة لحلول اللاندسكيب المتكاملة وتوريد النباتات وفق أعلى معايير الجودة والاستدامة.
                   </EditableText>
                 </div>
               </div>
-              <div className="mt-3 pt-2 border-t border-brand-warm/10 text-center text-[9px] uppercase tracking-widest text-brand-forest font-bold">
+              <div className="mt-3 pt-2 border-t border-brand-warm/10 text-center card-tag-forest">
                 Excellence & Growth
               </div>
             </div>
 
             {/* Panel 3: Corporate Mission */}
-            <div className="bg-white p-5 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+            <div className="card-surface card-surface-hover p-5 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3 border-b border-brand-warm/15 pb-2">
-                  <span className="w-7 h-7 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center">03</span>
+                  <span className="card-number-badge !w-7 !h-7 !text-xs">03</span>
                   <span className="text-[10px] uppercase tracking-widest text-brand-forest font-sans font-bold">Corporate Mission</span>
                 </div>
-                <EditableText as="h3" className="text-brand-forest font-sans text-sm font-bold mb-1">Our Mission</EditableText>
-                <EditableText as="h4" className="text-brand-forest font-arabic text-sm font-bold mb-2.5 text-right" dir="rtl">رسالتنا</EditableText>
+                <EditableText as="h3" className="card-title-en text-sm mb-1">Our Mission</EditableText>
+                <EditableText as="h4" className="card-title-ar text-sm mb-2.5" dir="rtl">رسالتنا</EditableText>
                 
                 <div className="space-y-2 border-t border-brand-warm/10 pt-2">
-                  <EditableText as="p" className="text-brand-dark/80 font-sans text-[10.5px] leading-relaxed text-justify">
+                  <EditableText as="p" className="card-body-en text-[10.5px] leading-relaxed text-justify">
                     Delivering world-class nursery production, resilient arid-zone flora, advanced irrigation networks, and end-to-end project execution.
                   </EditableText>
-                  <EditableText as="p" className="text-brand-dark/80 font-arabic text-[11.5px] leading-relaxed text-right" dir="rtl">
+                  <EditableText as="p" className="card-body-ar text-[11.5px] leading-relaxed" dir="rtl">
                     تقديم إنتاج نباتي عالي الكفاءة، وحلول ري ذكية، وتنفيذ هندسي متكامل لمشاريع التشجير الكبرى بما يضمن ديمومة المساحات الخضراء.
                   </EditableText>
                 </div>
               </div>
-              <div className="mt-3 pt-2 border-t border-brand-warm/10 text-center text-[9px] uppercase tracking-widest text-brand-forest font-bold">
+              <div className="mt-3 pt-2 border-t border-brand-warm/10 text-center card-tag-forest">
                 Quality & Execution
               </div>
             </div>

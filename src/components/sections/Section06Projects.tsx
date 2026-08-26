@@ -13,7 +13,7 @@ function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
   const hasVideo = project.videos && project.videos.length > 0;
 
   return (
-    <div className={`bg-white rounded-2xl border border-brand-warm/15 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 ${isFeatured ? 'h-full' : 'h-full'}`}>
+    <div className={`card-surface card-surface-hover overflow-hidden flex flex-col justify-between ${isFeatured ? 'h-full' : 'h-full'}`}>
       {/* Media / Header Visual */}
       <div className={`relative overflow-hidden shrink-0 ${isFeatured ? 'h-44 sm:h-52' : 'h-28'} bg-brand-forest/90`}>
         {hasImage ? (
@@ -72,15 +72,15 @@ function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
       </div>
 
       {/* Content Area */}
-      <div className={`p-2.5 flex-1 flex flex-col justify-between ${isFeatured ? 'p-3.5' : ''}`}>
+      <div className={`p-3 flex-1 flex flex-col justify-between ${isFeatured ? 'p-4' : ''}`}>
         <div className="space-y-1">
           <div className="text-right" dir="rtl">
-            <EditableText as="h3" className="font-arabic text-brand-forest font-bold text-[11px] leading-tight line-clamp-2">
+            <EditableText as="h3" className="card-title-ar text-[11.5px] leading-snug line-clamp-2">
               {project.nameAr}
             </EditableText>
           </div>
           <div className="text-left">
-            <EditableText as="h4" className="font-sans text-brand-dark/80 font-bold text-[9px] leading-tight line-clamp-2 uppercase tracking-wide">
+            <EditableText as="h4" className="card-title-en text-[9.5px] leading-snug line-clamp-2 uppercase tracking-wide">
               {project.nameEn}
             </EditableText>
           </div>
@@ -246,15 +246,15 @@ export function Section06Projects({ startPageNumber = 38 }: { startPageNumber?: 
             </div>
 
             {/* Right Column (7 Cols): Regional Presence & Execution Breadth */}
-            <div className="col-span-7 bg-white p-5 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+            <div className="col-span-7 card-surface p-5 flex flex-col justify-between">
               <div>
                 {/* Title */}
                 <div className="border-b border-brand-warm/15 pb-2.5 mb-3">
                   <div className="flex items-center justify-between mb-1">
-                    <EditableText as="h3" className="font-sans text-brand-forest font-bold text-sm uppercase tracking-wide">
+                    <EditableText as="h3" className="card-title-en text-sm uppercase tracking-wide">
                       Field Experience Across Multiple Regions
                     </EditableText>
-                    <EditableText as="h3" className="font-arabic text-brand-forest font-bold text-sm" dir="rtl">
+                    <EditableText as="h3" className="card-title-ar text-sm" dir="rtl">
                       خبرات ميدانية في مناطق متعددة من المملكة
                     </EditableText>
                   </div>
@@ -262,11 +262,11 @@ export function Section06Projects({ startPageNumber = 38 }: { startPageNumber?: 
                 </div>
 
                 {/* Editorial statement based strictly on approved records */}
-                <div className="space-y-2 text-[10px] text-brand-dark/75 leading-relaxed">
-                  <EditableText as="p" className="text-justify font-sans">
+                <div className="space-y-2 leading-relaxed">
+                  <EditableText as="p" className="text-justify card-body-en text-[10.5px]">
                     Rayat Najd has mobilized specialized engineering teams, heavy nursery logistics, and horticultural stewardship across diverse climatic zones of Saudi Arabia—spanning the Western, Central, Southern, and Northern regions.
                   </EditableText>
-                  <EditableText as="p" className="text-justify font-arabic text-[11px]" dir="rtl">
+                  <EditableText as="p" className="text-justify card-body-ar text-[11.5px]" dir="rtl">
                     تمتلك شركة رايات نجد قدرات تشغيلية ولوجستية مكنتها من تنفيذ وإدارة مشاريع تشجير ورعاية بيئية نوعية في مختلف مناطق المملكة، متكيفةً مع التباينات المناخية وطبيعة التربة في مختلف البيئات الصحراوية والساحلية والجبلية.
                   </EditableText>
                 </div>

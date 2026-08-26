@@ -36,24 +36,33 @@ interface IndexRowProps {
 
 function IndexRow({ titleAr, titleEn, range, isSpecial = false }: IndexRowProps) {
   return (
-    <div className={`flex items-center justify-between px-3 py-1 rounded-lg border transition-all duration-200 ${
-      isSpecial 
-        ? 'bg-white/90 border-brand-gold/40 shadow-xs' 
-        : 'bg-white/70 hover:bg-white border-brand-warm/15 shadow-xs'
-    }`}>
-      {/* Arabic and English Titles on the right side in RTL */}
-      <div className="flex flex-col text-right justify-center">
-        <span className="font-arabic text-brand-forest font-bold text-[12px] leading-tight" dir="rtl">
+    <div 
+      className={`group flex items-center justify-between px-3 py-1.5 rounded-lg border transition-all duration-200 ${
+        isSpecial 
+          ? 'bg-brand-forest/5 border-brand-gold/40 shadow-xs' 
+          : 'bg-white/75 hover:bg-white border-brand-warm/15 hover:border-brand-gold/30 shadow-xs'
+      }`}
+    >
+      {/* Arabic and English Titles */}
+      <div className="flex flex-col text-right justify-center min-w-0 pr-1">
+        <span className={`font-arabic font-bold text-[11.5px] leading-tight ${isSpecial ? 'text-brand-forest' : 'text-brand-forest'}`} dir="rtl">
           {titleAr}
         </span>
-        <span className="font-sans text-brand-dark/75 text-[8.5px] uppercase tracking-wider font-semibold leading-tight mt-0.5" dir="ltr">
+        <span className="font-sans text-brand-dark/70 text-[8.5px] uppercase tracking-wider font-semibold leading-tight mt-0.5 truncate" dir="ltr">
           {titleEn}
         </span>
       </div>
 
-      {/* Page Number Badge on the left edge in RTL */}
-      <div className="flex items-center justify-center shrink-0 pl-1" dir="ltr">
-        <span className="font-sans text-brand-forest font-bold text-[11px] px-2 py-0.5 rounded bg-brand-gold/15 border border-brand-gold/30 tabular-nums">
+      {/* Dotted Leader Line (hidden on very small widths, visible on landscape) */}
+      <div className="flex-1 mx-2 border-b border-dotted border-brand-warm/25 min-w-[20px]" />
+
+      {/* Page Number Pill */}
+      <div className="flex items-center justify-center shrink-0" dir="ltr">
+        <span className={`font-sans font-bold text-[10.5px] px-2 py-0.5 rounded border tabular-nums transition-colors ${
+          isSpecial 
+            ? 'bg-brand-forest text-brand-gold border-brand-forest' 
+            : 'bg-brand-beige/80 text-brand-forest border-brand-warm/25 group-hover:border-brand-gold/50 group-hover:bg-brand-gold/15'
+        }`}>
           {range}
         </span>
       </div>
@@ -69,18 +78,18 @@ interface GroupHeaderProps {
 
 function GroupHeader({ num, titleAr, titleEn }: GroupHeaderProps) {
   return (
-    <div className="flex items-center justify-between border-b border-brand-gold/40 pb-1 mb-1.5 pt-0.5">
+    <div className="flex items-center justify-between border-b border-brand-gold/35 pb-1 mb-1.5 pt-0.5">
       <div className="flex items-center gap-2">
         {num && (
-          <span className="w-5 h-5 rounded-full bg-brand-forest text-brand-gold font-sans font-bold text-[9px] flex items-center justify-center shrink-0">
+          <span className="w-5 h-5 rounded-full bg-brand-forest text-brand-gold font-sans font-bold text-[9px] flex items-center justify-center shrink-0 shadow-xs">
             {num}
           </span>
         )}
-        <span className="font-arabic text-brand-forest font-bold text-[13px]" dir="rtl">
+        <span className="font-arabic text-brand-forest font-bold text-[12.5px]" dir="rtl">
           {titleAr}
         </span>
       </div>
-      <span className="font-sans text-brand-dark/65 font-bold text-[8.5px] uppercase tracking-widest" dir="ltr">
+      <span className="font-sans text-brand-dark/60 font-bold text-[8px] uppercase tracking-widest" dir="ltr">
         {titleEn}
       </span>
     </div>
@@ -94,7 +103,7 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
       pageNumber={pageNumber} 
       bgType="pattern"
     >
-      <div className="flex flex-col h-full justify-between py-2" dir="rtl">
+      <div className="flex flex-col h-full justify-between py-1.5" dir="rtl">
         {/* Top Header */}
         <div className="flex items-center justify-between border-b border-brand-gold/30 pb-2 mb-2">
           <div className="flex items-center gap-3">
@@ -107,19 +116,19 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
             </EditableText>
           </div>
           <div className="text-left" dir="ltr">
-            <span className="text-brand-dark/60 text-[9.5px] uppercase tracking-widest font-sans font-semibold">
+            <span className="text-brand-dark/60 text-[9px] uppercase tracking-widest font-sans font-semibold">
               Rayat Najd Corporate Profile & Botanical Catalog
             </span>
           </div>
         </div>
 
-        {/* 2-Column Continuous RTL Executive Grid */}
+        {/* 2-Column Continuous RTL Executive Ledger Grid */}
         <div className="grid grid-cols-2 gap-5 items-stretch my-auto flex-1">
           
           {/* ========================================================================= */}
-          {/* RIGHT COLUMN (FIRST READING COLUMN IN RTL) */}
+          {/* RIGHT COLUMN (FIRST READING COLUMN IN ARABIC RTL) */}
           {/* ========================================================================= */}
-          <div className="flex flex-col justify-between h-full gap-3">
+          <div className="flex flex-col justify-between h-full gap-2.5">
             {/* GROUP 01: CORPORATE PROFILE */}
             <div className="flex flex-col gap-1">
               <GroupHeader 
@@ -130,21 +139,21 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
               <div className="flex flex-col gap-1">
                 <IndexRow titleAr="نبذة عن الشركة" titleEn="Company Overview" range={pages.about} />
                 <IndexRow titleAr="لماذا رايات نجد" titleEn="Why Rayat Najd" range={pages.whyUs} />
-                <IndexRow titleAr="الخدمات" titleEn="Our Services" range={pages.services} />
-                <IndexRow titleAr="المشاتل والقدرات التشغيلية" titleEn="Nurseries & Operational Capabilities" range={pages.nurseries} />
+                <IndexRow titleAr="الخدمات التخصصية" titleEn="Our Services" range={pages.services} />
+                <IndexRow titleAr="المشاتل والقدرات التشغيلية" titleEn="Nurseries & Operations" range={pages.nurseries} />
                 <IndexRow titleAr="القدرات المتكاملة" titleEn="Integrated Capabilities" range={pages.capabilities} isSpecial={true} />
               </div>
             </div>
 
-            {/* GROUP 02: PLANT CATALOG (PART 1) */}
+            {/* GROUP 02: BOTANICAL CATALOG (PART 1) */}
             <div className="flex flex-col gap-1">
               <GroupHeader 
                 num="02" 
                 titleAr="الكتالوج النباتي" 
-                titleEn="Plant Catalog" 
+                titleEn="Botanical Catalog" 
               />
               <div className="flex flex-col gap-1">
-                <IndexRow titleAr="مدخل الكتالوج النباتي" titleEn="Plant Catalog Overview" range={pages.productsCover} isSpecial={true} />
+                <IndexRow titleAr="مدخل الكتالوج النباتي" titleEn="Catalog Overview" range={pages.productsCover} isSpecial={true} />
                 <IndexRow titleAr="أشجار النخيل" titleEn="Palm Trees" range={pages.palmTrees} />
                 <IndexRow titleAr="أشجار الظل" titleEn="Shade Trees" range={pages.shadeTrees} />
                 <IndexRow titleAr="الأشجار المحلية" titleEn="Native Trees" range={pages.nativeTrees} />
@@ -154,14 +163,14 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
           </div>
 
           {/* ========================================================================= */}
-          {/* LEFT COLUMN (SECOND READING COLUMN IN RTL) */}
+          {/* LEFT COLUMN (SECOND READING COLUMN IN ARABIC RTL) */}
           {/* ========================================================================= */}
-          <div className="flex flex-col justify-between h-full gap-3">
-            {/* GROUP 02 (CONTINUED): PLANT CATALOG (PART 2) */}
+          <div className="flex flex-col justify-between h-full gap-2.5">
+            {/* GROUP 02 (CONTINUED): BOTANICAL CATALOG (PART 2) */}
             <div className="flex flex-col gap-1">
               <GroupHeader 
-                titleAr="الكتالوج النباتي (تتمة)" 
-                titleEn="Plant Catalog (Cont.)" 
+                titleAr="الكتالوج النباتي (تتمة الأصناف)" 
+                titleEn="Botanical Catalog (Cont.)" 
               />
               <div className="flex flex-col gap-1">
                 <IndexRow titleAr="الشجيرات والنباتات" titleEn="Shrubs & Plants" range={pages.shrubs} />
@@ -176,15 +185,15 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
             <div className="flex flex-col gap-1">
               <GroupHeader 
                 num="03" 
-                titleAr="المشاريع والأداء المؤسسي" 
-                titleEn="Projects & Corporate Performance" 
+                titleAr="المشاريع والأداء الميداني" 
+                titleEn="Projects & Delivery" 
               />
               <div className="flex flex-col gap-1">
-                <IndexRow titleAr="المشاريع" titleEn="Projects" range={pages.projects} isSpecial={true} />
-                <IndexRow titleAr="منهجية العمل" titleEn="Process" range={pages.process} />
-                <IndexRow titleAr="الجودة" titleEn="Quality" range={pages.quality} />
-                <IndexRow titleAr="الإنجازات" titleEn="Achievements" range={pages.achievements} />
-                <IndexRow titleAr="معرض الصور" titleEn="Gallery" range={pages.gallery} />
+                <IndexRow titleAr="المشاريع الميدانية" titleEn="Featured Projects" range={pages.projects} isSpecial={true} />
+                <IndexRow titleAr="منهجية التنفيذ" titleEn="Delivery Workflow" range={pages.process} />
+                <IndexRow titleAr="معايير الجودة والسلامة" titleEn="Quality & Compliance" range={pages.quality} />
+                <IndexRow titleAr="سجل الإنجازات" titleEn="Strategic Milestones" range={pages.achievements} />
+                <IndexRow titleAr="التوثيق الميداني" titleEn="Field Evidence" range={pages.gallery} />
               </div>
             </div>
 
@@ -192,11 +201,11 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
             <div className="flex flex-col gap-1">
               <GroupHeader 
                 num="04" 
-                titleAr="التواصل" 
-                titleEn="Contact" 
+                titleAr="التواصل والشراكة" 
+                titleEn="Contact & Engagement" 
               />
               <div className="flex flex-col gap-1">
-                <IndexRow titleAr="التواصل والمعلومات الرسمية" titleEn="Corporate Contact & Directory" range={pages.contact} isSpecial={true} />
+                <IndexRow titleAr="بيانات التواصل والمعلومات الرسمية" titleEn="Corporate Contact Directory" range={pages.contact} isSpecial={true} />
               </div>
             </div>
           </div>
@@ -204,7 +213,7 @@ export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
         </div>
 
         {/* Footer Navigation Bar */}
-        <div className="flex items-center justify-between pt-2 border-t border-brand-warm/15 text-[9px] text-brand-dark/55 uppercase tracking-widest font-sans" dir="ltr">
+        <div className="flex items-center justify-between pt-1.5 border-t border-brand-warm/15 text-[8.5px] text-brand-dark/55 uppercase tracking-widest font-sans" dir="ltr">
           <span className="font-semibold text-brand-forest">Rayat Najd Corporate Profile • Document Index & Navigation</span>
           <span className="font-arabic font-semibold text-brand-forest" dir="rtl">فهرس المحتويات والمراجع الرسمية — شركة رايات نجد</span>
         </div>

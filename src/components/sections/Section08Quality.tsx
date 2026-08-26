@@ -56,26 +56,26 @@ export function Section08Quality({ startPageNumber = 35 }: { startPageNumber?: n
           {pillars.map((p, i) => (
             <div 
               key={i} 
-              className="bg-white p-4 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between"
+              className="card-surface card-surface-hover p-4 flex flex-col justify-between"
             >
               <div>
-                <div className="w-8 h-8 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center mb-2.5">
+                <div className="card-number-badge mb-2.5">
                   {p.num}
                 </div>
-                <EditableText as="h3" className="font-sans text-brand-forest font-bold text-xs mb-0.5">{p.titleEn}</EditableText>
-                <EditableText as="h4" className="font-arabic text-brand-forest font-bold text-xs mb-2 text-right" dir="rtl">{p.titleAr}</EditableText>
+                <EditableText as="h3" className="card-title-en text-xs mb-0.5">{p.titleEn}</EditableText>
+                <EditableText as="h4" className="card-title-ar text-xs mb-2" dir="rtl">{p.titleAr}</EditableText>
 
                 <div className="space-y-1.5 border-t border-brand-warm/10 pt-2">
-                  <EditableText as="p" className="text-brand-dark/75 font-sans text-[10px] leading-snug">
+                  <EditableText as="p" className="card-body-en text-[10px] leading-snug">
                     {p.descEn}
                   </EditableText>
-                  <EditableText as="p" className="text-brand-dark/75 font-arabic text-[10.5px] leading-snug text-right" dir="rtl">
+                  <EditableText as="p" className="card-body-ar text-[10.5px] leading-snug" dir="rtl">
                     {p.descAr}
                   </EditableText>
                 </div>
               </div>
 
-              <div className="mt-3 pt-1.5 border-t border-brand-warm/10 text-center text-[8px] uppercase tracking-widest text-brand-gold font-bold">
+              <div className="mt-3 pt-1.5 border-t border-brand-warm/10 text-center card-tag-gold">
                 Governance Pillar {p.num}
               </div>
             </div>

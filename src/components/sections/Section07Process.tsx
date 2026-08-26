@@ -73,22 +73,22 @@ export function Section07Process({ startPageNumber = 34 }: { startPageNumber?: n
                   </div>
 
                   {/* Step Card */}
-                  <div className="bg-white p-3.5 rounded-2xl border border-brand-warm/15 shadow-sm w-full flex flex-col justify-between h-[180px]">
+                  <div className="card-surface card-surface-hover p-3.5 w-full flex flex-col justify-between h-[180px]">
                     <div>
-                      <EditableText as="h3" className="font-sans text-brand-forest font-bold text-xs mb-0.5">{step.titleEn}</EditableText>
-                      <EditableText as="h4" className="font-arabic text-brand-forest font-bold text-[11px] mb-2" dir="rtl">{step.titleAr}</EditableText>
+                      <EditableText as="h3" className="card-title-en text-xs mb-0.5">{step.titleEn}</EditableText>
+                      <EditableText as="h4" className="card-title-ar text-[11px] mb-2" dir="rtl">{step.titleAr}</EditableText>
                       
                       <div className="space-y-1 border-t border-brand-warm/10 pt-2">
-                        <EditableText as="p" className="text-brand-dark/75 font-sans text-[9px] leading-snug">
+                        <EditableText as="p" className="card-body-en text-[9px] leading-snug">
                           {step.descEn}
                         </EditableText>
-                        <EditableText as="p" className="text-brand-dark/75 font-arabic text-[9.5px] leading-snug" dir="rtl">
+                        <EditableText as="p" className="card-body-ar text-[9.5px] leading-snug" dir="rtl">
                           {step.descAr}
                         </EditableText>
                       </div>
                     </div>
 
-                    <div className="mt-1 pt-1 border-t border-brand-warm/10 text-center text-[7.5px] uppercase tracking-widest text-brand-gold font-bold">
+                    <div className="mt-1 pt-1 border-t border-brand-warm/10 text-center card-tag-gold">
                       Stage {step.num}
                     </div>
                   </div>

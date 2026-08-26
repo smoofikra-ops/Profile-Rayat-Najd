@@ -57,9 +57,9 @@ export function Section03Services({ startPageNumber = 6 }: { startPageNumber?: n
           {services.map((svc, i) => (
             <div 
               key={i} 
-              className="bg-white rounded-2xl border border-brand-warm/15 shadow-sm overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-md"
+              className="card-surface card-surface-hover overflow-hidden flex flex-col justify-between group"
             >
-              {/* Image: 58% height */}
+              {/* Image: top of card */}
               <div className="h-36 relative bg-brand-forest overflow-hidden shrink-0">
                 <img 
                   src={svc.image} 
@@ -68,23 +68,23 @@ export function Section03Services({ startPageNumber = 6 }: { startPageNumber?: n
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-2 left-2.5 right-2.5 flex justify-between items-end text-white">
-                  <span className="text-[11px] font-sans font-bold leading-tight">{svc.titleEn}</span>
-                  <span className="text-[12px] font-arabic font-bold leading-tight text-brand-gold" dir="rtl">{svc.titleAr}</span>
+                  <span className="card-title-en text-[11px] text-white leading-tight">{svc.titleEn}</span>
+                  <span className="card-title-ar text-[12px] leading-tight text-brand-gold" dir="rtl">{svc.titleAr}</span>
                 </div>
               </div>
 
-              {/* Text: 42% height */}
+              {/* Content */}
               <div className="p-3.5 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <EditableText as="p" className="text-brand-dark/80 font-sans text-[10px] leading-snug">
+                  <EditableText as="p" className="card-body-en text-[10px] leading-snug">
                     {svc.descEn}
                   </EditableText>
                   <div className="w-full h-px bg-brand-warm/10"></div>
-                  <EditableText as="p" className="text-brand-dark/80 font-arabic text-[11px] leading-snug text-right" dir="rtl">
+                  <EditableText as="p" className="card-body-ar text-[11px] leading-snug" dir="rtl">
                     {svc.descAr}
                   </EditableText>
                 </div>
-                <div className="mt-2.5 pt-1.5 border-t border-brand-warm/10 flex items-center justify-between text-[8.5px] uppercase tracking-widest text-brand-forest font-bold">
+                <div className="mt-2.5 pt-1.5 border-t border-brand-warm/10 flex items-center justify-between text-[8px] uppercase tracking-widest text-brand-forest font-bold">
                   <span>Professional Service</span>
                   <span className="font-arabic" dir="rtl">تنفيذ معتمد</span>
                 </div>

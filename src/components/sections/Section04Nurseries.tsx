@@ -44,38 +44,46 @@ export function Section04Nurseries({ startPageNumber = 8 }: { startPageNumber?: 
             {/* Strategic Pillars (5 Columns) */}
             <div className="col-span-5 flex flex-col justify-between gap-3">
               {/* Card 1: Production Scale */}
-              <div className="bg-white p-4 rounded-xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+              <div className="card-surface card-surface-hover p-4 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <EditableText as="h4" className="text-brand-forest font-sans text-xs font-bold">Vast Production Scale</EditableText>
-                    <EditableText as="h4" className="text-brand-forest font-arabic text-xs font-bold" dir="rtl">طاقة إنتاجية كبرى</EditableText>
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <EditableText as="h4" className="card-title-en text-xs">Vast Production Scale</EditableText>
+                    <EditableText as="h4" className="card-title-ar text-xs" dir="rtl">طاقة إنتاجية كبرى</EditableText>
                   </div>
-                  <div className="space-y-1 border-t border-brand-warm/10 pt-1.5">
-                    <EditableText as="p" className="text-brand-dark/80 font-sans text-[10px] leading-snug">
+                  <div className="space-y-1 border-t border-brand-warm/10 pt-2">
+                    <EditableText as="p" className="card-body-en text-[10px] leading-snug">
                       High-volume annual output dedicated to mega-projects, municipal greening, and government master plans.
                     </EditableText>
-                    <EditableText as="p" className="text-brand-dark/80 font-arabic text-[10.5px] leading-snug text-right" dir="rtl">
+                    <EditableText as="p" className="card-body-ar text-[10.5px] leading-snug" dir="rtl">
                       إنتاج كمي سنوي مخصص لتلبية احتياجات المشاريع الكبرى والمبادرات الوطنية لزيادة الغطاء النباتي.
                     </EditableText>
                   </div>
                 </div>
+                <div className="mt-2 pt-1 border-t border-brand-warm/10 flex items-center justify-between card-tag-forest">
+                  <span>High Volume</span>
+                  <span className="font-arabic" dir="rtl">إنتاج كمي مستمر</span>
+                </div>
               </div>
 
               {/* Card 2: Acclimatization & Quality */}
-              <div className="bg-white p-4 rounded-xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+              <div className="card-surface card-surface-hover p-4 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <EditableText as="h4" className="text-brand-forest font-sans text-xs font-bold">Acclimatization & Hardening</EditableText>
-                    <EditableText as="h4" className="text-brand-forest font-arabic text-xs font-bold" dir="rtl">التقسية والتأهيل المناخي</EditableText>
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <EditableText as="h4" className="card-title-en text-xs">Acclimatization & Hardening</EditableText>
+                    <EditableText as="h4" className="card-title-ar text-xs" dir="rtl">التقسية والتأهيل المناخي</EditableText>
                   </div>
-                  <div className="space-y-1 border-t border-brand-warm/10 pt-1.5">
-                    <EditableText as="p" className="text-brand-dark/80 font-sans text-[10px] leading-snug">
+                  <div className="space-y-1 border-t border-brand-warm/10 pt-2">
+                    <EditableText as="p" className="card-body-en text-[10px] leading-snug">
                       Controlled open-field conditioning ensures maximum drought, heat, and salinity resistance.
                     </EditableText>
-                    <EditableText as="p" className="text-brand-dark/80 font-arabic text-[10.5px] leading-snug text-right" dir="rtl">
+                    <EditableText as="p" className="card-body-ar text-[10.5px] leading-snug" dir="rtl">
                       عمليات تأهيل حقلي دقيقة لضمان أعلى درجات التكيف مع البيئة المحلية ومقاومة الجفاف والملوحة.
                     </EditableText>
                   </div>
+                </div>
+                <div className="mt-2 pt-1 border-t border-brand-warm/10 flex items-center justify-between card-tag-forest">
+                  <span>Arid Resilience</span>
+                  <span className="font-arabic" dir="rtl">تحمل بيئي فائق</span>
                 </div>
               </div>
             </div>
@@ -111,27 +119,27 @@ export function Section04Nurseries({ startPageNumber = 8 }: { startPageNumber?: 
           {/* Layout: Operational Narrative (5 cols) + Real Logistics/Staging Image (7 cols) */}
           <div className="grid grid-cols-12 gap-5 my-auto items-stretch">
             {/* Operational Text & Specifications (5 Columns) */}
-            <div className="col-span-5 flex flex-col justify-between bg-white p-5 rounded-2xl border border-brand-warm/15 shadow-sm">
+            <div className="col-span-5 flex flex-col justify-between card-surface p-5">
               <div>
-                <EditableText as="h3" className="text-brand-forest font-sans text-sm font-bold mb-1">Nationwide Distribution Capabilities</EditableText>
-                <EditableText as="h4" className="text-brand-forest font-arabic text-sm font-bold mb-2.5 text-right" dir="rtl">أسطول متكامل للتوريد المباشر لكافة المواقع</EditableText>
+                <EditableText as="h3" className="card-title-en text-sm mb-1">Nationwide Distribution Capabilities</EditableText>
+                <EditableText as="h4" className="card-title-ar text-sm mb-2.5 text-right" dir="rtl">أسطول متكامل للتوريد المباشر لكافة المواقع</EditableText>
                 
                 <div className="space-y-2 border-t border-brand-warm/10 pt-2">
-                  <EditableText as="p" className="text-brand-dark/80 font-sans text-[10.5px] leading-relaxed text-justify">
+                  <EditableText as="p" className="card-body-en text-[10.5px] leading-relaxed text-justify">
                     A dedicated fleet of climate-managed transport vehicles and heavy crane carriers guarantees safe, phased delivery of fragile seedlings and mature specimen trees to remote project locations across Saudi Arabia.
                   </EditableText>
-                  <EditableText as="p" className="text-brand-dark/80 font-arabic text-[11.5px] leading-relaxed text-right" dir="rtl">
+                  <EditableText as="p" className="card-body-ar text-[11.5px] leading-relaxed" dir="rtl">
                     أسطول مجهز بوسائل نقل مهيأة ورافعات متخصصة يضمن التوريد المرحلي الآمن للشتلات والأشجار المعمرة إلى مواقع المشاريع في كافة مناطق المملكة دون الإضرار بسلامة المجموع الجذري.
                   </EditableText>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-2 pt-3 border-t border-brand-warm/10 text-center">
-                <div className="bg-brand-light p-2 rounded-lg">
+                <div className="bg-brand-cream/60 border border-brand-warm/15 p-2 rounded-xl">
                   <span className="text-[10px] font-sans font-bold text-brand-forest block">Phased Staging</span>
                   <span className="text-[9px] font-arabic text-brand-dark/70 block" dir="rtl">توريد مرحلي منتظم</span>
                 </div>
-                <div className="bg-brand-light p-2 rounded-lg">
+                <div className="bg-brand-cream/60 border border-brand-warm/15 p-2 rounded-xl">
                   <span className="text-[10px] font-sans font-bold text-brand-forest block">Rootball Integrity</span>
                   <span className="text-[9px] font-arabic text-brand-dark/70 block" dir="rtl">حماية المجموع الجذري</span>
                 </div>

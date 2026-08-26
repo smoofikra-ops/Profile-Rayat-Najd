@@ -58,7 +58,7 @@ export function Section10Gallery({ startPageNumber = 37 }: { startPageNumber?: n
           {images.map((item, idx) => (
             <div 
               key={idx} 
-              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-warm/15 flex flex-col justify-between"
+              className="card-surface card-surface-hover overflow-hidden flex flex-col justify-between"
             >
               <div className="h-28 relative bg-brand-forest overflow-hidden">
                 <img 
@@ -67,9 +67,9 @@ export function Section10Gallery({ startPageNumber = 37 }: { startPageNumber?: n
                   className="w-full h-full object-cover filter brightness-95 hover:scale-105 transition-transform duration-500" 
                 />
               </div>
-              <div className="p-2.5 flex items-center justify-between bg-white">
-                <span className="text-brand-dark font-sans text-[10px] font-bold">{item.captionEn}</span>
-                <span className="text-brand-forest font-arabic text-[11px] font-bold" dir="rtl">{item.captionAr}</span>
+              <div className="p-2.5 flex items-center justify-between gap-2">
+                <span className="card-title-en text-[10px] truncate">{item.captionEn}</span>
+                <span className="card-title-ar text-[11px] truncate" dir="rtl">{item.captionAr}</span>
               </div>
             </div>
           ))}

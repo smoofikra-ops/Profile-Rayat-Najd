@@ -222,14 +222,14 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                   </div>
 
                   {/* Content Column (5 cols = ~42%) */}
-                  <div className="col-span-5 flex flex-col justify-between bg-white p-5 rounded-2xl border border-brand-warm/15 shadow-sm">
+                  <div className="col-span-5 flex flex-col justify-between card-surface p-5">
                     <div>
                       <div className="space-y-2 mb-3">
-                        <EditableText as="p" className="text-brand-dark/85 font-sans text-[11px] leading-relaxed text-justify">
+                        <EditableText as="p" className="card-body-en text-[11px] leading-relaxed text-justify">
                           {cap.descEn}
                         </EditableText>
                         <div className="w-full h-px bg-brand-warm/10"></div>
-                        <EditableText as="p" className="text-brand-dark/85 font-arabic text-[12px] leading-relaxed text-justify" dir="rtl">
+                        <EditableText as="p" className="card-body-ar text-[12px] leading-relaxed text-justify" dir="rtl">
                           {cap.descAr}
                         </EditableText>
                       </div>
@@ -373,13 +373,13 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                   </div>
 
                   {/* Center Capability Statement (4 cols) */}
-                  <div className="col-span-4 flex flex-col justify-between bg-white p-4 rounded-2xl border border-brand-warm/15 shadow-sm">
+                  <div className="col-span-4 flex flex-col justify-between card-surface p-4">
                     <div className="space-y-2">
-                      <EditableText as="p" className="text-brand-dark/85 font-sans text-[10.5px] leading-snug text-justify">
+                      <EditableText as="p" className="card-body-en text-[10.5px] leading-snug text-justify">
                         {cap.descEn}
                       </EditableText>
                       <div className="w-full h-px bg-brand-warm/10"></div>
-                      <EditableText as="p" className="text-brand-dark/85 font-arabic text-[11.5px] leading-snug text-justify" dir="rtl">
+                      <EditableText as="p" className="card-body-ar text-[11.5px] leading-snug text-justify" dir="rtl">
                         {cap.descAr}
                       </EditableText>
                     </div>
@@ -447,9 +447,9 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                 {/* Bilingual Capability Blocks */}
                 <div className="grid grid-cols-2 gap-5 my-auto items-stretch">
                   {/* English Block */}
-                  <div className="bg-white p-4 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between">
+                  <div className="card-surface p-4 flex flex-col justify-between">
                     <div>
-                      <EditableText as="p" className="text-brand-dark/85 font-sans text-[11px] leading-relaxed mb-3 text-justify">
+                      <EditableText as="p" className="card-body-en text-[11px] leading-relaxed mb-3 text-justify">
                         {cap.descEn}
                       </EditableText>
                       <div className="space-y-1 border-t border-brand-warm/10 pt-2">
@@ -464,9 +464,9 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                   </div>
 
                   {/* Arabic Block */}
-                  <div className="bg-white p-4 rounded-2xl border border-brand-warm/15 shadow-sm flex flex-col justify-between text-right" dir="rtl">
+                  <div className="card-surface p-4 flex flex-col justify-between text-right" dir="rtl">
                     <div>
-                      <EditableText as="p" className="text-brand-dark/85 font-arabic text-[12px] leading-relaxed mb-3 text-justify">
+                      <EditableText as="p" className="card-body-ar text-[12px] leading-relaxed mb-3 text-justify">
                         {cap.descAr}
                       </EditableText>
                       <div className="space-y-1 border-t border-brand-warm/10 pt-2">

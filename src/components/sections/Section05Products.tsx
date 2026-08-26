@@ -468,7 +468,7 @@ export function Section05Products({ startPageNumber = 14 }: { startPageNumber?: 
                       {cat.ar}
                     </EditableText>
                     <div className="w-20 h-0.5 bg-brand-gold/60 mx-auto mb-3"></div>
-                    <div className="grid grid-cols-2 gap-6 text-[11px] text-brand-beige">
+                    <div className="grid grid-cols-2 gap-6 text-[15px] text-brand-beige">
                       <EditableText as="p" className="text-justify font-sans leading-snug">{cat.descEn}</EditableText>
                       <EditableText as="p" className="text-justify font-arabic leading-snug" dir="rtl">{cat.descAr}</EditableText>
                     </div>
@@ -542,8 +542,8 @@ function ProductCard({
   key?: React.Key;
 }) {
   return (
-    <div className="flex flex-col bg-white border border-brand-warm/15 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 justify-between">
-      {/* 1. PHOTOGRAPH (top 58% of card) */}
+    <div className="card-surface card-surface-hover flex flex-col justify-between overflow-hidden">
+      {/* 1. PHOTOGRAPH (top of card) */}
       <div className="h-36 relative bg-brand-light overflow-hidden shrink-0 border-b border-brand-warm/10">
         {imageUrl ? (
           <img 
@@ -557,33 +557,34 @@ function ProductCard({
       </div>
 
       {/* 2. Plant Information */}
-      <div className="p-3 flex-1 flex flex-col justify-between">
+      <div className="p-3.5 flex-1 flex flex-col justify-between">
         <div>
           {/* Names Row */}
-          <div className="flex items-center justify-between mb-0.5">
-            <EditableText as="h4" className="font-arabic text-brand-forest font-bold text-xs" dir="rtl">{titleAr}</EditableText>
-            <EditableText as="h4" className="font-sans text-brand-dark font-bold text-[11px]">{titleEn}</EditableText>
+          <div className="flex items-center justify-between gap-2 mb-1">
+            <EditableText as="h4" className="card-title-ar text-[13px]" dir="rtl">{titleAr}</EditableText>
+            <EditableText as="h4" className="card-title-en text-[11.5px]">{titleEn}</EditableText>
           </div>
 
-          {/* Scientific Name */}
-          <EditableText as="p" className="text-brand-gold text-[9.5px] italic font-serif text-center mb-2">
+          {/* Scientific Botanical Name */}
+          <EditableText as="p" className="card-scientific text-[12.5px] text-center my-1.5">
             {scientific}
           </EditableText>
 
-          {/* Key Indicators */}
+          {/* Key Indicators / Characteristics */}
           <div className="space-y-1 pt-1.5 border-t border-brand-warm/10">
-            <EditableText as="p" className="text-[8.5px] text-brand-dark/75 font-sans leading-tight text-center">
+            <EditableText as="p" className="card-body-en text-[10px] leading-snug text-center">
               {descEn}
             </EditableText>
-            <EditableText as="p" className="text-[9.5px] text-brand-dark/75 font-arabic leading-tight text-center" dir="rtl">
+            <EditableText as="p" className="card-body-ar text-[11px] leading-snug text-center" dir="rtl">
               {descAr}
             </EditableText>
           </div>
         </div>
 
-        {/* Bottom Tag */}
-        <div className="mt-2 pt-1 border-t border-brand-warm/10 text-center text-[7.5px] uppercase tracking-widest text-brand-forest font-bold">
-          Acclimatized Variety
+        {/* Bottom Tag / Verification */}
+        <div className="mt-2.5 pt-1.5 border-t border-brand-warm/10 flex items-center justify-between text-[8px] uppercase tracking-widest text-brand-forest font-bold">
+          <span>Acclimatized Variety</span>
+          <span className="font-arabic" dir="rtl">صنف متكيف ومقسى</span>
         </div>
       </div>
     </div>

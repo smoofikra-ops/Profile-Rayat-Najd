@@ -165,6 +165,44 @@ body {
   .typo-table-td {
     @apply text-[14px] font-normal text-brand-dark;
   }
+
+  /* Global Corporate Card & Typography System */
+  .card-surface {
+    @apply bg-white rounded-2xl border border-brand-warm/15 shadow-sm transition-all duration-300;
+  }
+  .card-surface-hover {
+    @apply hover:shadow-md hover:border-brand-warm/25;
+  }
+  .card-title-ar {
+    @apply font-arabic font-bold text-brand-forest leading-snug;
+  }
+  .card-title-en {
+    @apply font-sans font-bold text-brand-dark leading-snug;
+  }
+  .card-scientific {
+    @apply font-serif italic text-brand-gold leading-none tracking-normal;
+  }
+  .card-body-ar {
+    @apply font-arabic text-brand-dark/80 leading-relaxed text-right;
+  }
+  .card-body-en {
+    @apply font-sans text-brand-dark/80 leading-relaxed text-left;
+  }
+  .card-meta-ar {
+    @apply font-arabic text-[9.5px] font-semibold text-brand-dark/60;
+  }
+  .card-meta-en {
+    @apply font-sans text-[8.5px] uppercase tracking-wider font-semibold text-brand-dark/60;
+  }
+  .card-tag-gold {
+    @apply text-[8px] uppercase tracking-widest text-brand-gold font-bold;
+  }
+  .card-tag-forest {
+    @apply text-[8px] uppercase tracking-widest text-brand-forest font-bold;
+  }
+  .card-number-badge {
+    @apply w-8 h-8 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center shrink-0 shadow-sm border border-brand-gold/20;
+  }
   
 /* Master Landscape Page System */
   .landscape-page {
