@@ -131,6 +131,7 @@ const categories: CategoryData[] = [
         titleEn: "Umbrella Thorn Acacia", 
         titleAr: "السمر", 
         scientific: "Acacia tortilis",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/native-drought-tolerant/acacia-tortilis-umbrella-thorn.webp",
         indicators: "Iconic Desert Shape | Zero Maintenance | Native Biodiversity",
         indicatorsAr: "شكل صحراوي مميز | استهلاك مائي أدنى | تعزيز التنوع الحيوي"
       },
@@ -138,6 +139,7 @@ const categories: CategoryData[] = [
         titleEn: "Salam Acacia", 
         titleAr: "السلم", 
         scientific: "Acacia ehrenbergiana",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/native-drought-tolerant/acacia-ehrenbergiana-salam.webp",
         indicators: "High Heat Tolerance | Low Water Demand | Wildlife Habitat",
         indicatorsAr: "تحمل عالي للحرارة | استهلاك مائي منخفض | بيئة للحياة الفطرية"
       },
@@ -145,6 +147,7 @@ const categories: CategoryData[] = [
         titleEn: "Christ's Thorn Jujube", 
         titleAr: "السدر البري", 
         scientific: "Ziziphus spina-christi",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/native-drought-tolerant/ziziphus-spina-christi-sidr.webp",
         indicators: "Cultural Value | High Drought Tolerance | Dense Shade",
         indicatorsAr: "قيمة تراثية وبيئية | تحمل عالي للجفاف | ظل وفير"
       }
@@ -161,6 +164,7 @@ const categories: CategoryData[] = [
         titleEn: "Royal Poinciana / Gulmohar", 
         titleAr: "البوانسيانا الملكية", 
         scientific: "Delonix regia",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/ornamental-trees/delonix-regia-royal-poinciana.webp",
         indicators: "Vibrant Scarlet Flowers | Broad Umbrella Canopy | Fast Growing",
         indicatorsAr: "أزهار حمراء مميزة | مظلة خيمية واسعة | نمو سريع"
       },
@@ -168,6 +172,7 @@ const categories: CategoryData[] = [
         titleEn: "Yellow Poinciana", 
         titleAr: "بيلتوفورم (البوانسيانا الصفراء)", 
         scientific: "Peltophorum pterocarpum",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/ornamental-trees/peltophorum-pterocarpum-yellow-poinciana.webp",
         indicators: "Golden Yellow Blooms | High Heat Tolerance | Street Tree",
         indicatorsAr: "أزهار صفراء ذهبية | تحمل عالي للحرارة | لتشجير الشوارع"
       },
@@ -182,6 +187,7 @@ const categories: CategoryData[] = [
         titleEn: "Golden Shower Tree", 
         titleAr: "كاسيا فيستولا (خيار شمبر)", 
         scientific: "Cassia fistula",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/ornamental-trees/cassia-fistula-golden-shower-tree.webp",
         indicators: "Cascading Golden Flowers | High Heat Tolerance | Decorative",
         indicatorsAr: "عناقيد زهرية ذهبية | تحمل ممتاز للحرارة | قيمة تزيينية"
       }
@@ -198,6 +204,7 @@ const categories: CategoryData[] = [
         titleEn: "Bougainvillea", 
         titleAr: "الجهنمية", 
         scientific: "Bougainvillea spectabilis",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shrubs/bougainvillea-spectabilis-bougainvillea.webp",
         indicators: "Continuous Flowering | Extreme Drought Tolerance | Versatile",
         indicatorsAr: "إزهار مستمر | تحمل شديد للجفاف | متعددة الاستخدامات"
       },
@@ -205,6 +212,7 @@ const categories: CategoryData[] = [
         titleEn: "Oleander", 
         titleAr: "الدفلة", 
         scientific: "Nerium oleander",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shrubs/nerium-oleander-oleander.webp",
         indicators: "High Heat & Salinity Tolerance | Highway Median Greening",
         indicatorsAr: "تحمل فائق للحرارة والملوحة | مثالية للجزر الوسطية"
       },
@@ -212,6 +220,7 @@ const categories: CategoryData[] = [
         titleEn: "Yellow Bells", 
         titleAr: "تيكوما ستانس", 
         scientific: "Tecoma stans",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shrubs/tecoma-stans-yellow-bells.webp",
         indicators: "Yellow Bell Flowers | Fast Growing | Drought Hardy",
         indicatorsAr: "أزهار جرسية صفراء | نمو سريع | مقاومة للجفاف"
       },
@@ -219,6 +228,7 @@ const categories: CategoryData[] = [
         titleEn: "Lantana Camara", 
         titleAr: "لانتانا كمارا", 
         scientific: "Lantana camara",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shrubs/lantana-camara-lantana.webp",
         indicators: "Multicolor Blooms | Ground Coverage | Extremely Resilient",
         indicatorsAr: "أزهار متعددة الألوان | تغطية كثيفة | مقاومة عالية للظروف"
       }
@@ -235,6 +245,7 @@ const categories: CategoryData[] = [
         titleEn: "Wedelia", 
         titleAr: "ويديليا (سفندر صخري)", 
         scientific: "Sphagneticola trilobata",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/ground-covers/sphagneticola-trilobata-wedelia.webp",
         indicators: "Dense Green Carpet | Yellow Daisy Flowers | Erosion Control",
         indicatorsAr: "سجادة خضراء كثيفة | أزهار صفراء | منع انجراف التربة"
       },
@@ -242,6 +253,7 @@ const categories: CategoryData[] = [
         titleEn: "Portulacaria / Elephant Bush", 
         titleAr: "بورتولاكاريا (رجلة الشجر)", 
         scientific: "Portulacaria afra",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/ground-covers/portulacaria-afra-elephant-bush.webp",
         indicators: "Succulent Leaves | High Carbon Sequestration | Low Irrigation",
         indicatorsAr: "أوراق عصارية | امتصاص عالي للكربون | استهلاك ري قليل"
       },
@@ -249,6 +261,7 @@ const categories: CategoryData[] = [
         titleEn: "Sesuvium", 
         titleAr: "سيسوفيوم (غاسول)", 
         scientific: "Sesuvium portulacastrum",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/ground-covers/sesuvium-portulacastrum-sesuvium.webp",
         indicators: "Extreme Salinity Tolerance | Coastal & Urban Landscapes",
         indicatorsAr: "تحمل فائق للملوحة | للمناطق الساحلية والحضرية"
       },
@@ -256,6 +269,7 @@ const categories: CategoryData[] = [
         titleEn: "Purple Heart", 
         titleAr: "ستريبتوكاربوس / قلب أرجواني", 
         scientific: "Tradescantia pallida",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/ground-covers/tradescantia-pallida-purple-heart.webp",
         indicators: "Deep Purple Foliage | Contrast Accent | Easy Propagation",
         indicatorsAr: "أوراق أرجوانية مميزة | تباين لوني رائع | سهولة الإكثار"
       }
@@ -272,6 +286,7 @@ const categories: CategoryData[] = [
         titleEn: "Petunia", 
         titleAr: "البتونيا", 
         scientific: "Petunia hybrida",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/seasonal-plants/petunia-hybrida-petunia.webp",
         indicators: "Vibrant Winter/Spring Colors | Flower Beds & Planters",
         indicatorsAr: "ألوان زاهية لموسم الشتاء والربيع | للأحواض والميادين"
       },
@@ -279,6 +294,7 @@ const categories: CategoryData[] = [
         titleEn: "Marigold", 
         titleAr: "المخملية (الماريجولد)", 
         scientific: "Tagetes erecta",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/seasonal-plants/tagetes-erecta-marigold.webp",
         indicators: "Golden Orange Blooms | Pest Repellent | Heat Tolerant",
         indicatorsAr: "أزهار برتقالية وذهبية | طاردة للآفات | تحمل ممتاز"
       },
@@ -286,6 +302,7 @@ const categories: CategoryData[] = [
         titleEn: "Vinca / Madagascar Periwinkle", 
         titleAr: "الونكا (عين البزون)", 
         scientific: "Catharanthus roseus",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/seasonal-plants/catharanthus-roseus-vinca.webp",
         indicators: "Summer Flowering | High Heat Tolerance | Low Maintenance",
         indicatorsAr: "إزهار صيفي وفير | تحمل فائق للحرارة | عناية ميسرة"
       },
@@ -293,6 +310,7 @@ const categories: CategoryData[] = [
         titleEn: "Zinnia", 
         titleAr: "الزينيا", 
         scientific: "Zinnia elegans",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/seasonal-plants/zinnia-elegans-zinnia.webp",
         indicators: "Rich Color Palette | Sun Loving | Long Lasting Blooms",
         indicatorsAr: "تنوع لوني جذاب | محبة لأشعة الشمس | أزهار طويلة البقاء"
       }
@@ -309,6 +327,7 @@ const categories: CategoryData[] = [
         titleEn: "Agave Americana", 
         titleAr: "الأجاف الأمريكي", 
         scientific: "Agave americana",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/desert-plants/agave-americana-century-plant.webp",
         indicators: "Sculptural Form | Extreme Drought Tolerance | Low Irrigation",
         indicatorsAr: "شكل هندسي فريد | أقصى درجات تحمل الجفاف | ري شحيح"
       },
@@ -316,6 +335,7 @@ const categories: CategoryData[] = [
         titleEn: "Aloe Vera", 
         titleAr: "الصبار الطبي (ألوفيرا)", 
         scientific: "Aloe barbadensis",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/desert-plants/aloe-barbadensis-aloe-vera.webp",
         indicators: "Medicinal Foliage | Arid Architecture | Sun Hardy",
         indicatorsAr: "أوراق عصارية علاجية | مناسب للحدائق الجافة | محب للشمس"
       },
@@ -323,6 +343,7 @@ const categories: CategoryData[] = [
         titleEn: "Desert Spoon / Dasylirion", 
         titleAr: "داسيليريون (ملعقة الصحراء)", 
         scientific: "Dasylirion wheeleri",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/desert-plants/dasylirion-wheeleri-desert-spoon.webp",
         indicators: "Fine Blue-Green Foliage | Modern Xeriscaping",
         indicatorsAr: "أوراق إبرية رمادية مزرقة | لتنسيق الحدائق الصحراوية"
       },
@@ -330,6 +351,7 @@ const categories: CategoryData[] = [
         titleEn: "Red Yucca", 
         titleAr: "هسبيرالوي (اليوكا الحمراء)", 
         scientific: "Hesperaloe parviflora",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/desert-plants/hesperaloe-parviflora-red-yucca.webp",
         indicators: "Coral-Red Flower Spikes | Extreme Heat Hardy",
         indicatorsAr: "شماريخ زهرية حمراء | متانة فائقة في الصيف"
       }
@@ -346,6 +368,7 @@ const categories: CategoryData[] = [
         titleEn: "Rangoon Creeper", 
         titleAr: "ياسمين هندي (رنجون)", 
         scientific: "Combretum indicum",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/climbing-plants/combretum-indicum-rangoon-creeper.webp",
         indicators: "Fragrant Color-Changing Flowers | Pergola Shading",
         indicatorsAr: "أزهار عطرية متغيرة الألوان | مثالية لتغطية البرجولات"
       },
@@ -353,6 +376,7 @@ const categories: CategoryData[] = [
         titleEn: "Climbing Bougainvillea", 
         titleAr: "الجهنمية المتسلقة", 
         scientific: "Bougainvillea glabra",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/climbing-plants/bougainvillea-glabra-climbing-bougainvillea.webp",
         indicators: "Massive Floral Display | Wall Coverage | Arid Hardy",
         indicatorsAr: "تغطية زهرية كثيفة | كسوة للجدران | متكيفة مع الجفاف"
       },
@@ -360,6 +384,7 @@ const categories: CategoryData[] = [
         titleEn: "Star Jasmine", 
         titleAr: "الياسمين النجمي", 
         scientific: "Trachelospermum jasminoides",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/climbing-plants/trachelospermum-jasminoides-star-jasmine.webp",
         indicators: "Intensely Fragrant White Flowers | Evergreen Foliage",
         indicatorsAr: "أزهار بيضاء عطرية فواحة | دائم الخضرة"
       },
@@ -367,6 +392,7 @@ const categories: CategoryData[] = [
         titleEn: "Bleeding Heart Vine", 
         titleAr: "كليرودندرون", 
         scientific: "Clerodendrum thomsoniae",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/climbing-plants/clerodendrum-thomsoniae-bleeding-heart-vine.webp",
         indicators: "Two-Tone Red & White Blooms | Shaded Walls",
         indicatorsAr: "أزهار ثنائية اللون مميزة | للجدران والممرات شبه المظللة"
       }
