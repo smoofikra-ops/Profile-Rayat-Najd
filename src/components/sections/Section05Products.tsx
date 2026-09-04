@@ -38,10 +38,18 @@ const categories: CategoryData[] = [
     descAr: "أشجار نخيل التمر وأشجار النخيل المروحية المعمرة والمؤهلة هندسياً للمشاريع الحضرية والطرق الكبرى والمناظر الطبيعية.",
     items: [
       {
+        titleEn: "Royal Palm", 
+        titleAr: "نخل ملكي", 
+        scientific: "Roystonea regia",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-59.webp",
+        indicators: "Broad Crown | Luxury Landscaping | Cold Tolerant",
+        indicatorsAr: "تاج عريض مميز | للمناظر الفاخرة | تحمل ممتاز للبرودة"
+      },
+      {
         titleEn: "Date Palm", 
-        titleAr: "نخيل التمر", 
+        titleAr: "نخل عربي", 
         scientific: "Phoenix dactylifera",
-        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-01.webp",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-64.webp",
         indicators: "High Heat Tolerance | High Salinity Tolerance | Cultural Heritage",
         indicatorsAr: "تحمل عالي للحرارة | تحمل عالي للملوحة | إرث وطني"
       },
@@ -49,7 +57,7 @@ const categories: CategoryData[] = [
         titleEn: "Mexican Fan Palm", 
         titleAr: "واشنطونيا روبستا", 
         scientific: "Washingtonia robusta",
-        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-63.webp",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-49.webp",
         indicators: "Fast Growing | Avenue Landscaping | Medium Drought Tolerance",
         indicatorsAr: "سريع النمو | لتشجير الشوارع والمحاور | تحمل متوسط للجفاف"
       },
@@ -57,17 +65,9 @@ const categories: CategoryData[] = [
         titleEn: "California Fan Palm", 
         titleAr: "واشنطونيا فيليفيرا", 
         scientific: "Washingtonia filifera",
-        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-65.webp",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-31.webp",
         indicators: "High Drought Tolerance | High Salinity Tolerance | Low Irrigation",
         indicatorsAr: "تحمل عالي للجفاف | تحمل عالي للملوحة | استهلاك ري منخفض"
-      },
-      {
-        titleEn: "Canary Island Date", 
-        titleAr: "النخيل الكناري", 
-        scientific: "Phoenix canariensis",
-        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/palm-trees/rayat-najd-palm-tree-nursery-02.webp",
-        indicators: "Broad Crown | Luxury Landscaping | Cold Tolerant",
-        indicatorsAr: "تاج عريض مميز | للمناظر الفاخرة | تحمل ممتاز للبرودة"
       }
     ]
   },
@@ -79,33 +79,36 @@ const categories: CategoryData[] = [
     descAr: "أشجار ذات مظلات كثيفة تساهم في خفض درجات الحرارة الحضرية وتوفير الظل وتجميل الطرق والميادين والحدائق العامة.",
     items: [
       {
+        titleEn: "Neem Tree", 
+        titleAr: "شجرة النيم", 
+        scientific: "Azadirachta indica",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shadow-tree/naim-tree.jpeg",
+        indicators: "High Heat Tolerance | Evergreen | Natural Pest Repellent",
+        indicatorsAr: "تحمل عالي للحرارة | دائم الخضرة | طارد طبيعي للآفات"
+      },
+      {
+        titleEn: "Albizia Lebbeck", 
+        titleAr: "البيزيا لبخ", 
+        scientific: "Albizia lebbeck",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shadow-tree/albizia-lebbeck.webp",
+        indicators: "Fast Growing Shade | High Drought Tolerance | Nitrogen Fixing",
+        indicatorsAr: "شجرة ظل سريعة النمو | تحمل عالي للجفاف | مخصبة للتربة"
+      },
+      {
+        titleEn: "Umbrella Tree", 
+        titleAr: "تيرميناليا مانتالي", 
+        scientific: "Terminalia mantaly",
+        img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/shadow-tree/Terminalia-mantaly%20%20.jpg",
+        indicators: "Architectural Tiered Canopy | Urban Landscapes | Fast Growing",
+        indicatorsAr: "مظلة متدرجة هندسية | للمناظر الحضرية | سريع النمو"
+      },
+      {
         titleEn: "Pongam Tree", 
         titleAr: "بونجاميا (كارانج)", 
         scientific: "Pongamia pinnata",
         img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/trees/rayat-najd-tree-sapling-nursery-01.webp",
         indicators: "High Salinity Tolerance | High Drought Tolerance | Nitrogen Fixing",
         indicatorsAr: "تحمل شديد للملوحة | تحمل عالي للجفاف | مثبت للنيتروجين"
-      },
-      {
-        titleEn: "Umbrella Tree", 
-        titleAr: "تيرميناليا مانتالي", 
-        scientific: "Terminalia mantaly",
-        indicators: "Architectural Tiered Canopy | Urban Landscapes | Fast Growing",
-        indicatorsAr: "مظلة متدرجة هندسية | للمناظر الحضرية | سريع النمو"
-      },
-      {
-        titleEn: "Indian Rosewood", 
-        titleAr: "دالبيرجيا سيسو", 
-        scientific: "Dalbergia sissoo",
-        indicators: "Fast Growing | High Drought Tolerance | Windbreak",
-        indicatorsAr: "سريع النمو | تحمل عالي للجفاف | مصد للرياح"
-      },
-      {
-        titleEn: "Neem", 
-        titleAr: "النيم", 
-        scientific: "Azadirachta indica",
-        indicators: "High Heat Tolerance | Evergreen | Natural Pest Repellent",
-        indicatorsAr: "تحمل عالي للحرارة | دائم الخضرة | طارد طبيعي للآفات"
       }
     ]
   },
@@ -386,9 +389,10 @@ export function Section05Products({ startPageNumber = 14 }: { startPageNumber?: 
             <img 
               src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-04.webp" 
               alt="Rayat Najd Plant Catalog Master Collection" 
-              className="w-full h-full object-cover filter brightness-90 contrast-105" 
+              className="w-full h-full object-cover filter brightness-95 contrast-105" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-forest/95 via-brand-forest/60 to-brand-forest/90"></div>
+            {/* Mode A Hero Dark: localized gradient preserving nursery clarity while keeping text readable */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-forest/90 via-black/35 to-brand-forest/85"></div>
           </div>
 
           {/* Structured Landscape Content */}
@@ -400,7 +404,7 @@ export function Section05Products({ startPageNumber = 14 }: { startPageNumber?: 
             </div>
 
             {/* Center Announcement */}
-            <div className="text-center my-auto bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
+            <div className="text-center my-auto bg-black/45 backdrop-blur-xs p-6 rounded-2xl border border-white/20 shadow-2xl">
               <EditableText as="h1" className="text-white font-sans text-2xl font-bold tracking-wider uppercase mb-1">
                 The Rayat Najd Plant Collection
               </EditableText>
@@ -445,19 +449,20 @@ export function Section05Products({ startPageNumber = 14 }: { startPageNumber?: 
               noSafeArea={true}
             >
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                {/* Dominant Cover Photo */}
+                {/* Mode C: Dominant Category Plant Cover Photo with minimal overlay */}
                 <div className="absolute inset-0 z-0">
                   <img 
                     src={cat.img} 
                     alt={cat.en} 
-                    className="w-full h-full object-cover filter brightness-95 contrast-105" 
+                    className="w-full h-full object-cover filter brightness-[0.98] contrast-105" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/70"></div>
+                  {/* Subtle edge gradients only: middle 60% is unobstructed photography */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/60"></div>
                 </div>
 
                 {/* Localized Category Title & Subtitle */}
                 <div className="relative z-10 w-full max-w-4xl mx-auto px-8 flex flex-col items-center justify-center text-center">
-                  <div className="bg-black/50 backdrop-blur-md px-10 py-6 rounded-2xl border border-white/20 shadow-2xl">
+                  <div className="bg-black/55 backdrop-blur-xs px-10 py-6 rounded-2xl border border-white/20 shadow-2xl">
                     <span className="text-brand-gold font-sans text-[10px] tracking-[0.3em] uppercase font-bold block mb-1">
                       Botanical Category 0{index + 1}
                     </span>
@@ -496,8 +501,8 @@ export function Section05Products({ startPageNumber = 14 }: { startPageNumber?: 
                   </div>
                 </div>
 
-                {/* 4-Card Landscape Grid */}
-                <div className="grid grid-cols-4 gap-4 my-auto items-stretch">
+                {/* 4-Card Landscape Grid (RTL: Item 0 Rightmost -> Item 3 Leftmost) */}
+                <div className="grid grid-cols-4 gap-4 my-auto items-stretch" dir="rtl">
                   {cat.items.map((item, i) => (
                     <ProductCard
                       key={i}

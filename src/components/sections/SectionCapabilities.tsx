@@ -110,7 +110,7 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
       id: "06",
       en: "Urban Landscape Development",
       ar: "تطوير المشهد الحضري والمحاور",
-      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-09.webp",
+      bgImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-hero.webp",
       descEn: "Transforming urban corridors, highway medians, streetscapes, and civic plazas into sustainable green corridors that elevate quality of life.",
       descAr: "تحسين وتطوير المشهد الحضري عبر تشجير الطرق والميادين والمحاور الحضرية لتعزيز جودة الحياة والحد من الانبعاثات الكربونية.",
       keyCapabilitiesEn: [
@@ -278,7 +278,8 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                     alt={cap.en} 
                     className="w-full h-full object-cover filter brightness-95 contrast-105" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-forest/95 via-brand-forest/75 to-transparent"></div>
+                  {/* Mode A: Localized left gradient keeping right 45% fully photographic and visible */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-forest/90 via-brand-forest/65 to-transparent"></div>
                 </div>
 
                 {/* Localized Left Editorial Panel */}
@@ -296,7 +297,7 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                     </div>
 
                     {/* Bilingual Descriptions */}
-                    <div className="bg-black/40 backdrop-blur-md p-4 rounded-xl border border-white/15 space-y-2 mb-3">
+                    <div className="bg-black/45 backdrop-blur-xs p-4 rounded-xl border border-white/15 space-y-2 mb-3">
                       <EditableText as="p" className="text-brand-beige font-sans text-[11px] leading-relaxed text-justify">
                         {cap.descEn}
                       </EditableText>
@@ -335,6 +336,197 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                     <span>Rayat Najd Major Projects Delivery</span>
                     <span className="font-arabic" dir="rtl">حلول معتمدة للمشاريع العملاقة</span>
                   </div>
+                </div>
+              </div>
+            </Section>
+          );
+        } else if (index === 6) {
+          // PAGE 16 RECOMPOSITION: Text on TOP with increased size, TWO balanced large images BELOW side-by-side (50% + 50%)
+          return (
+            <Section key={cap.id} className="bg-brand-beige border-b border-brand-warm/10" pageNumber={pageNum} bgType="pattern">
+              <div className="flex flex-col h-full justify-between py-2">
+                {/* TOP AREA: Typography Hierarchy - Headings and Larger Supporting Text on Top */}
+                <div className="border-b border-brand-warm/20 pb-3 mb-2">
+                  {/* Header Row */}
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-3">
+                      <span className="w-7 h-7 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center shadow-sm">
+                        {cap.id}
+                      </span>
+                      <div>
+                        <EditableText as="h3" className="text-xs uppercase tracking-widest font-sans font-bold text-brand-gold">{cap.en}</EditableText>
+                        <span className="text-[10px] uppercase font-sans text-brand-dark/50 tracking-wider">Rayat Najd Engineering Track</span>
+                      </div>
+                    </div>
+                    <div className="text-right" dir="rtl">
+                      <EditableText as="h2" className="font-arabic text-2xl font-bold text-brand-forest mb-0">{cap.ar}</EditableText>
+                    </div>
+                  </div>
+
+                  {/* Larger Supporting Text in Balanced Editorial Presentation */}
+                  <div className="grid grid-cols-2 gap-6 pt-1">
+                    {/* English Supporting Text & Key Capabilities */}
+                    <div className="space-y-2">
+                      <EditableText as="p" className="text-brand-dark/85 font-sans text-[12px] leading-relaxed text-justify">
+                        {cap.descEn}
+                      </EditableText>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10.5px] text-brand-dark/80 pt-1 border-t border-brand-warm/10">
+                        {cap.keyCapabilitiesEn.map((item, idx) => (
+                          <div key={idx} className="flex items-center gap-1.5 font-sans">
+                            <span className="text-brand-gold text-[8px]">■</span>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Arabic Supporting Text & Key Capabilities (Primary Hierarchy) */}
+                    <div className="space-y-2 text-right" dir="rtl">
+                      <EditableText as="p" className="text-brand-dark/95 font-arabic text-[13px] leading-relaxed text-justify font-medium">
+                        {cap.descAr}
+                      </EditableText>
+                      <div className="flex flex-wrap justify-start gap-x-4 gap-y-1 text-[11px] text-brand-dark/80 pt-1 border-t border-brand-warm/10 font-arabic">
+                        {cap.keyCapabilitiesAr.map((item, idx) => (
+                          <div key={idx} className="flex items-center gap-1.5">
+                            <span className="text-brand-gold text-[8px]">■</span>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* BOTTOM AREA: Two Large Images Side-by-Side (Balanced 50% + 50% Split) */}
+                <div className="grid grid-cols-2 gap-4 flex-1 my-auto min-h-[220px] max-h-[265px]">
+                  {/* Left Image (50%) */}
+                  <div className="rounded-2xl overflow-hidden shadow-sm border border-brand-warm/20 relative bg-brand-forest group">
+                    <img 
+                      src={cap.bgImage} 
+                      alt="Water-Efficient Hydraulic Distribution Networks" 
+                      className="w-full h-full object-cover filter brightness-100 contrast-100" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
+                      <span className="text-[10.5px] font-sans font-bold text-brand-gold">Hydraulic Distribution Networks</span>
+                      <span className="text-[11.5px] font-arabic font-bold text-white" dir="rtl">شبكات ري موفرة للمياه وتوزيع هيدروليكي</span>
+                    </div>
+                  </div>
+
+                  {/* Right Image (50%) */}
+                  <div className="rounded-2xl overflow-hidden shadow-sm border border-brand-warm/20 relative bg-brand-forest group">
+                    <img 
+                      src={cap.secondaryImage || cap.bgImage} 
+                      alt="Automated Central Control & Telemetry Systems" 
+                      className="w-full h-full object-cover filter brightness-100 contrast-100" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
+                      <span className="text-[10.5px] font-sans font-bold text-brand-gold">Automated Telemetry & Pump Systems</span>
+                      <span className="text-[11.5px] font-arabic font-bold text-white" dir="rtl">أنظمة تحكم آلي ومحطات ضخ متقدمة</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sub Bar */}
+                <div className="flex items-center justify-between pt-2 border-t border-brand-warm/15 text-[9px] text-brand-dark/50 uppercase tracking-widest font-sans">
+                  <span>Integrated Infrastructure & Horticultural Systems</span>
+                  <span className="font-arabic" dir="rtl">منظومة زراعية وهندسية متكاملة</span>
+                </div>
+              </div>
+            </Section>
+          );
+        } else if (index === 7) {
+          // PAGE 17 ENLARGEMENT: Dominant Wide Image (55-65% width) + Strong Editorial Typography (40% width)
+          return (
+            <Section key={cap.id} className="bg-brand-light border-b border-brand-warm/10" pageNumber={pageNum} bgType="pattern">
+              <div className="flex flex-col h-full justify-between py-2">
+                {/* Header */}
+                <div className="flex items-center justify-between border-b border-brand-warm/15 pb-2 mb-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-7 h-7 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center shadow-sm">
+                      {cap.id}
+                    </span>
+                    <div>
+                      <EditableText as="h2" className="typo-h1 !text-2xl font-bold !mb-0">{cap.en}</EditableText>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3" dir="rtl">
+                    <EditableText as="h2" className="typo-h1 font-arabic !text-2xl font-bold !mb-0 text-brand-forest">{cap.ar}</EditableText>
+                  </div>
+                </div>
+
+                {/* Major Editorial Layout: Dominant Wide Image (~60% width) + Strong Typography Column (~40% width) */}
+                <div className="grid grid-cols-12 gap-6 flex-1 my-auto items-stretch min-h-[300px]">
+                  {/* Dominant Hero Image (7 cols = ~58.3% of width) */}
+                  <div className="col-span-7 rounded-2xl overflow-hidden shadow-sm border border-brand-warm/20 relative bg-brand-forest min-h-[300px]">
+                    <img 
+                      src={cap.bgImage} 
+                      alt={cap.en} 
+                      className="w-full h-full object-cover filter brightness-100 contrast-100" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
+                      <div>
+                        <span className="text-brand-gold text-[10px] uppercase tracking-widest block font-bold font-sans">
+                          Arboricultural Vitality & Field Care
+                        </span>
+                        <span className="text-xs font-medium text-white/95">
+                          Long-term vegetative health and asset preservation programs
+                        </span>
+                      </div>
+                      <span className="text-[11.5px] font-arabic font-bold text-brand-gold" dir="rtl">
+                        استدامة الأصول الزراعية وسلامة الغطاء النباتي
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Strong Editorial Typography Column (5 cols = ~41.7% of width) */}
+                  <div className="col-span-5 flex flex-col justify-between card-surface p-5 border border-brand-warm/20">
+                    <div className="space-y-3">
+                      {/* Arabic Section (Primary Hierarchy) */}
+                      <div className="text-right border-b border-brand-warm/15 pb-3" dir="rtl">
+                        <EditableText as="h3" className="font-arabic text-lg font-bold text-brand-forest mb-1.5">
+                          إدارة شاملة لصيانة وتطوير الغطاء النباتي
+                        </EditableText>
+                        <EditableText as="p" className="font-arabic text-[12.5px] leading-relaxed text-brand-dark/90 text-justify">
+                          {cap.descAr}
+                        </EditableText>
+                      </div>
+
+                      {/* English Section (Secondary Hierarchy) */}
+                      <div className="text-left">
+                        <EditableText as="h4" className="font-sans text-xs font-bold text-brand-gold uppercase tracking-wider mb-1">
+                          Preventive Maintenance & Arboriculture
+                        </EditableText>
+                        <EditableText as="p" className="font-sans text-[11.5px] leading-relaxed text-brand-dark/80 text-justify">
+                          {cap.descEn}
+                        </EditableText>
+                      </div>
+                    </div>
+
+                    {/* Integrated Service Deliverables */}
+                    <div className="pt-3 border-t border-brand-warm/15 space-y-1.5">
+                      <div className="flex items-center justify-between text-[8.5px] uppercase tracking-widest text-brand-forest font-bold mb-1">
+                        <span>Quality Standards</span>
+                        <span className="font-arabic" dir="rtl">معايير الجودة الزراعية</span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 text-[10px] text-brand-dark/80">
+                        <div className="bg-brand-cream/60 p-2.5 rounded-lg border border-brand-warm/10 font-sans">
+                          ✓ Proactive Health Care
+                        </div>
+                        <div className="bg-brand-cream/60 p-2.5 rounded-lg border border-brand-warm/10 font-arabic text-right" dir="rtl">
+                          ✓ تقليم وتهذيب متخصص
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sub Bar */}
+                <div className="flex items-center justify-between pt-2 border-t border-brand-warm/15 text-[9px] text-brand-dark/50 uppercase tracking-widest font-sans">
+                  <span>Rayat Najd Landscape Asset Management</span>
+                  <span className="font-arabic" dir="rtl">حلول تشغيل وصيانة مستدامة تضمن نضارة المشاريع</span>
                 </div>
               </div>
             </Section>

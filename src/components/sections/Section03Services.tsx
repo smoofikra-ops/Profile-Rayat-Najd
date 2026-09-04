@@ -7,14 +7,14 @@ export function Section03Services({ startPageNumber = 6 }: { startPageNumber?: n
       titleAr: "تنفيذ اللاندسكيب والمشاريع",
       descEn: "Turnkey hardscape and softscape execution for giga-projects, commercial developments, and public parks.",
       descAr: "تنفيذ متكامل لأعمال اللاندسكيب الصلب والناعم للمشاريع الكبرى والمجمعات التجارية والحدائق العامة.",
-      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-04.webp"
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-03.webp"
     },
     {
       titleEn: "Landscape Design",
       titleAr: "تصميم وتخطيط المواقع",
       descEn: "Comprehensive master-planning, microclimate analysis, and horticultural architecture tailored to the Saudi environment.",
       descAr: "مخططات هندسية متكاملة ودراسات مناخية وتصاميم زراعية متوافقة مع البيئة الطبيعية للمملكة.",
-      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-09.webp"
+      image: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-services.webp"
     },
     {
       titleEn: "Greening & Afforestation",

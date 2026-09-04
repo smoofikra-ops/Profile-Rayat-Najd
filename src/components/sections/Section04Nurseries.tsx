@@ -149,11 +149,11 @@ export function Section04Nurseries({ startPageNumber = 8 }: { startPageNumber?: 
             {/* Real Logistics / Operational Photography (7 Columns) */}
             <div className="col-span-7 rounded-2xl overflow-hidden shadow-sm border border-brand-warm/20 relative bg-brand-forest min-h-[220px]">
               <img 
-                src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-01.webp" 
-                alt="Rayat Najd Fleet and Logistics Staging" 
-                className="w-full h-full object-cover filter brightness-95 contrast-105" 
+                src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/section-backgrounds/logistics.jpeg" 
+                alt="Rayat Najd Logistics Services & Heavy Transport Fleet" 
+                className="w-full h-full object-cover object-center filter brightness-100 contrast-100" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
                 <div>
                   <span className="text-brand-gold text-[9px] uppercase tracking-widest block font-bold">Staging & Transport Fleet</span>

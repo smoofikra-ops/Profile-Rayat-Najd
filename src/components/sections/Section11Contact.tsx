@@ -1,5 +1,6 @@
 import { Section, EditableText } from '../ui/Layouts';
 import { Phone, Mail, Globe, MapPin } from 'lucide-react';
+import { RayatNajdEmblem } from '../brand/RayatNajdLogo';
 
 export function Section11Contact({ pageNumber = 38 }: { pageNumber?: number }) {
   return (
@@ -9,24 +10,21 @@ export function Section11Contact({ pageNumber = 38 }: { pageNumber?: number }) {
       noSafeArea={true}
     >
       <div className="relative w-full h-full flex flex-col justify-between overflow-hidden px-12 py-10">
-        {/* Background Subtle Gradient & Pattern */}
+        {/* Mode A Hero Dark: Atmospheric Landscape Photography */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/backgrounds/rayat-najd-website-background-trees.webp" 
             alt="Rayat Najd Back Cover" 
-            className="w-full h-full object-cover filter brightness-50 contrast-125 mix-blend-overlay" 
+            className="w-full h-full object-cover filter brightness-[0.88] contrast-110" 
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-forest via-brand-forest/90 to-brand-forest"></div>
+          {/* Localized gradient preserving clear forest tree silhouettes while securing text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-forest/90 via-brand-forest/65 to-brand-forest/85"></div>
         </div>
 
         {/* Top Branding */}
         <div className="relative z-10 flex items-center justify-between border-b border-brand-gold/40 pb-4">
           <div className="flex items-center gap-3">
-            <img 
-              src="https://nmolabs-cdn.b-cdn.net/Rayat-najd/01-branding/logo-and-icon/rayat-najd-logo-light.webp" 
-              alt="Rayat Najd" 
-              className="h-10 object-contain" 
-            />
+            <RayatNajdEmblem size={44} variant="light" />
             <div className="border-l border-white/20 pl-3">
               <span className="text-white font-sans text-xs tracking-wider uppercase font-bold block">Rayat Najd For Landscaping</span>
               <span className="text-brand-gold text-[9px] uppercase tracking-widest font-sans">Capability Profile • 2025</span>
@@ -64,7 +62,7 @@ export function Section11Contact({ pageNumber = 38 }: { pageNumber?: number }) {
           </div>
 
           {/* Right Official Contact Directory (6 Cols) */}
-          <div className="col-span-6 bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl space-y-3">
+          <div className="col-span-6 bg-black/45 backdrop-blur-xs p-6 rounded-2xl border border-white/20 shadow-2xl space-y-3">
             <div className="flex items-center gap-3 text-white">
               <div className="w-8 h-8 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center shrink-0">
                 <MapPin className="w-4 h-4" />

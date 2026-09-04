@@ -93,8 +93,8 @@ export function Section01About({ startPageNumber = 1 }: { startPageNumber?: numb
               alt="Rayat Najd Agricultural Leadership" 
               className="w-full h-full object-cover filter brightness-95 contrast-105" 
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/50"></div>
-            <div className="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/20 text-white">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/40"></div>
+            <div className="absolute bottom-6 left-6 right-6 bg-black/55 backdrop-blur-xs p-4 rounded-xl border border-white/20 text-white">
               <span className="text-[9px] uppercase tracking-widest text-brand-gold font-sans block mb-1">Executive Commitment</span>
               <span className="text-[12px] font-arabic font-bold block" dir="rtl">التزام القيادة بالاستدامة وجودة التنفيذ</span>
             </div>

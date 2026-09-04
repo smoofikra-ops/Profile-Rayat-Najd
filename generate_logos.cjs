@@ -1,0 +1,447 @@
+import fs from 'fs';
+import path from 'path';
+import sharp from 'sharp';
+
+const publicDir = path.join(process.cwd(), 'public');
+const brandDir = path.join(publicDir, 'brand');
+
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+if (!fs.existsSync(brandDir)) {
+  fs.mkdirSync(brandDir, { recursive: true });
+}
+
+// 1. EMBLEM ONLY SVG (Pure transparent background, perfectly integrated circular tree & roots)
+const emblemSvg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Gradients for Luxury Corporate Identity -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA73"/>
+      <stop offset="35%" stop-color="#C59B4E"/>
+      <stop offset="70%" stop-color="#E8CA8C"/>
+      <stop offset="100%" stop-color="#A57A2C"/>
+    </linearGradient>
+
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#143A2A"/>
+      <stop offset="50%" stop-color="#1E4D38"/>
+      <stop offset="100%" stop-color="#0F2E20"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D7352"/>
+      <stop offset="100%" stop-color="#184832"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#408E67"/>
+      <stop offset="100%" stop-color="#20563C"/>
+    </linearGradient>
+
+    <linearGradient id="rootGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C59B4E"/>
+      <stop offset="50%" stop-color="#DFBA73"/>
+      <stop offset="100%" stop-color="#9C7226"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Ring Elements (Concentric Gold & Forest Circular Borders) -->
+  <circle cx="250" cy="250" r="236" fill="none" stroke="url(#goldRing)" stroke-width="5"/>
+  <circle cx="250" cy="250" r="226" fill="none" stroke="url(#forestGrad)" stroke-width="2.5" opacity="0.4"/>
+  <circle cx="250" cy="250" r="220" fill="none" stroke="url(#goldRing)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.75"/>
+
+  <!-- Inner Medallion Grounding Circle -->
+  <circle cx="250" cy="250" r="212" fill="none"/>
+
+  <!-- Botanical Emblem Group -->
+  <g id="tree-and-roots">
+    <!-- Horizontal Horizon / Ground Level Line & Geo Balance -->
+    <path d="M 68 256 Q 160 252 250 252 Q 340 252 432 256" fill="none" stroke="url(#goldRing)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="250" cy="252" r="4" fill="url(#goldRing)"/>
+
+    <!-- ================= CANOPY / LEAF CLUSTERS (UPPER HEMISPHERE) ================= -->
+    <!-- Central Main Dome Canopy -->
+    <path d="M 250 82 
+             C 275 82, 305 95, 316 118 
+             C 336 122, 355 142, 355 166 
+             C 370 178, 376 200, 368 220 
+             C 362 236, 345 248, 328 248
+             C 305 248, 290 238, 275 228
+             C 260 220, 240 220, 225 228
+             C 210 238, 195 248, 172 248
+             C 155 248, 138 236, 132 220
+             C 124 200, 130 178, 145 166
+             C 145 142, 164 122, 184 118
+             C 195 95, 225 82, 250 82 Z" 
+          fill="url(#forestGrad)"/>
+
+    <!-- Layered Highlights / Leaf Nodes for Natural Depth -->
+    <!-- Top Apex Cluster -->
+    <path d="M 250 86 C 268 86, 288 98, 296 114 C 285 120, 268 124, 250 124 C 232 124, 215 120, 204 114 C 212 98, 232 86, 250 86 Z" fill="url(#leafGrad2)" opacity="0.9"/>
+    
+    <!-- Left Mid Canopy -->
+    <path d="M 184 124 C 205 124, 222 138, 226 156 C 204 162, 178 162, 158 152 C 158 136, 170 124, 184 124 Z" fill="url(#leafGrad1)"/>
+    <path d="M 148 170 C 168 170, 182 186, 182 202 C 160 208, 140 204, 134 190 C 132 180, 138 170, 148 170 Z" fill="url(#leafGrad2)" opacity="0.85"/>
+
+    <!-- Right Mid Canopy -->
+    <path d="M 316 124 C 330 124, 342 136, 342 152 C 322 162, 296 162, 274 156 C 278 138, 295 124, 316 124 Z" fill="url(#leafGrad1)"/>
+    <path d="M 352 170 C 362 170, 368 180, 366 190 C 360 204, 340 208, 318 202 C 318 186, 332 170, 352 170 Z" fill="url(#leafGrad2)" opacity="0.85"/>
+
+    <!-- Individual Elegant Leaf Blades / Stylized Palm/Sidr Leaves extending outward -->
+    <!-- Left side leaves -->
+    <path d="M 112 186 C 128 172, 146 178, 148 194 C 132 198, 118 194, 112 186 Z" fill="url(#goldRing)"/>
+    <path d="M 132 140 C 146 128, 164 132, 166 148 C 150 152, 138 148, 132 140 Z" fill="url(#leafGrad2)"/>
+    <path d="M 172 100 C 184 86, 202 92, 202 108 C 188 110, 178 106, 172 100 Z" fill="url(#goldRing)"/>
+
+    <!-- Right side leaves -->
+    <path d="M 388 186 C 382 194, 368 198, 352 194 C 354 178, 372 172, 388 186 Z" fill="url(#goldRing)"/>
+    <path d="M 368 140 C 362 148, 350 152, 334 148 C 336 132, 354 128, 368 140 Z" fill="url(#leafGrad2)"/>
+    <path d="M 328 100 C 322 106, 312 110, 298 108 C 298 92, 316 86, 328 100 Z" fill="url(#goldRing)"/>
+
+    <!-- ================= TRUNK & BRANCHES ================= -->
+    <!-- Main Center Trunk -->
+    <path d="M 242 252 
+             C 243 215, 238 185, 226 165
+             C 236 172, 244 175, 250 175
+             C 256 175, 264 172, 274 165
+             C 262 185, 257 215, 258 252 Z" 
+          fill="url(#goldRing)"/>
+
+    <!-- Left Main Branch -->
+    <path d="M 240 210 C 220 198, 192 192, 164 198 C 182 188, 210 186, 234 195 Z" fill="url(#goldRing)"/>
+    
+    <!-- Right Main Branch -->
+    <path d="M 260 210 C 280 198, 308 192, 336 198 C 318 188, 290 186, 266 195 Z" fill="url(#goldRing)"/>
+
+    <!-- Center Upward Branch Flare -->
+    <path d="M 247 175 L 250 128 L 253 175 Z" fill="url(#goldRing)"/>
+
+    <!-- ================= ROOTS NETWORK (LOWER HEMISPHERE) ================= -->
+    <!-- Symmetrical, Elegant Organic Taproots anchored in Gold -->
+    <!-- Center Deep Taproot -->
+    <path d="M 245 252 C 246 295, 244 345, 250 395 C 256 345, 254 295, 255 252 Z" fill="url(#rootGold)"/>
+    <path d="M 248 395 L 250 412 L 252 395 Z" fill="url(#rootGold)"/>
+
+    <!-- Left Primary Root 1 (Deep diagonal) -->
+    <path d="M 244 254 C 235 290, 205 330, 168 368 C 185 340, 222 298, 238 256 Z" fill="url(#rootGold)"/>
+    <!-- Left Root Tendril 1b -->
+    <path d="M 198 316 C 172 340, 142 355, 114 366 C 136 352, 168 335, 190 310 Z" fill="url(#rootGold)"/>
+    <!-- Left Root Tendril 1c (Lower curve hugging circle) -->
+    <path d="M 174 360 C 196 385, 220 405, 242 414 C 224 404, 198 384, 178 358 Z" fill="url(#rootGold)"/>
+
+    <!-- Right Primary Root 1 (Deep diagonal) -->
+    <path d="M 256 254 C 265 290, 295 330, 332 368 C 315 340, 278 298, 262 256 Z" fill="url(#rootGold)"/>
+    <!-- Right Root Tendril 1b -->
+    <path d="M 302 316 C 328 340, 358 355, 386 366 C 364 352, 332 335, 310 310 Z" fill="url(#rootGold)"/>
+    <!-- Right Root Tendril 1c (Lower curve hugging circle) -->
+    <path d="M 326 360 C 304 385, 280 405, 258 414 C 276 404, 302 384, 322 358 Z" fill="url(#rootGold)"/>
+
+    <!-- Lateral Shallow Roots (Spanning Ground Line) -->
+    <!-- Left Lateral Root -->
+    <path d="M 238 254 C 200 262, 150 268, 92 278 C 135 268, 185 260, 234 256 Z" fill="url(#rootGold)"/>
+    <path d="M 148 266 C 122 284, 98 310, 82 338 C 96 312, 122 288, 146 270 Z" fill="url(#rootGold)"/>
+
+    <!-- Right Lateral Root -->
+    <path d="M 262 254 C 300 262, 350 268, 408 278 C 365 268, 315 260, 266 256 Z" fill="url(#rootGold)"/>
+    <path d="M 352 266 C 378 284, 402 310, 418 338 C 404 312, 378 288, 354 270 Z" fill="url(#rootGold)"/>
+
+    <!-- Lower Harmony Ring Accent (Subtle botanical curve framing roots) -->
+    <path d="M 120 372 C 160 412, 205 428, 250 428 C 295 428, 340 412, 380 372" fill="none" stroke="url(#goldRing)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+  </g>
+</svg>`;
+
+// 2. FULL VERTICAL LOCKUP LOGO (Emblem + Arabic Typography + English Subtitle)
+const fullLogoVerticalSvg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <defs>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C59B4E"/>
+      <stop offset="50%" stop-color="#DFBA73"/>
+      <stop offset="100%" stop-color="#9C7226"/>
+    </linearGradient>
+
+    <linearGradient id="goldRingV" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA73"/>
+      <stop offset="35%" stop-color="#C59B4E"/>
+      <stop offset="70%" stop-color="#E8CA8C"/>
+      <stop offset="100%" stop-color="#A57A2C"/>
+    </linearGradient>
+
+    <linearGradient id="forestGradV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#143A2A"/>
+      <stop offset="50%" stop-color="#1E4D38"/>
+      <stop offset="100%" stop-color="#0F2E20"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad1V" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D7352"/>
+      <stop offset="100%" stop-color="#184832"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad2V" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#408E67"/>
+      <stop offset="100%" stop-color="#20563C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Centered Emblem at Top (Scale & Translate) -->
+  <g transform="translate(100, 20) scale(0.8)">
+    <!-- Outer Ring Elements -->
+    <circle cx="250" cy="250" r="236" fill="none" stroke="url(#goldRingV)" stroke-width="5"/>
+    <circle cx="250" cy="250" r="226" fill="none" stroke="url(#forestGradV)" stroke-width="2.5" opacity="0.4"/>
+    <circle cx="250" cy="250" r="220" fill="none" stroke="url(#goldRingV)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.75"/>
+
+    <!-- Ground Level -->
+    <path d="M 68 256 Q 160 252 250 252 Q 340 252 432 256" fill="none" stroke="url(#goldRingV)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="250" cy="252" r="4" fill="url(#goldRingV)"/>
+
+    <!-- Canopy -->
+    <path d="M 250 82 C 275 82, 305 95, 316 118 C 336 122, 355 142, 355 166 C 370 178, 376 200, 368 220 C 362 236, 345 248, 328 248 C 305 248, 290 238, 275 228 C 260 220, 240 220, 225 228 C 210 238, 195 248, 172 248 C 155 248, 138 236, 132 220 C 124 200, 130 178, 145 166 C 145 142, 164 122, 184 118 C 195 95, 225 82, 250 82 Z" fill="url(#forestGradV)"/>
+    <path d="M 250 86 C 268 86, 288 98, 296 114 C 285 120, 268 124, 250 124 C 232 124, 215 120, 204 114 C 212 98, 232 86, 250 86 Z" fill="url(#leafGrad2V)" opacity="0.9"/>
+    <path d="M 184 124 C 205 124, 222 138, 226 156 C 204 162, 178 162, 158 152 C 158 136, 170 124, 184 124 Z" fill="url(#leafGrad1V)"/>
+    <path d="M 148 170 C 168 170, 182 186, 182 202 C 160 208, 140 204, 134 190 C 132 180, 138 170, 148 170 Z" fill="url(#leafGrad2V)" opacity="0.85"/>
+    <path d="M 316 124 C 330 124, 342 136, 342 152 C 322 162, 296 162, 274 156 C 278 138, 295 124, 316 124 Z" fill="url(#leafGrad1V)"/>
+    <path d="M 352 170 C 362 170, 368 180, 366 190 C 360 204, 340 208, 318 202 C 318 186, 332 170, 352 170 Z" fill="url(#leafGrad2V)" opacity="0.85"/>
+
+    <path d="M 112 186 C 128 172, 146 178, 148 194 C 132 198, 118 194, 112 186 Z" fill="url(#goldRingV)"/>
+    <path d="M 132 140 C 146 128, 164 132, 166 148 C 150 152, 138 148, 132 140 Z" fill="url(#leafGrad2V)"/>
+    <path d="M 172 100 C 184 86, 202 92, 202 108 C 188 110, 178 106, 172 100 Z" fill="url(#goldRingV)"/>
+    <path d="M 388 186 C 382 194, 368 198, 352 194 C 354 178, 372 172, 388 186 Z" fill="url(#goldRingV)"/>
+    <path d="M 368 140 C 362 148, 350 152, 334 148 C 336 132, 354 128, 368 140 Z" fill="url(#leafGrad2V)"/>
+    <path d="M 328 100 C 322 106, 312 110, 298 108 C 298 92, 316 86, 328 100 Z" fill="url(#goldRingV)"/>
+
+    <!-- Trunk -->
+    <path d="M 242 252 C 243 215, 238 185, 226 165 C 236 172, 244 175, 250 175 C 256 175, 264 172, 274 165 C 262 185, 257 215, 258 252 Z" fill="url(#goldRingV)"/>
+    <path d="M 240 210 C 220 198, 192 192, 164 198 C 182 188, 210 186, 234 195 Z" fill="url(#goldRingV)"/>
+    <path d="M 260 210 C 280 198, 308 192, 336 198 C 318 188, 290 186, 266 195 Z" fill="url(#goldRingV)"/>
+    <path d="M 247 175 L 250 128 L 253 175 Z" fill="url(#goldRingV)"/>
+
+    <!-- Roots -->
+    <path d="M 245 252 C 246 295, 244 345, 250 395 C 256 345, 254 295, 255 252 Z" fill="url(#goldRingV)"/>
+    <path d="M 248 395 L 250 412 L 252 395 Z" fill="url(#goldRingV)"/>
+    <path d="M 244 254 C 235 290, 205 330, 168 368 C 185 340, 222 298, 238 256 Z" fill="url(#goldRingV)"/>
+    <path d="M 198 316 C 172 340, 142 355, 114 366 C 136 352, 168 335, 190 310 Z" fill="url(#goldRingV)"/>
+    <path d="M 174 360 C 196 385, 220 405, 242 414 C 224 404, 198 384, 178 358 Z" fill="url(#goldRingV)"/>
+    <path d="M 256 254 C 265 290, 295 330, 332 368 C 315 340, 278 298, 262 256 Z" fill="url(#goldRingV)"/>
+    <path d="M 302 316 C 328 340, 358 355, 386 366 C 364 352, 332 335, 310 310 Z" fill="url(#goldRingV)"/>
+    <path d="M 326 360 C 304 385, 280 405, 258 414 C 276 404, 302 384, 322 358 Z" fill="url(#goldRingV)"/>
+    <path d="M 238 254 C 200 262, 150 268, 92 278 C 135 268, 185 260, 234 256 Z" fill="url(#goldRingV)"/>
+    <path d="M 148 266 C 122 284, 98 310, 82 338 C 96 312, 122 288, 146 270 Z" fill="url(#goldRingV)"/>
+    <path d="M 262 254 C 300 262, 350 268, 408 278 C 365 268, 315 260, 266 256 Z" fill="url(#goldRingV)"/>
+    <path d="M 352 266 C 378 284, 402 310, 418 338 C 404 312, 378 288, 354 270 Z" fill="url(#goldRingV)"/>
+    <path d="M 120 372 C 160 412, 205 428, 250 428 C 295 428, 340 412, 380 372" fill="none" stroke="url(#goldRingV)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+  </g>
+
+  <!-- Typography Lockup -->
+  <!-- Arabic Brand Name -->
+  <text x="300" y="475" text-anchor="middle" font-family="'IBM Plex Sans Arabic', 'Traditional Arabic', 'Segoe UI', sans-serif" font-weight="700" font-size="52" fill="#143A2A" letter-spacing="1">
+    رايات نجد
+  </text>
+
+  <!-- Decorative Divider Line with Diamond Center -->
+  <g transform="translate(300, 505)">
+    <line x1="-160" y1="0" x2="-25" y2="0" stroke="url(#goldText)" stroke-width="1.5"/>
+    <polygon points="0,-4 4,0 0,4 -4,0" fill="url(#goldText)"/>
+    <line x1="25" y1="0" x2="160" y2="0" stroke="url(#goldText)" stroke-width="1.5"/>
+  </g>
+
+  <!-- Arabic Subtitle / Tagline -->
+  <text x="300" y="535" text-anchor="middle" font-family="'IBM Plex Sans Arabic', 'Traditional Arabic', 'Segoe UI', sans-serif" font-weight="500" font-size="20" fill="#2D7352" letter-spacing="0.5">
+    للتشجير والاستدامة البيئية
+  </text>
+
+  <!-- English Brand Name -->
+  <text x="300" y="585" text-anchor="middle" font-family="'Montserrat', 'Arial', sans-serif" font-weight="700" font-size="18" fill="#143A2A" letter-spacing="6">
+    RAYAT NAJD
+  </text>
+
+  <!-- English Tagline -->
+  <text x="300" y="612" text-anchor="middle" font-family="'Montserrat', 'Arial', sans-serif" font-weight="500" font-size="11" fill="#C59B4E" letter-spacing="3">
+    LANDSCAPING &amp; ENVIRONMENTAL SUSTAINABILITY
+  </text>
+</svg>`;
+
+// 3. FULL HORIZONTAL LOCKUP LOGO (Emblem on Left/Right + Bilingual Typography)
+const fullLogoHorizontalSvg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 250" width="850" height="250">
+  <defs>
+    <linearGradient id="goldRingH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA73"/>
+      <stop offset="35%" stop-color="#C59B4E"/>
+      <stop offset="70%" stop-color="#E8CA8C"/>
+      <stop offset="100%" stop-color="#A57A2C"/>
+    </linearGradient>
+
+    <linearGradient id="forestGradH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#143A2A"/>
+      <stop offset="50%" stop-color="#1E4D38"/>
+      <stop offset="100%" stop-color="#0F2E20"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad1H" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D7352"/>
+      <stop offset="100%" stop-color="#184832"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad2H" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#408E67"/>
+      <stop offset="100%" stop-color="#20563C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Emblem (Scaled) -->
+  <g transform="translate(15, 15) scale(0.44)">
+    <circle cx="250" cy="250" r="236" fill="none" stroke="url(#goldRingH)" stroke-width="5"/>
+    <circle cx="250" cy="250" r="226" fill="none" stroke="url(#forestGradH)" stroke-width="2.5" opacity="0.4"/>
+    <circle cx="250" cy="250" r="220" fill="none" stroke="url(#goldRingH)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.75"/>
+
+    <path d="M 68 256 Q 160 252 250 252 Q 340 252 432 256" fill="none" stroke="url(#goldRingH)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="250" cy="252" r="4" fill="url(#goldRingH)"/>
+
+    <path d="M 250 82 C 275 82, 305 95, 316 118 C 336 122, 355 142, 355 166 C 370 178, 376 200, 368 220 C 362 236, 345 248, 328 248 C 305 248, 290 238, 275 228 C 260 220, 240 220, 225 228 C 210 238, 195 248, 172 248 C 155 248, 138 236, 132 220 C 124 200, 130 178, 145 166 C 145 142, 164 122, 184 118 C 195 95, 225 82, 250 82 Z" fill="url(#forestGradH)"/>
+    <path d="M 250 86 C 268 86, 288 98, 296 114 C 285 120, 268 124, 250 124 C 232 124, 215 120, 204 114 C 212 98, 232 86, 250 86 Z" fill="url(#leafGrad2H)" opacity="0.9"/>
+    <path d="M 184 124 C 205 124, 222 138, 226 156 C 204 162, 178 162, 158 152 C 158 136, 170 124, 184 124 Z" fill="url(#leafGrad1H)"/>
+    <path d="M 148 170 C 168 170, 182 186, 182 202 C 160 208, 140 204, 134 190 C 132 180, 138 170, 148 170 Z" fill="url(#leafGrad2H)" opacity="0.85"/>
+    <path d="M 316 124 C 330 124, 342 136, 342 152 C 322 162, 296 162, 274 156 C 278 138, 295 124, 316 124 Z" fill="url(#leafGrad1H)"/>
+    <path d="M 352 170 C 362 170, 368 180, 366 190 C 360 204, 340 208, 318 202 C 318 186, 332 170, 352 170 Z" fill="url(#leafGrad2H)" opacity="0.85"/>
+
+    <path d="M 112 186 C 128 172, 146 178, 148 194 C 132 198, 118 194, 112 186 Z" fill="url(#goldRingH)"/>
+    <path d="M 132 140 C 146 128, 164 132, 166 148 C 150 152, 138 148, 132 140 Z" fill="url(#leafGrad2H)"/>
+    <path d="M 172 100 C 184 86, 202 92, 202 108 C 188 110, 178 106, 172 100 Z" fill="url(#goldRingH)"/>
+    <path d="M 388 186 C 382 194, 368 198, 352 194 C 354 178, 372 172, 388 186 Z" fill="url(#goldRingH)"/>
+    <path d="M 368 140 C 362 148, 350 152, 334 148 C 336 132, 354 128, 368 140 Z" fill="url(#leafGrad2H)"/>
+    <path d="M 328 100 C 322 106, 312 110, 298 108 C 298 92, 316 86, 328 100 Z" fill="url(#goldRingH)"/>
+
+    <path d="M 242 252 C 243 215, 238 185, 226 165 C 236 172, 244 175, 250 175 C 256 175, 264 172, 274 165 C 262 185, 257 215, 258 252 Z" fill="url(#goldRingH)"/>
+    <path d="M 240 210 C 220 198, 192 192, 164 198 C 182 188, 210 186, 234 195 Z" fill="url(#goldRingH)"/>
+    <path d="M 260 210 C 280 198, 308 192, 336 198 C 318 188, 290 186, 266 195 Z" fill="url(#goldRingH)"/>
+    <path d="M 247 175 L 250 128 L 253 175 Z" fill="url(#goldRingH)"/>
+
+    <path d="M 245 252 C 246 295, 244 345, 250 395 C 256 345, 254 295, 255 252 Z" fill="url(#goldRingH)"/>
+    <path d="M 248 395 L 250 412 L 252 395 Z" fill="url(#goldRingH)"/>
+    <path d="M 244 254 C 235 290, 205 330, 168 368 C 185 340, 222 298, 238 256 Z" fill="url(#goldRingH)"/>
+    <path d="M 198 316 C 172 340, 142 355, 114 366 C 136 352, 168 335, 190 310 Z" fill="url(#goldRingH)"/>
+    <path d="M 174 360 C 196 385, 220 405, 242 414 C 224 404, 198 384, 178 358 Z" fill="url(#goldRingH)"/>
+    <path d="M 256 254 C 265 290, 295 330, 332 368 C 315 340, 278 298, 262 256 Z" fill="url(#goldRingH)"/>
+    <path d="M 302 316 C 328 340, 358 355, 386 366 C 364 352, 332 335, 310 310 Z" fill="url(#goldRingH)"/>
+    <path d="M 326 360 C 304 385, 280 405, 258 414 C 276 404, 302 384, 322 358 Z" fill="url(#goldRingH)"/>
+    <path d="M 238 254 C 200 262, 150 268, 92 278 C 135 268, 185 260, 234 256 Z" fill="url(#goldRingH)"/>
+    <path d="M 148 266 C 122 284, 98 310, 82 338 C 96 312, 122 288, 146 270 Z" fill="url(#goldRingH)"/>
+    <path d="M 262 254 C 300 262, 350 268, 408 278 C 365 268, 315 260, 266 256 Z" fill="url(#goldRingH)"/>
+    <path d="M 352 266 C 378 284, 402 310, 418 338 C 404 312, 378 288, 354 270 Z" fill="url(#goldRingH)"/>
+    <path d="M 120 372 C 160 412, 205 428, 250 428 C 295 428, 340 412, 380 372" fill="none" stroke="url(#goldRingH)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+  </g>
+
+  <!-- Vertical Divider Bar -->
+  <line x1="260" y1="40" x2="260" y2="210" stroke="url(#goldRingH)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Right Typography (Bilingual Balance) -->
+  <g transform="translate(290, 0)">
+    <!-- Arabic Main Title -->
+    <text x="0" y="85" font-family="'IBM Plex Sans Arabic', 'Traditional Arabic', 'Segoe UI', sans-serif" font-weight="700" font-size="44" fill="#143A2A">
+      رايات نجد
+    </text>
+
+    <!-- Arabic Tagline -->
+    <text x="0" y="125" font-family="'IBM Plex Sans Arabic', 'Traditional Arabic', 'Segoe UI', sans-serif" font-weight="500" font-size="18" fill="#2D7352">
+      للتشجير والاستدامة البيئية
+    </text>
+
+    <!-- English Brand Title -->
+    <text x="0" y="172" font-family="'Montserrat', 'Arial', sans-serif" font-weight="700" font-size="16" fill="#143A2A" letter-spacing="4">
+      RAYAT NAJD
+    </text>
+
+    <!-- English Tagline -->
+    <text x="0" y="196" font-family="'Montserrat', 'Arial', sans-serif" font-weight="600" font-size="9.5" fill="#C59B4E" letter-spacing="2">
+      LANDSCAPING &amp; ENVIRONMENTAL SUSTAINABILITY
+    </text>
+  </g>
+</svg>`;
+
+// 4. LIGHT / WHITE VARIANT FOR DARK BACKGROUNDS (Hero cover & contact back page)
+const emblemLightSvg = emblemSvg
+  .replace('fill="#143A2A"', 'fill="#FFFFFF"')
+  .replace('stop-color="#143A2A"', 'stop-color="#FFFFFF"')
+  .replace('stop-color="#1E4D38"', 'stop-color="#EAF5EE"')
+  .replace('stop-color="#0F2E20"', 'stop-color="#C2E0CE"');
+
+// Write SVGs to disk
+fs.writeFileSync(path.join(brandDir, 'rayat-najd-emblem.svg'), emblemSvg);
+fs.writeFileSync(path.join(brandDir, 'rayat-najd-emblem-light.svg'), emblemLightSvg);
+fs.writeFileSync(path.join(brandDir, 'rayat-najd-logo-vertical.svg'), fullLogoVerticalSvg);
+fs.writeFileSync(path.join(brandDir, 'rayat-najd-logo-horizontal.svg'), fullLogoHorizontalSvg);
+
+// Also copy canonical files to /public/ for immediate root serving
+fs.writeFileSync(path.join(publicDir, 'logo.svg'), emblemSvg);
+fs.writeFileSync(path.join(publicDir, 'logo-full.svg'), fullLogoHorizontalSvg);
+fs.writeFileSync(path.join(publicDir, 'logo-vertical.svg'), fullLogoVerticalSvg);
+
+async function generateAllPngs() {
+  console.log('Generating PNG deliverables in all required resolutions...');
+
+  const sizes = [512, 256, 128, 64, 32];
+
+  for (const size of sizes) {
+    // 1. Transparent Emblem PNG
+    await sharp(Buffer.from(emblemSvg))
+      .resize(size, size)
+      .png()
+      .toFile(path.join(brandDir, `rayat-najd-emblem-${size}x${size}.png`));
+
+    // 2. Light Emblem PNG (for dark backgrounds)
+    await sharp(Buffer.from(emblemLightSvg))
+      .resize(size, size)
+      .png()
+      .toFile(path.join(brandDir, `rayat-najd-emblem-light-${size}x${size}.png`));
+
+    // 3. App icon in root public
+    if (size === 512 || size === 192 || size === 32) {
+      await sharp(Buffer.from(emblemSvg))
+        .resize(size, size)
+        .png()
+        .toFile(path.join(publicDir, `icon-${size}.png`));
+    }
+  }
+
+  // Generate canonical transparent PNGs
+  await sharp(Buffer.from(emblemSvg))
+    .resize(512, 512)
+    .png()
+    .toFile(path.join(publicDir, 'rayatnajd-emblem-clean.png'));
+
+  await sharp(Buffer.from(emblemLightSvg))
+    .resize(512, 512)
+    .png()
+    .toFile(path.join(publicDir, 'rayatnajd-emblem-light.png'));
+
+  await sharp(Buffer.from(fullLogoVerticalSvg))
+    .resize(600, 700)
+    .png()
+    .toFile(path.join(brandDir, 'rayat-najd-logo-vertical-transparent.png'));
+
+  await sharp(Buffer.from(fullLogoHorizontalSvg))
+    .resize(850, 250)
+    .png()
+    .toFile(path.join(brandDir, 'rayat-najd-logo-horizontal-transparent.png'));
+
+  await sharp(Buffer.from(fullLogoHorizontalSvg))
+    .resize(850, 250)
+    .png()
+    .toFile(path.join(publicDir, 'logo-full.png'));
+
+  // Generate 32x32 standard favicon.ico (using 32x32 PNG container or standard favicon)
+  const faviconBuffer = await sharp(Buffer.from(emblemSvg))
+    .resize(32, 32)
+    .png()
+    .toBuffer();
+  fs.writeFileSync(path.join(publicDir, 'favicon.ico'), faviconBuffer);
+  fs.writeFileSync(path.join(publicDir, 'favicon.png'), faviconBuffer);
+  fs.writeFileSync(path.join(brandDir, 'favicon.ico'), faviconBuffer);
+
+  console.log('Successfully created all vector SVGs, transparent PNGs, and favicon.ico!');
+}
+
+generateAllPngs().catch(console.error);

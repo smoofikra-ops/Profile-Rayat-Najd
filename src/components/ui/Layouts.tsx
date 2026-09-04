@@ -26,14 +26,40 @@ const LeafDecoration = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export function Section({ children, className = '', id = '', pageNumber, bgType = 'none', bgImage, noSafeArea = false }: { children: React.ReactNode, className?: string, id?: string, pageNumber?: number, bgType?: 'pattern' | 'leaves' | 'none', bgImage?: string, noSafeArea?: boolean, key?: React.Key }) {
+export function Section({ 
+  children, 
+  className = '', 
+  id = '', 
+  pageNumber, 
+  bgType = 'none', 
+  bgImage, 
+  bgMode = 'corporate-soft',
+  noSafeArea = false 
+}: { 
+  children: React.ReactNode, 
+  className?: string, 
+  id?: string, 
+  pageNumber?: number, 
+  bgType?: 'pattern' | 'leaves' | 'none', 
+  bgImage?: string, 
+  bgMode?: 'hero-dark' | 'corporate-soft' | 'category-image',
+  noSafeArea?: boolean, 
+  key?: React.Key 
+}) {
   return (
     <section id={id} className={`landscape-page mb-8 print:my-0 print:mb-0 print:shadow-none print:border-none print:page-break-after-always shadow-[0_15px_40px_rgba(0,0,0,0.1)] ${className}`}>
       
       {bgImage && (
-        <div className="absolute inset-0 z-0 pointer-events-none">
-           <img src={bgImage} alt="Background" className="w-full h-full object-cover" />
-           <div className="absolute inset-0 bg-white/90"></div>
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+           <img src={bgImage} alt="Background" className="w-full h-full object-cover filter brightness-[1.02] contrast-[1.05]" />
+           {bgMode === 'hero-dark' ? (
+             <div className="absolute inset-0 bg-gradient-to-b from-brand-forest/90 via-black/35 to-brand-forest/90"></div>
+           ) : bgMode === 'category-image' ? (
+             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/60"></div>
+           ) : (
+             /* MODE B — CORPORATE SOFT: Image clearly visible with light soft overlay and localized contrast */
+             <div className="absolute inset-0 bg-white/70 backdrop-brightness-[0.98]"></div>
+           )}
         </div>
       )}
 

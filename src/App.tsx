@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from 'react';
 import { CoverSection } from './components/sections/CoverSection';
 import { Section00Index } from './components/sections/Section00Index';
 import { Section01About } from './components/sections/Section01About';
@@ -20,6 +21,8 @@ import { Section11Contact } from './components/sections/Section11Contact';
 import { PdfGenerator } from './components/ui/PdfGenerator';
 import { GridToggle } from './components/ui/GridToggle';
 import { BotanicalBackground } from './components/ui/BotanicalBackground';
+import { LogoBrandModal } from './components/brand/LogoBrandModal';
+import { RayatNajdEmblem } from './components/brand/RayatNajdLogo';
 
 const CatalogSeparator = () => (
   <div className="w-full max-w-[297mm] mx-auto py-6 print:hidden flex items-center justify-center opacity-70">
@@ -89,6 +92,8 @@ export default function App() {
     contact: getRange(pContact, pageLengths.contact)
   };
 
+  const [isLogoModalOpen, setIsLogoModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-brand-beige w-full overflow-x-hidden selection:bg-brand-olive selection:text-white font-sans text-brand-dark relative pb-16">
       <BotanicalBackground />
@@ -123,8 +128,24 @@ export default function App() {
         <Section11Contact pageNumber={pContact} />
       </div>
 
+      {/* Floating Logo Suite & Brand Assets Button */}
+      <button
+        onClick={() => setIsLogoModalOpen(true)}
+        className="fixed bottom-8 left-8 z-50 bg-brand-forest hover:bg-brand-forest/90 text-brand-gold px-4 py-3.5 rounded-full shadow-2xl transition-all duration-300 no-print flex items-center gap-3 font-sans text-xs uppercase tracking-[0.18em] backdrop-blur-md border border-brand-gold/40 group hover:scale-105"
+        aria-label="Open Brand Logo & Assets Suite"
+        title="Brand Identity & Clean Transparent Logo Suite"
+      >
+        <RayatNajdEmblem size={22} variant="light" className="group-hover:rotate-12 transition-transform duration-300" />
+        <span className="font-bold tracking-widest hidden sm:inline-block">Brand Assets &amp; Logo</span>
+        <span className="font-arabic font-bold text-white text-[11px] hidden md:inline-block border-l border-white/20 pl-2">
+          الهوية والشعار
+        </span>
+      </button>
+
       <PdfGenerator />
       <GridToggle />
+
+      <LogoBrandModal isOpen={isLogoModalOpen} onClose={() => setIsLogoModalOpen(false)} />
     </div>
   );
 }
