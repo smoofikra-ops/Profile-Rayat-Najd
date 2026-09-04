@@ -22,7 +22,7 @@ import { PdfGenerator } from './components/ui/PdfGenerator';
 import { GridToggle } from './components/ui/GridToggle';
 import { BotanicalBackground } from './components/ui/BotanicalBackground';
 import { LogoBrandModal } from './components/brand/LogoBrandModal';
-import { RayatNajdEmblem } from './components/brand/RayatNajdLogo';
+import { RAYAT_NAJD_LOGO_URL } from './constants/brand';
 
 const CatalogSeparator = () => (
   <div className="w-full max-w-[297mm] mx-auto py-6 print:hidden flex items-center justify-center opacity-70">
@@ -135,7 +135,11 @@ export default function App() {
         aria-label="Open Brand Logo & Assets Suite"
         title="Brand Identity & Clean Transparent Logo Suite"
       >
-        <RayatNajdEmblem size={22} variant="light" className="group-hover:rotate-12 transition-transform duration-300" />
+        <img 
+          src={RAYAT_NAJD_LOGO_URL} 
+          alt="Rayat Najd Logo" 
+          className="w-5 h-5 object-contain group-hover:rotate-12 transition-transform duration-300 select-none" 
+        />
         <span className="font-bold tracking-widest hidden sm:inline-block">Brand Assets &amp; Logo</span>
         <span className="font-arabic font-bold text-white text-[11px] hidden md:inline-block border-l border-white/20 pl-2">
           الهوية والشعار

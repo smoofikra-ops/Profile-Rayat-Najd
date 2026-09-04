@@ -1,6 +1,6 @@
 import { Section, EditableText } from '../ui/Layouts';
 import { Phone, Mail, Globe, MapPin } from 'lucide-react';
-import { RayatNajdEmblem } from '../brand/RayatNajdLogo';
+import { RAYAT_NAJD_LOGO_URL } from '../../constants/brand';
 
 export function Section11Contact({ pageNumber = 38 }: { pageNumber?: number }) {
   return (
@@ -9,7 +9,7 @@ export function Section11Contact({ pageNumber = 38 }: { pageNumber?: number }) {
       pageNumber={pageNumber} 
       noSafeArea={true}
     >
-      <div className="relative w-full h-full flex flex-col justify-between overflow-hidden px-12 py-10">
+      <div className="relative w-full h-full flex flex-col justify-between overflow-hidden px-12 pt-10 pb-[18mm]">
         {/* Mode A Hero Dark: Atmospheric Landscape Photography */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -24,7 +24,11 @@ export function Section11Contact({ pageNumber = 38 }: { pageNumber?: number }) {
         {/* Top Branding */}
         <div className="relative z-10 flex items-center justify-between border-b border-brand-gold/40 pb-4">
           <div className="flex items-center gap-3">
-            <RayatNajdEmblem size={44} variant="light" />
+            <img 
+              src={RAYAT_NAJD_LOGO_URL} 
+              alt="Rayat Najd Logo" 
+              className="w-11 h-11 object-contain shrink-0 drop-shadow-md select-none" 
+            />
             <div className="border-l border-white/20 pl-3">
               <span className="text-white font-sans text-xs tracking-wider uppercase font-bold block">Rayat Najd For Landscaping</span>
               <span className="text-brand-gold text-[9px] uppercase tracking-widest font-sans">Capability Profile • 2025</span>

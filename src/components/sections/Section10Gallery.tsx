@@ -3,7 +3,7 @@ import { Section, EditableText } from '../ui/Layouts';
 export function Section10Gallery({ startPageNumber = 37 }: { startPageNumber?: number }) {
   const images = [
     {
-      url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-12.webp",
+      url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-05.webp",
       captionEn: "Al-Ha'ir Central Production Nursery",
       captionAr: "مشاتل الحائر المركزية — الرياض"
     },
@@ -23,12 +23,12 @@ export function Section10Gallery({ startPageNumber = 37 }: { startPageNumber?: n
       captionAr: "موقع تشجير أم شلفة البيئي"
     },
     {
-      url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-10.webp",
+      url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/05-services/smart-irrigation/Hydraulic%20Irrigation%20Engineering.jpg",
       captionEn: "Hydraulic Irrigation Engineering",
       captionAr: "تنفيذ شبكات الري الذكية"
     },
     {
-      url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-01.webp",
+      url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/05-services/mature-tree-relocation/rayat-najd-mature-tree-relocation-03.jpeg",
       captionEn: "Heavy Logistics & Delivery Fleet",
       captionAr: "أسطول النقل والخدمات اللوجستية"
     }

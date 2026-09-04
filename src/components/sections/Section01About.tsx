@@ -1,4 +1,5 @@
 import { Section, BilingualContainer, EnglishContent, ArabicContent, EditableText } from '../ui/Layouts';
+import { VISION_2030_LOGO_URL } from '../../constants/brand';
 
 export function Section01About({ startPageNumber = 1 }: { startPageNumber?: number }) {
   return (
@@ -184,9 +185,9 @@ export function Section01About({ startPageNumber = 1 }: { startPageNumber?: numb
                 <div className="flex items-center justify-between mb-3 border-b border-brand-warm/15 pb-2">
                   <span className="card-number-badge !w-7 !h-7 !text-xs">01</span>
                   <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Saudi_Vision_2030_logo.svg" 
-                    alt="Vision 2030" 
-                    className="h-7 mix-blend-multiply opacity-85" 
+                    src={VISION_2030_LOGO_URL} 
+                    alt="Saudi Vision 2030" 
+                    className="h-7 object-contain drop-shadow-xs" 
                   />
                 </div>
                 <EditableText as="h3" className="card-title-en text-sm mb-1">Strategic Alignment</EditableText>

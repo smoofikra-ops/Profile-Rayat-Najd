@@ -132,11 +132,24 @@ export const PROJECTS_DATA: ProjectRecord[] = [
     categoryAr: "تنمية الغطاء النباتي",
     categoryEn: "Greening / Vegetation Development",
     bunnyFolder: "03-projects/umm-al-hamam-al-asyah",
-    primaryImage: null,
-    media: [],
+    primaryImage: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/umm-al-hamam-al-asyah/DJI_0446.jpg",
+    media: [
+      {
+        projectSlug: "umm-al-hamam-al-asyah",
+        folder: "03-projects/umm-al-hamam-al-asyah",
+        filename: "DJI_0446.jpg",
+        url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/umm-al-hamam-al-asyah/DJI_0446.jpg",
+        mediaType: "image",
+        extension: "jpg",
+        isImage: true,
+        isVideo: false,
+        role: "primary",
+        verified: true
+      }
+    ],
     videos: [],
     gallery: [],
-    mediaStatus: "awaiting-bunny-sync"
+    mediaStatus: "verified-project-media"
   },
   {
     id: "project-07-umm-shalhah",

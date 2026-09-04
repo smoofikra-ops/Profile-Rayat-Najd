@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { EditableText } from '../ui/Layouts';
-import { RayatNajdEmblem } from '../brand/RayatNajdLogo';
+import { RAYAT_NAJD_LOGO_URL } from '../../constants/brand';
 
 export function CoverSection() {
   return (
@@ -35,9 +35,13 @@ export function CoverSection() {
             </EditableText>
           </div>
 
-          {/* Official Emblem Logo (Reconstructed Clean Transparent Mark) */}
-          <div className="w-20 h-20 rounded-full flex items-center justify-center bg-white/95 backdrop-blur-md shadow-2xl border-2 border-brand-gold shrink-0 p-2 hover:scale-105 transition-transform">
-            <RayatNajdEmblem size={68} variant="dark" />
+          {/* Official Approved Circular Transparent Logo */}
+          <div className="flex items-center justify-center shrink-0">
+            <img 
+              src={RAYAT_NAJD_LOGO_URL} 
+              alt="Rayat Najd Logo" 
+              className="w-20 h-20 object-contain drop-shadow-xl hover:scale-105 transition-transform select-none" 
+            />
           </div>
 
           {/* Arabic Identity */}

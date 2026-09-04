@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { ImageIcon, Info } from 'lucide-react';
+import { RAYAT_NAJD_LOGO_URL, VISION_2030_LOGO_URL } from '../../constants/brand';
 
 export function EditableText({ as: Component = 'div', className = '', children, ...props }: any) {
   // @ts-ignore
@@ -46,6 +47,8 @@ export function Section({
   noSafeArea?: boolean, 
   key?: React.Key 
 }) {
+  const isDark = className.includes('bg-brand-forest') || className.includes('text-white') || bgMode === 'hero-dark' || bgMode === 'category-image';
+
   return (
     <section id={id} className={`landscape-page mb-8 print:my-0 print:mb-0 print:shadow-none print:border-none print:page-break-after-always shadow-[0_15px_40px_rgba(0,0,0,0.1)] ${className}`}>
       
@@ -82,17 +85,32 @@ export function Section({
       )}
 
       {pageNumber !== undefined && (
-        <div className="absolute bottom-[4mm] left-[20mm] right-[20mm] h-[10mm] flex items-center justify-between text-[8.5px] text-brand-dark/40 font-sans tracking-widest uppercase z-40 border-t border-brand-warm/15 pt-1.5">
-           <div className="w-1/3 flex items-center justify-start gap-3">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Saudi_Vision_2030_logo.svg" alt="Vision 2030" className="h-5 opacity-60 mix-blend-multiply filter grayscale contrast-125" />
-              <EditableText as="span" className="font-medium text-[8px] opacity-70">Rayat Najd Corporate Profile</EditableText>
+        <div className={`absolute bottom-[4mm] left-[20mm] right-[20mm] h-[10mm] flex items-center justify-between text-[8.5px] ${isDark ? 'text-white/70 border-white/20' : 'text-brand-dark/50 border-brand-warm/20'} font-sans tracking-widest uppercase z-40 border-t pt-1.5`}>
+           {/* Bottom-Left: Vision 2030 & Rayat Najd Mini Logo */}
+           <div className="w-1/3 flex items-center justify-start gap-2.5">
+              <img 
+                src={VISION_2030_LOGO_URL} 
+                alt="Saudi Vision 2030" 
+                className={`h-5 object-contain shrink-0 select-none ${isDark ? 'brightness-0 invert opacity-95' : 'opacity-90'}`} 
+              />
+              <span className={`h-3.5 w-px ${isDark ? 'bg-white/25' : 'bg-brand-warm/30'}`}></span>
+              <div className="flex items-center gap-1.5">
+                <img 
+                  src={RAYAT_NAJD_LOGO_URL} 
+                  alt="Rayat Najd" 
+                  className="w-4 h-4 object-contain shrink-0 select-none drop-shadow-xs" 
+                />
+                <EditableText as="span" className="font-medium text-[8px] opacity-85 whitespace-nowrap">Rayat Najd Corporate Profile</EditableText>
+              </div>
            </div>
+           {/* Center: Page Number */}
            <div className="w-1/3 flex justify-center items-center gap-2">
               <div className="w-5 h-px bg-brand-gold/50"></div>
-              <span className="font-bold text-brand-forest drop-shadow-sm text-[11px] font-sans">{pageNumber < 10 ? `0${pageNumber}` : pageNumber}</span>
+              <span className={`font-bold drop-shadow-sm text-[11px] font-sans ${isDark ? 'text-brand-gold' : 'text-brand-forest'}`}>{pageNumber < 10 ? `0${pageNumber}` : pageNumber}</span>
               <div className="w-5 h-px bg-brand-gold/50"></div>
            </div>
-           <EditableText as="span" dir="rtl" className="w-1/3 text-right font-arabic font-medium pb-0.5 text-[9.5px]">ملف الشركة - رايات نجد</EditableText>
+           {/* Bottom-Right: Arabic Title */}
+           <EditableText as="span" dir="rtl" className={`w-1/3 text-right font-arabic font-medium pb-0.5 text-[9.5px] ${isDark ? 'text-white/80' : 'text-brand-dark/70'}`}>ملف الشركة - رايات نجد</EditableText>
         </div>
       )}
     </section>

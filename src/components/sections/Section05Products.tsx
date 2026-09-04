@@ -278,7 +278,7 @@ const categories: CategoryData[] = [
   {
     en: "Seasonal Plants", 
     ar: "النباتات والزهور الموسمية",
-    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-08.webp",
+    img: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/04-products/seasonal-plants/petunia-hybrida-petunia.webp",
     descEn: "Dynamic seasonal annuals and flowering perennials cultivated to provide breathtaking color bursts for civic celebrations and formal gardens.",
     descAr: "زهور ونباتات موسمية متنوعة يتم إنتاجها لتوفير لوحات بصرية زاهية في الميادين العامة والحدائق النموذجية.",
     items: [
@@ -475,20 +475,29 @@ export function Section05Products({ startPageNumber = 14 }: { startPageNumber?: 
               noSafeArea={true}
             >
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                {/* Mode C: Dominant Category Plant Cover Photo with minimal overlay */}
+                {/* Mode C: Dominant Category Plant Cover Photo with refined overlay */}
                 <div className="absolute inset-0 z-0">
                   <img 
                     src={cat.img} 
                     alt={cat.en} 
-                    className="w-full h-full object-cover filter brightness-[0.98] contrast-105" 
+                    className={`w-full h-full object-cover ${cat.en === 'Seasonal Plants' ? 'object-center filter brightness-[1.02] contrast-[1.05]' : 'filter brightness-[0.98] contrast-105'}`} 
                   />
-                  {/* Subtle edge gradients only: middle 60% is unobstructed photography */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/60"></div>
+                  {/* Subtle edge gradients only: middle is unobstructed photography */}
+                  {cat.en === 'Seasonal Plants' ? (
+                    <>
+                      {/* Refined subtle dark green wash (opacity ~0.22) preserving floral richness */}
+                      <div className="absolute inset-0 bg-brand-forest/22 mix-blend-multiply pointer-events-none"></div>
+                      {/* Soft edge vignette to ensure footer and title safety without hiding flowers */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/40 pointer-events-none"></div>
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/60"></div>
+                  )}
                 </div>
 
                 {/* Localized Category Title & Subtitle */}
                 <div className="relative z-10 w-full max-w-4xl mx-auto px-8 flex flex-col items-center justify-center text-center">
-                  <div className="bg-black/55 backdrop-blur-xs px-10 py-6 rounded-2xl border border-white/20 shadow-2xl">
+                  <div className={`${cat.en === 'Seasonal Plants' ? 'bg-black/65 backdrop-blur-sm border-white/25' : 'bg-black/55 backdrop-blur-xs border-white/20'} px-10 py-6 rounded-2xl border shadow-2xl transition-all`}>
                     <span className="text-brand-gold font-sans text-[10px] tracking-[0.3em] uppercase font-bold block mb-1">
                       Botanical Category 0{index + 1}
                     </span>
