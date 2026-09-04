@@ -1,6 +1,6 @@
 {
-  "name": "Horzental  Profile and catalog Rayat Najd",
-  "description": "A luxury, bilingual, print-ready product catalog for Rayat Najd landscaping and nursery.",
+  "name": "رايات نجد | الملف التعريفي والكتالوج النباتي",
+  "description": "الملف التعريفي الرسمي لشركة رايات نجد للتشجير والاستدامة البيئية، ويشمل خدمات اللاندسكيب، التشجير، المشاتل، أنظمة الري، الصيانة، نقل الأشجار والكتالوج النباتي.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
