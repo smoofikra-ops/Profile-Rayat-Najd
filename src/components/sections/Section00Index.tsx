@@ -99,6 +99,7 @@ function GroupHeader({ num, titleAr, titleEn }: GroupHeaderProps) {
 export function Section00Index({ pageNumber, pages }: Section00IndexProps) {
   return (
     <Section 
+      id="catalog-index"
       className="bg-brand-beige border-b border-brand-warm/10" 
       pageNumber={pageNumber} 
       bgType="pattern"

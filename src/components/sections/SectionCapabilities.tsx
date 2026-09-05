@@ -605,48 +605,65 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
             </Section>
           );
         } else {
-          // TEMPLATE D: Wide Image Strip + Bilingual Capability Blocks
+          // TEMPLATE D: Full-Bleed Cover Image with Floating Dual Luxury Text Cards
           return (
-            <Section key={cap.id} className="bg-brand-light border-b border-brand-warm/10" pageNumber={pageNum} bgType="pattern">
-              <div className="flex flex-col h-full justify-between py-2">
-                {/* Header */}
-                <div className="flex items-center justify-between border-b border-brand-warm/15 pb-2 mb-2">
-                  <div className="flex items-center gap-3">
-                    <span className="w-6 h-6 rounded-full bg-brand-forest text-brand-gold font-sans text-xs font-bold flex items-center justify-center">
-                      {cap.id}
-                    </span>
-                    <EditableText as="h2" className="typo-h1 !text-2xl font-bold !mb-0">{cap.en}</EditableText>
-                  </div>
-                  <div className="flex items-center gap-3" dir="rtl">
-                    <EditableText as="h2" className="typo-h1 font-arabic !text-2xl font-bold !mb-0">{cap.ar}</EditableText>
-                  </div>
-                </div>
-
-                {/* Wide Image Strip (Height ~110px) */}
-                <div className="w-full h-28 rounded-2xl overflow-hidden shadow-sm border border-brand-warm/20 relative bg-brand-forest shrink-0">
+            <Section key={cap.id} className="bg-brand-forest !p-0" pageNumber={pageNum} noSafeArea={true}>
+              <div className="relative w-full h-full flex flex-col justify-between overflow-hidden px-[20mm] py-[11mm] pb-[16mm]">
+                {/* Full-Bleed Cover Image with Cinematic Overlay */}
+                <div className="absolute inset-0 z-0">
                   <img 
                     src={cap.bgImage} 
                     alt={cap.en} 
-                    className="w-full h-full object-cover filter brightness-95 contrast-105" 
+                    className="w-full h-full object-cover filter brightness-[0.82] contrast-[1.1]" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70"></div>
-                  <div className="absolute bottom-2 left-4 right-4 flex justify-between items-end text-white">
-                    <span className="text-[10px] font-sans font-bold text-brand-gold uppercase tracking-wider">{cap.en} — Operational Delivery</span>
-                    <span className="text-[11px] font-arabic font-bold text-brand-gold" dir="rtl">{cap.ar} — تنفيذ متكامل</span>
+                  {/* Multi-stage dark luxury gradient protecting both text and card readability */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-black/85"></div>
+                  <div className="absolute inset-0 bg-brand-forest/35"></div>
+                </div>
+
+                {/* Foreground Header */}
+                <div className="relative z-10 flex items-center justify-between border-b border-white/20 pb-2.5 mb-2">
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-brand-gold text-brand-dark font-sans text-xs font-bold flex items-center justify-center shadow-lg">
+                      {cap.id}
+                    </span>
+                    <div>
+                      <EditableText as="h2" className="text-white font-sans text-2xl font-bold !mb-0 drop-shadow-md">{cap.en}</EditableText>
+                      <span className="text-[9.5px] uppercase tracking-widest text-brand-gold font-bold font-sans block mt-0.5">
+                        Giga-Projects &amp; Strategic Supply Infrastructure
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end" dir="rtl">
+                    <EditableText as="h2" className="text-brand-gold font-arabic text-2xl font-bold !mb-0 drop-shadow-md">{cap.ar}</EditableText>
+                    <span className="text-[11px] font-arabic font-semibold text-white/80 block mt-0.5">
+                      حلول لوجستية وسلاسل إمداد متكاملة للمشاريع الكبرى
+                    </span>
                   </div>
                 </div>
 
-                {/* Bilingual Capability Blocks */}
-                <div className="grid grid-cols-2 gap-5 my-auto items-stretch">
-                  {/* English Block */}
-                  <div className="card-surface p-4 flex flex-col justify-between">
+                {/* The Two Floating Content Cards Over the Background */}
+                <div className="relative z-10 grid grid-cols-2 gap-6 my-auto items-stretch">
+                  {/* English Card */}
+                  <div className="bg-[#0B251D]/90 backdrop-blur-md rounded-2xl p-5 border border-brand-gold/35 shadow-2xl flex flex-col justify-between hover:border-brand-gold/60 transition-all">
                     <div>
-                      <EditableText as="p" className="card-body-en text-[11px] leading-relaxed mb-3 text-justify">
+                      <div className="flex items-center justify-between border-b border-white/15 pb-2 mb-3">
+                        <span className="text-brand-gold font-sans text-xs font-bold uppercase tracking-wider">
+                          Strategic Supply Logistics
+                        </span>
+                        <span className="text-[9px] font-sans font-semibold text-white/75 uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded">
+                          Execution &amp; Staging
+                        </span>
+                      </div>
+                      <EditableText as="p" className="text-brand-beige font-sans text-[11.5px] leading-relaxed mb-4 text-justify">
                         {cap.descEn}
                       </EditableText>
-                      <div className="space-y-1 border-t border-brand-warm/10 pt-2">
+                      <div className="space-y-1.5 border-t border-brand-gold/20 pt-3">
+                        <span className="text-[9px] uppercase tracking-widest text-brand-gold font-bold block font-sans mb-1">
+                          Key Operational Capabilities
+                        </span>
                         {cap.keyCapabilitiesEn.map((item, idx) => (
-                          <div key={idx} className="flex items-center gap-1.5 text-[10px] text-brand-dark/80 font-sans">
+                          <div key={idx} className="flex items-center gap-2 text-[10.5px] text-white/95 font-sans bg-black/25 px-2.5 py-1.5 rounded-lg border border-white/5">
                             <span className="text-brand-gold text-[8px]">■</span>
                             <span>{item}</span>
                           </div>
@@ -655,15 +672,26 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                     </div>
                   </div>
 
-                  {/* Arabic Block */}
-                  <div className="card-surface p-4 flex flex-col justify-between text-right" dir="rtl">
+                  {/* Arabic Card */}
+                  <div className="bg-[#0B251D]/90 backdrop-blur-md rounded-2xl p-5 border border-brand-gold/35 shadow-2xl flex flex-col justify-between text-right hover:border-brand-gold/60 transition-all" dir="rtl">
                     <div>
-                      <EditableText as="p" className="card-body-ar text-[12px] leading-relaxed mb-3 text-justify">
+                      <div className="flex items-center justify-between border-b border-white/15 pb-2 mb-3">
+                        <span className="text-brand-gold font-arabic text-sm font-bold">
+                          جاهزية الإمداد وسلاسل التوريد
+                        </span>
+                        <span className="text-[10px] font-arabic font-semibold text-white/75 bg-white/10 px-2 py-0.5 rounded">
+                          جاهزية تشغيلية
+                        </span>
+                      </div>
+                      <EditableText as="p" className="text-brand-beige font-arabic text-[12.5px] leading-relaxed mb-4 text-justify">
                         {cap.descAr}
                       </EditableText>
-                      <div className="space-y-1 border-t border-brand-warm/10 pt-2">
+                      <div className="space-y-1.5 border-t border-brand-gold/20 pt-3">
+                        <span className="text-[10px] font-arabic font-bold text-brand-gold block mb-1">
+                          ركائز القدرة التشغيلية
+                        </span>
                         {cap.keyCapabilitiesAr.map((item, idx) => (
-                          <div key={idx} className="flex items-center justify-start gap-1.5 text-[10.5px] text-brand-dark/80">
+                          <div key={idx} className="flex items-center justify-start gap-2 text-[11px] text-white/95 font-arabic bg-black/25 px-2.5 py-1.5 rounded-lg border border-white/5">
                             <span className="text-brand-gold text-[8px]">■</span>
                             <span>{item}</span>
                           </div>
@@ -673,10 +701,10 @@ export function SectionCapabilities({ startPageNumber = 10 }: { startPageNumber?
                   </div>
                 </div>
 
-                {/* Sub Bar */}
-                <div className="flex items-center justify-between pt-2 border-t border-brand-warm/15 text-[9px] text-brand-dark/50 uppercase tracking-widest font-sans">
+                {/* Sub Bar Footer */}
+                <div className="relative z-10 flex items-center justify-between pt-2 border-t border-white/20 text-[9px] text-white/70 uppercase tracking-widest font-sans">
                   <span>Rayat Najd National Greening Solutions</span>
-                  <span className="font-arabic" dir="rtl">حلول تشجير متقدمة للمشاريع الوطنية</span>
+                  <span className="font-arabic font-medium" dir="rtl">حلول تشجير متقدمة وموثوقة للمشاريع الوطنية الكبرى</span>
                 </div>
               </div>
             </Section>

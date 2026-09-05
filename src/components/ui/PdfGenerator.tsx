@@ -1,53 +1,52 @@
-import React, { useState } from 'react';
-import { Printer, Loader2 } from 'lucide-react';
-// @ts-ignore
-import html2pdf from 'html2pdf.js';
+import { useState, useEffect } from 'react';
+import { FileDown, Loader2 } from 'lucide-react';
+import { usePdfDownload } from '../../hooks/usePdfDownload';
 
 export function PdfGenerator() {
-  const [isGenerating, setIsGenerating] = useState(false);
+  const { isGenerating, downloadPdf } = usePdfDownload();
+  const [hasScrolledPastHero, setHasScrolledPastHero] = useState(false);
 
-  const generatePDF = async () => {
-    if (isGenerating) return;
-    setIsGenerating(true);
-    
-    // Add a class to hide non-essential elements before generation
-    document.body.classList.add('pdf-export-mode');
-
-    const element = document.getElementById('catalog-root');
-    
-    const opt: any = {
-      margin:       0,
-      filename:     'Rayat-Najd-Premium-Catalog.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, useCORS: true, logging: false },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' },
-      pagebreak:    { mode: ['css', 'legacy'] }
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show sticky CTA after user scrolls past the hero section (~450px)
+      if (window.scrollY > 450) {
+        setHasScrolledPastHero(true);
+      } else {
+        setHasScrolledPastHero(false);
+      }
     };
 
-    try {
-      await html2pdf().set(opt).from(element).save();
-    } catch (error) {
-      console.error("PDF generation failed:", error);
-    } finally {
-      document.body.classList.remove('pdf-export-mode');
-      setIsGenerating(false);
-    }
-  };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Do not render if user is still in the hero section to keep UI pristine and uncluttered
+  if (!hasScrolledPastHero && !isGenerating) {
+    return null;
+  }
 
   return (
     <button 
-      onClick={generatePDF}
+      onClick={() => downloadPdf('sticky_download_button')}
       disabled={isGenerating}
-      className="fixed bottom-8 right-8 z-50 bg-brand-dark/90 hover:bg-brand-olive text-brand-beige p-4 rounded-full shadow-3d shadow-3d-hover transition-all duration-300 no-print flex items-center gap-3 font-sans text-xs uppercase tracking-[0.2em] backdrop-blur-md border border-brand-warm/20 disabled:opacity-50 disabled:cursor-not-allowed group"
-      aria-label="Generate PDF"
+      className="fixed bottom-8 right-8 z-50 bg-brand-forest hover:bg-brand-forest/90 text-brand-gold px-4 py-3 rounded-full shadow-2xl transition-all duration-300 no-print flex items-center gap-2.5 font-sans text-xs uppercase tracking-wider backdrop-blur-md border border-brand-gold/50 disabled:opacity-50 disabled:cursor-not-allowed group hover:scale-105 cursor-pointer min-h-[44px]"
+      aria-label="تحميل الملف التعريفي الرسمي لشركة رايات نجد بصيغة PDF"
+      title="تحميل الملف التعريفي PDF - Rayat Najd Corporate Profile"
     >
       {isGenerating ? (
-        <Loader2 size={18} className="animate-spin" />
+        <Loader2 size={18} className="animate-spin text-brand-gold shrink-0" />
       ) : (
-        <Printer size={18} className="group-hover:scale-110 transition-transform duration-300 icon-shadow-3d" />
+        <FileDown size={18} className="text-brand-gold group-hover:-translate-y-0.5 transition-transform shrink-0" />
       )}
-      <span className="hidden md:inline-block pr-2 text-shadow-3d">
-        {isGenerating ? 'Generating...' : 'Generate PDF'}
+      <span className="font-arabic font-bold text-sm text-brand-gold pr-1" dir="rtl">
+        {isGenerating ? 'جاري التحميل...' : 'تحميل PDF'}
+      </span>
+      <span className="hidden sm:inline-block font-sans font-semibold text-[10px] text-white/90 border-r border-white/20 pr-2 tracking-wider">
+        {isGenerating ? 'Generating...' : 'Download PDF'}
       </span>
     </button>
   );

@@ -25,7 +25,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen {
+/* Desktop: min-width: 1123px - PIXEL-IDENTICAL TO APPROVED DESKTOP */
+@media screen and (min-width: 1123px) {
   body {
     display: flex;
     justify-content: center;
@@ -38,6 +39,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* Mobile & Tablet: max-width: 1122.98px - Full-width viewport for scaled catalog */
+@media screen and (max-width: 1122.98px) {
+  body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #root {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
   }
 }
 
@@ -119,6 +139,17 @@ body {
 
 .pdf-export-mode section {
   page-break-inside: avoid;
+}
+
+.pdf-export-mode .catalog-viewport-wrapper {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.pdf-export-mode #catalog-root {
+  position: static !important;
+  width: 297mm !important;
+  transform: none !important;
 }
 
 /* Master Typography System */

@@ -22,6 +22,8 @@ import { PdfGenerator } from './components/ui/PdfGenerator';
 import { GridToggle } from './components/ui/GridToggle';
 import { BotanicalBackground } from './components/ui/BotanicalBackground';
 import { LogoBrandModal } from './components/brand/LogoBrandModal';
+import { MobileHeaderBar } from './components/ui/MobileHeaderBar';
+import { CatalogViewerWrapper } from './components/ui/CatalogViewerWrapper';
 import { RAYAT_NAJD_LOGO_URL } from './constants/brand';
 
 const CatalogSeparator = () => (
@@ -95,10 +97,11 @@ export default function App() {
   const [isLogoModalOpen, setIsLogoModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-brand-beige w-full overflow-x-hidden selection:bg-brand-olive selection:text-white font-sans text-brand-dark relative pb-16">
+    <div className="min-h-screen bg-brand-beige w-full selection:bg-brand-olive selection:text-white font-sans text-brand-dark relative pb-16">
+      <MobileHeaderBar />
       <BotanicalBackground />
       
-      <div id="catalog-root" className="w-full relative z-10 flex flex-col items-center">
+      <CatalogViewerWrapper>
         <CoverSection />
         <CatalogSeparator />
         <Section00Index pageNumber={pIndex} pages={pageRanges} />
@@ -126,7 +129,7 @@ export default function App() {
         <Section10Gallery startPageNumber={pGallery} />
         <CatalogSeparator />
         <Section11Contact pageNumber={pContact} />
-      </div>
+      </CatalogViewerWrapper>
 
       {/* Floating Logo Suite & Brand Assets Button */}
       <button
