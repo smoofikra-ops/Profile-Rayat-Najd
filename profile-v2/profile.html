@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>Rayat Najd — Company Profile (Pages 1–4)</title>
+<title>Rayat Najd — Company Profile</title>
 <style>
 @font-face{font-family:Tajawal;font-weight:300;src:url(fonts/Tajawal/Tajawal-Light.ttf)}
 @font-face{font-family:Tajawal;font-weight:400;src:url(fonts/Tajawal/Tajawal-Regular.ttf)}
@@ -14,7 +14,7 @@
   --gold:#C59B4E; --gold-l:#DFBA73; --gold-d:#A57A2C;
   --ivory:#F8F3E8; --ivory-2:#EFE6D3; --ink:#1F2A24; --muted:#5E6B62;
 }
-@page{size:1920px 1080px;margin:0}
+@page{margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#d9d4c8}
 body{font-family:Tajawal,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -303,6 +303,694 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <div><span class="n">04</span><b>التنمية المستدامة</b><small>Sustainable Development</small><p>ترشيد الموارد وتقليل الهدر.</p></div>
   </div>
   <div class="folio" style="right:120px"><b>04</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<style>
+/* ===== shared (pages 5–24) ===== */
+.dark{background:var(--forest);color:#EDE6D4}
+.ttl{position:absolute;right:120px;top:96px;text-align:right}
+.ttl .kicker{text-align:right}
+.ttl h2{font-size:60px;font-weight:800;color:var(--forest);line-height:1.12;margin-top:14px}
+.dark .ttl h2,.onphoto .ttl h2{color:#fff}
+.dark .kicker,.onphoto .kicker{color:var(--gold-l)}
+.ttl .sub{font-family:Lora;font-style:italic;font-size:21px;color:var(--muted);margin-top:8px;direction:ltr;text-align:right}
+.dark .ttl .sub,.onphoto .ttl .sub{color:rgba(237,230,212,.75)}
+.dark .folio,.onphoto .folio{color:rgba(255,255,255,.72)}
+.body-ar{font-size:23px;line-height:1.85;color:#2c3a32}
+.dark .body-ar,.onphoto .body-ar{color:#E9E3D3}
+.body-en{font-family:Lora;font-style:italic;font-size:17px;line-height:1.6;color:var(--muted);direction:ltr;text-align:left}
+.dark .body-en,.onphoto .body-en{color:rgba(233,227,211,.72)}
+.cap{position:absolute;font-family:Inter;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:#fff;direction:ltr;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+.cap-ar{position:absolute;font-size:16px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.src{position:absolute;font-size:14px;color:var(--muted)}
+.dark .src{color:rgba(233,227,211,.55)}
+.fig b{display:block;font-family:Lora;font-weight:500;font-size:46px;line-height:1;color:var(--forest)}
+.dark .fig b,.onphoto .fig b{color:var(--gold-l)}
+.fig span{display:block;font-size:18px;font-weight:700;margin-top:10px;color:var(--forest)}
+.dark .fig span,.onphoto .fig span{color:#fff}
+.fig small{display:block;font-size:15px;color:var(--muted);margin-top:4px;line-height:1.45}
+.dark .fig small,.onphoto .fig small{color:rgba(233,227,211,.7)}
+.thumb{position:absolute;background:#fff;box-shadow:0 18px 40px rgba(15,46,32,.22),0 2px 6px rgba(15,46,32,.15);border:1px solid rgba(197,155,78,.35)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.pill{display:inline-block;font-size:14px;font-weight:700;padding:5px 14px;border-radius:30px;border:1px solid var(--gold);color:var(--gold-d)}
+.dark .pill{color:var(--gold-l)}
+
+/* P5 sectors */
+.p5 .list{position:absolute;right:120px;top:300px;width:820px}
+.p5 .row{display:grid;grid-template-columns:70px 1fr;padding:16px 0;border-bottom:1px solid rgba(197,155,78,.35)}
+.p5 .row:last-child{border:0}
+.p5 .row .n{font-family:Lora;font-style:italic;font-size:26px;color:var(--gold-d);padding-top:4px}
+.p5 .row b{font-size:28px;font-weight:800;color:var(--forest)}
+.p5 .row b em{font-family:Inter;font-style:normal;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);margin-inline-start:14px}
+.p5 .row p{font-size:18px;color:var(--muted);margin-top:4px}
+
+/* P6 afforestation */
+.p6 .text{position:absolute;right:120px;top:300px;width:760px}
+.p6 .figs{position:absolute;right:120px;bottom:120px;width:1100px;display:grid;grid-template-columns:repeat(3,1fr);gap:46px;border-top:1px solid rgba(223,186,115,.6);padding-top:26px}
+
+/* P7 trees & palms */
+.p7 .text{position:absolute;right:120px;top:290px;width:780px}
+.p7 .nurs{position:absolute;right:120px;top:640px;width:780px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.p7 .nurs div{border-top:2px solid var(--gold);padding-top:14px}
+.p7 .nurs b{font-size:26px;font-weight:800;color:var(--forest)}
+.p7 .nurs small{display:block;font-family:Inter;font-size:12.5px;letter-spacing:.16em;color:var(--gold-d);text-transform:uppercase;margin-top:4px;direction:ltr;text-align:right}
+.p7 .nurs p{font-size:17px;color:var(--muted);margin-top:8px;line-height:1.55}
+.p7 .refs{position:absolute;right:120px;bottom:110px;width:780px;font-size:17px;color:var(--muted);line-height:1.6}
+.p7 .refs b{color:var(--forest)}
+
+/* P8 services row */
+.p8 .cols{position:absolute;left:120px;right:120px;top:600px;display:grid;grid-template-columns:repeat(4,1fr);gap:44px}
+.p8 .cols h3{font-size:27px;font-weight:800;color:#fff}
+.p8 .cols h3 small{display:block;font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);margin-top:6px;direction:ltr;text-align:right}
+.p8 .cols p{font-size:18px;line-height:1.65;color:#E2DBC8;margin-top:12px}
+.p8 .cols .ev{font-size:15px;color:var(--gold-l);margin-top:12px;line-height:1.5;border-top:1px solid rgba(223,186,115,.35);padding-top:10px}
+
+/* P9 methodology */
+.p9 .step{position:absolute;width:270px;text-align:center}
+.p9 .step .n{font-family:Lora;font-style:italic;font-size:22px;color:var(--gold-d)}
+.p9 .step b{display:block;font-size:25px;font-weight:800;color:var(--forest);margin-top:6px;line-height:1.3}
+.p9 .step small{display:block;font-family:Inter;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);margin-top:6px}
+.p9 .step p{font-size:16.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+
+/* P10 PM */
+.p10 .text{position:absolute;right:120px;top:300px;width:800px}
+.p10 .pr{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:13px 0;border-bottom:1px solid rgba(197,155,78,.3)}
+.p10 .pr i{width:14px;height:14px;border-radius:50%;border:2px solid var(--gold);margin-top:10px}
+.p10 .pr b{font-size:23px;font-weight:800;color:var(--forest)}
+.p10 .pr p{font-size:17.5px;color:var(--muted);margin-top:3px;line-height:1.5}
+.p10 .out{position:absolute;right:120px;bottom:110px;width:800px}
+.p10 .out .lbl{font-size:17px;font-weight:700;color:var(--gold-d);margin-bottom:10px}
+.p10 .out span{display:inline-block;font-size:16px;color:var(--forest);border:1px solid rgba(197,155,78,.6);border-radius:30px;padding:6px 16px;margin:0 0 8px 8px;background:rgba(255,255,255,.5)}
+
+/* P11 QHSE */
+.p11 .cols{position:absolute;right:120px;left:120px;top:440px;display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.p11 h3{font-size:30px;font-weight:800;color:#fff}
+.p11 h3 small{font-family:Lora;font-style:italic;font-weight:400;font-size:19px;color:var(--gold-l);margin-inline-start:12px}
+.p11 .cols p{font-size:19.5px;line-height:1.75;color:#E2DBC8;margin-top:12px}
+.p11 .iso{position:absolute;right:120px;left:120px;bottom:100px;display:flex;gap:40px;align-items:center;border-top:1px solid rgba(223,186,115,.5);padding-top:28px}
+.p11 .iso .m{display:flex;align-items:center;gap:18px}
+.p11 .iso .ring{width:96px;height:96px;border-radius:50%;border:2px solid var(--gold-l);display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:Inter;color:#fff;font-weight:700;font-size:15px;line-height:1.1;text-align:center;direction:ltr}
+.p11 .iso .ring em{font-style:normal;font-weight:400;font-size:12px;color:var(--gold-l)}
+.p11 .iso .m b{display:block;font-size:20px;color:#fff;font-weight:700}
+.p11 .iso .m span{display:block;font-size:14.5px;color:rgba(233,227,211,.7);margin-top:3px}
+
+/* P12 capabilities */
+.p12 .c3{position:absolute;right:120px;left:120px;top:300px;display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:70px}
+.p12 h3{font-size:28px;font-weight:800;color:var(--forest)}
+.p12 h3 small{display:block;font-family:Inter;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);margin-top:5px;direction:ltr;text-align:right}
+.p12 .big{font-family:Lora;font-size:130px;line-height:.9;color:var(--forest);font-weight:500}
+.p12 .regions{columns:2;column-gap:24px;font-size:19px;line-height:2;color:#2c3a32;margin-top:14px}
+.p12 .regions li{list-style:none;break-inside:avoid}
+.p12 .regions li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-inline-end:10px;vertical-align:middle}
+.p12 .kv{margin-top:16px}
+.p12 .kv div{padding:12px 0;border-bottom:1px solid rgba(197,155,78,.3)}
+.p12 .kv b{font-family:Lora;font-size:32px;color:var(--forest);font-weight:500}
+.p12 .kv span{display:block;font-size:16.5px;color:var(--muted);margin-top:2px;line-height:1.45}
+
+/* P13 portfolio */
+.p13 .figs{position:absolute;right:120px;top:330px;width:700px;display:grid;grid-template-columns:1fr 1fr;gap:44px 50px}
+.p13 .figs .fig b{font-size:64px}
+.p13 .chart{position:absolute;left:110px;top:300px;width:900px;height:560px}
+.p13 .clients{position:absolute;right:120px;bottom:120px;width:1680px;border-top:1px solid rgba(223,186,115,.45);padding-top:22px;font-size:19px;color:#E2DBC8;line-height:1.8}
+.p13 .clients b{color:var(--gold-l);font-weight:700;margin-inline-end:14px}
+
+/* project feature pages */
+.feat .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.feat .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:36px;margin-top:28px}
+.feat .facts .fig b{font-size:40px}
+.feat h3{font-size:30px;font-weight:800;color:var(--forest);line-height:1.3}
+.dark.feat h3,.onphoto.feat h3{color:#fff}
+.feat .item{padding:14px 0;border-bottom:1px solid rgba(197,155,78,.3)}
+.feat .item b{font-size:21px;font-weight:800;color:var(--forest)}
+.dark.feat .item b,.onphoto.feat .item b{color:#fff}
+.feat .item p{font-size:16.5px;color:var(--muted);margin-top:3px;line-height:1.5}
+.dark.feat .item p,.onphoto.feat .item p{color:rgba(233,227,211,.78)}
+.feat .item em{font-style:normal;font-family:Lora;color:var(--gold-d);font-size:17px}
+.dark.feat .item em,.onphoto.feat .item em{color:var(--gold-l)}
+
+/* register tables */
+.reg table{position:absolute;right:120px;left:120px;top:270px;border-collapse:collapse;width:1680px}
+.reg th{font-size:15px;font-weight:700;color:var(--gold-d);text-align:right;padding:0 12px 12px;border-bottom:2px solid var(--gold)}
+.reg td{font-size:16.5px;color:#2c3a32;padding:11px 12px;border-bottom:1px solid rgba(197,155,78,.28);vertical-align:top;line-height:1.4}
+.reg td:first-child{font-family:Lora;font-style:italic;color:var(--gold-d);width:46px}
+.reg td.v{font-family:Inter;font-size:15.5px;direction:ltr;text-align:left;white-space:nowrap;color:var(--forest);font-weight:600}
+.reg td.d{font-family:Inter;font-size:14px;direction:ltr;text-align:left;white-space:nowrap;color:var(--muted)}
+.reg td.o{color:var(--muted);font-size:15.5px}
+.reg tr.tot td{border-bottom:0;border-top:2px solid var(--gold);font-weight:800;color:var(--forest);font-size:19px;padding-top:16px}
+
+/* P21 licences */
+.p21 .lic{position:absolute;right:120px;top:290px;width:880px}
+.p21 .lic div{display:grid;grid-template-columns:1fr auto;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(197,155,78,.32)}
+.p21 .lic b{font-size:22px;font-weight:800;color:var(--forest)}
+.p21 .lic b small{font-family:Inter;font-weight:500;font-size:12.5px;letter-spacing:.1em;color:var(--gold-d);margin-inline-start:12px;text-transform:uppercase}
+.p21 .lic p{grid-column:1/-1;font-size:16px;color:var(--muted);margin-top:3px}
+.p21 .lic .st{font-size:15px;font-weight:700;color:var(--leaf);white-space:nowrap}
+
+/* P22 letters */
+.p22 .tl{position:absolute;text-align:center;width:250px}
+.p22 .tl .thumb{position:relative;width:250px;height:340px}
+.p22 .tl b{display:block;font-size:16px;font-weight:700;color:#fff;margin-top:14px;line-height:1.35}
+.p22 .tl span{display:block;font-size:13.5px;color:rgba(233,227,211,.7);margin-top:3px}
+
+/* P23 why */
+.p23 .grid{position:absolute;right:120px;left:120px;top:330px;display:grid;grid-template-columns:repeat(3,1fr);gap:54px 70px}
+.p23 .grid .n{font-family:Lora;font-style:italic;font-size:22px;color:var(--gold-l)}
+.p23 .grid b{display:block;font-size:28px;font-weight:800;color:#fff;margin-top:6px}
+.p23 .grid small{display:block;font-family:Inter;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);margin-top:5px;direction:ltr;text-align:right}
+.p23 .grid p{font-size:18px;color:#E2DBC8;margin-top:10px;line-height:1.6}
+
+/* P24 back cover */
+.p24 .center{position:absolute;right:120px;top:150px;width:900px;text-align:center;color:#fff}
+.p24 .center img{width:230px;height:230px}
+.p24 .center h2{font-size:58px;font-weight:800;margin-top:22px}
+.p24 .center .en{font-family:Inter;font-weight:600;letter-spacing:.2em;color:var(--gold-l);font-size:24px;margin-top:10px;text-align:center}
+.p24 .contacts{position:absolute;right:120px;top:640px;width:900px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.p24 .contacts small{display:block;font-size:16px;color:var(--gold-l);font-weight:500}
+.p24 .contacts b{display:block;font-family:Inter;font-size:24px;color:#fff;font-weight:600;margin-top:8px;direction:ltr}
+.p24 .contacts span{display:block;font-family:Inter;font-size:12px;letter-spacing:.16em;color:rgba(255,255,255,.55);margin-top:4px;text-transform:uppercase}
+.p24 .addr{position:absolute;right:120px;top:800px;width:900px;text-align:center;font-size:20px;color:#E2DBC8}
+.p24 .addr span{display:block;font-family:Inter;font-size:13px;letter-spacing:.2em;color:rgba(255,255,255,.55);margin-top:6px;text-transform:uppercase}
+</style>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="G" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DFBA73"/><stop offset=".35" stop-color="#C59B4E"/><stop offset=".7" stop-color="#E8CA8C"/><stop offset="1" stop-color="#A57A2C"/></linearGradient>
+  </defs>
+</svg>
+
+<!-- ================= P5 SECTORS ================= -->
+<section class="page p5">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><clipPath id="c5"><path d="M0 0 H700 C860 170 760 380 860 560 C960 740 860 930 760 1080 H0 Z"/></clipPath></defs>
+    <g clip-path="url(#c5)"><image href="img/h_419.jpg" x="-260" y="0" width="1440" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M712 -10 C872 170 772 380 872 560 C972 740 872 930 772 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
+    <path d="M742 -10 C902 172 802 382 902 562 C1002 742 902 932 802 1092" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".55"/>
+  </svg>
+  <div class="cap" style="left:60px;bottom:48px">Umm Al-Hamam afforestation · Al Asyah, Qassim</div>
+  <div class="ttl"><div class="kicker">04 — Business Sectors</div><h2>قطاعات الأعمال</h2></div>
+  <div class="list">
+    <div class="row"><span class="n">01</span><div><b>التشجير وتنمية الغطاء النباتي<em>Afforestation</em></b><p>زراعة الأنواع المحلية، إعادة تأهيل المراعي، الرعاية والسقيا للمشاريع البيئية.</p></div></div>
+    <div class="row"><span class="n">02</span><div><b>توريد الأشجار والنخيل<em>Trees &amp; Palms Supply</em></b><p>من مشاتل المؤسسة في منطقة الرياض: نخيل واشنطونيا ونخيل التمر والأشجار المحلية.</p></div></div>
+    <div class="row"><span class="n">03</span><div><b>تنسيق المواقع والحدائق<em>Landscaping</em></b><p>تنسيق المواقع العامة والسكنية والحدائق والممرات والمسطحات الخضراء.</p></div></div>
+    <div class="row"><span class="n">04</span><div><b>شبكات الري<em>Irrigation Networks</em></b><p>توريد وتركيب وتشغيل شبكات الري والخزانات وخطوط التغذية.</p></div></div>
+    <div class="row"><span class="n">05</span><div><b>نقل الأشجار الكبيرة وإزالتها<em>Tree Relocation</em></b><p>قلع ونقل وإعادة زراعة الأشجار والنخيل المعمّرة ومعالجتها قبل النقل.</p></div></div>
+    <div class="row"><span class="n">06</span><div><b>التشغيل والصيانة والأعمال المساندة<em>O&amp;M · Fencing</em></b><p>عقود الرعاية والصيانة، وأعمال التسوير والسياج والأعمال المدنية المرتبطة بالمواقع.</p></div></div>
+  </div>
+  <div class="folio" style="right:120px"><b>05</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P6 AFFORESTATION ================= -->
+<section class="page p6 onphoto">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><linearGradient id="sh6" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#0F2E20" stop-opacity=".94"/><stop offset=".45" stop-color="#0F2E20" stop-opacity=".72"/><stop offset=".8" stop-color="#0F2E20" stop-opacity=".1"/></linearGradient></defs>
+    <image href="img/h_420.jpg" x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>
+    <rect width="1920" height="1080" fill="url(#sh6)"/>
+    <path d="M-10 1000 C500 940 900 1060 1930 960" fill="none" stroke="url(#G)" stroke-width="3" opacity=".9"/>
+  </svg>
+  <div class="ttl"><div class="kicker">05 — Afforestation &amp; Vegetation Cover</div><h2>التشجير وتنمية الغطاء النباتي</h2><div class="sub">Afforestation, rangeland rehabilitation &amp; vegetation care</div></div>
+  <div class="text">
+    <p class="body-ar">ننفّذ مشاريع التشجير في البيئات الصحراوية والمفتوحة: تجهيز الحفر، وتوريد الشتلات المحلية وزراعتها، ومدّ خطوط الري بالتنقيط، ثم الرعاية والسقيا حتى ثبات الغطاء النباتي. كما ننفّذ أعمال إعادة تأهيل المراعي المتدهورة بنثر البذور والاستزراع.</p>
+    <p class="body-en" style="margin-top:16px">We deliver afforestation in open desert environments — pit preparation, native seedling supply and planting, drip-irrigation lines, then care and watering until vegetation is established — as well as rangeland rehabilitation through seed broadcasting and replanting.</p>
+  </div>
+  <div class="figs">
+    <div class="fig"><b>3,000</b><span>هكتار</span><small>إعادة تأهيل المراعي المتدهورة (المرحلة الثانية) — المركز الوطني لتنمية الغطاء النباتي</small></div>
+    <div class="fig"><b>230,000</b><span>شتلة</span><small>حفر وتوريد وزراعة في موقعي الجموم وخليص — منطقة مكة المكرمة</small></div>
+    <div class="fig"><b>150,000</b><span>شتلة</span><small>توريد وحفر وزراعة — منتزه الطائف الوطني</small></div>
+  </div>
+  <div class="cap" style="left:70px;bottom:36px">Umm Al-Hamam · Al Asyah, Qassim</div>
+  <div class="folio" style="right:120px;bottom:40px"><b>06</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P7 TREES, PALMS & NURSERIES ================= -->
+<section class="page p7">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="c7a"><path d="M0 0 H900 C930 140 860 300 760 400 C640 520 420 560 240 520 C120 494 40 470 0 470 Z"/></clipPath>
+      <clipPath id="c7b"><path d="M70 600 C200 520 470 520 620 600 C770 680 820 860 740 980 C680 1070 520 1090 330 1060 C160 1034 40 960 30 830 C22 730 30 650 70 600 Z"/></clipPath>
+    </defs>
+    <g clip-path="url(#c7a)"><image href="img/n_22.jpg" x="-80" y="-60" width="1100" height="620" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M912 -10 C942 140 872 304 772 406 C650 528 420 572 236 532 C120 506 40 482 -10 482" fill="none" stroke="url(#G)" stroke-width="3.5"/>
+    <g clip-path="url(#c7b)"><image href="img/p_5280.jpg" x="20" y="520" width="830" height="570" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M70 600 C200 520 470 520 620 600 C770 680 820 860 740 980 C680 1070 520 1090 330 1060 C160 1034 40 960 30 830 C22 730 30 650 70 600 Z" fill="none" stroke="url(#G)" stroke-width="2"/>
+  </svg>
+  <div class="cap" style="left:60px;top:430px">Al-Hair nursery · Riyadh</div>
+  <div class="cap" style="left:840px;top:1000px">Al-Mansouriyah nursery</div>
+  <div class="ttl"><div class="kicker">06 — Trees, Palms &amp; Nurseries</div><h2>توريد الأشجار والنخيل</h2><div class="sub">Supplied from our own nurseries</div></div>
+  <div class="text">
+    <p class="body-ar">نوفّر للمشاريع نخيل الواشنطونيا ونخيل التمر والأشجار المحلية المتحمّلة للجفاف كالسدر والسمر والغاف والطلح، مع أعمال النقل والزراعة والرعاية وفق جداول الكميات والمواصفات المعتمدة.</p>
+    <p class="body-en" style="margin-top:12px">Washingtonia and date palms, and drought-tolerant native trees such as Sidr, Samar, Ghaf and Talh — supplied, transported, planted and cared for to approved BOQs and specifications.</p>
+  </div>
+  <div class="nurs">
+    <div><b>مشتل الحائر</b><small>Al-Hair Nursery · Riyadh</small><p>حقول نخيل وأشجار في أوعية جاهزة للتوريد.</p></div>
+    <div><b>مشتل المنصورية</b><small>Al-Mansouriyah Nursery</small><p>صفوف نخيل واشنطونيا بأعمار وأطوال متعددة.</p></div>
+  </div>
+  <div class="refs"><b>من عقود التوريد:</b> أشجار ونباتات مشروع روشن للشركة الوطنية للإسكان · أشجار ونباتات مشروع القدية · توريد 20,000 من الأشجار والنباتات ونقل نخيل ورعايته للمزرعة الخاصة لهيئة الدرعية · نباتات ونخيل مشروع سدرة (المرحلة الأولى).</div>
+  <div class="folio" style="right:120px"><b>07</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P8 LANDSCAPE · IRRIGATION · RELOCATION · O&M ================= -->
+<section class="page p8 dark">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <radialGradient id="bg8" cx=".2" cy=".1" r="1"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient>
+      <clipPath id="c8"><path d="M0 0 H1920 V430 C1600 520 1240 470 960 500 C640 534 330 560 0 500 Z"/></clipPath>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#bg8)"/>
+    <g clip-path="url(#c8)">
+      <image href="img/rel_4.jpg" x="0" y="-80" width="660" height="640" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/h_387.jpg" x="660" y="-40" width="620" height="600" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/p_5284.jpg" x="1280" y="-40" width="640" height="600" preserveAspectRatio="xMidYMid slice"/>
+      <rect x="656" y="0" width="5" height="600" fill="#C59B4E"/><rect x="1276" y="0" width="5" height="600" fill="#C59B4E"/>
+      <rect width="1920" height="200" fill="#0F2E20" opacity=".35"/>
+    </g>
+    <path d="M-10 502 C330 562 640 536 960 502 C1240 472 1600 522 1930 430" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="ttl" style="top:60px"><div class="kicker">07 — Site Works</div><h2 style="text-shadow:0 2px 14px rgba(0,0,0,.45)">الأعمال الميدانية المتكاملة</h2></div>
+  <div class="cols">
+    <div><h3>تنسيق المواقع<small>Landscaping</small></h3><p>تنسيق المجاري والممرات والمواقع العامة مع أعمال الزراعة والري والإنارة.</p><div class="ev">التنسيق الكامل لمجرى الشعيب وأعمال الري والزراعة والإنارة — وادي الحصان</div></div>
+    <div><h3>شبكات الري<small>Irrigation</small></h3><p>توريد وتركيب وتشغيل شبكات الري والخزانات للمشاريع البيئية والسكنية.</p><div class="ev">شبكة ري بطول 233,350 مترًا وخمسة خزانات — محطة التمريات، الجوف</div></div>
+    <div><h3>نقل الأشجار<small>Tree Relocation</small></h3><p>قلع الأشجار والنخيل المعمّرة وتغليفها ونقلها وإعادة زراعتها بمعدات مناسبة.</p><div class="ev">نقل النخيل ومعالجته من حي السمحان إلى الموقع المعتمد في الدرعية</div></div>
+    <div><h3>التشغيل والصيانة<small>O&amp;M · Fencing</small></h3><p>عقود الرعاية والصيانة الدورية، وأعمال التسوير والسياج للمواقع.</p><div class="ev">توريد وتركيب سور شبك بطول 15,511 مترًا — متنزه الفج الكريمي، مكة المكرمة</div></div>
+  </div>
+  <div class="src" style="right:120px;bottom:48px">الأرقام من: ملخص المشاريع خلال خمس سنوات وشهادات الإنجاز</div>
+  <div class="folio" style="left:120px"><b>08</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P9 METHODOLOGY ================= -->
+<section class="page p9">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <path d="M0 860 C380 760 600 980 1100 880 C1450 810 1650 720 1920 760 V1080 H0 Z" fill="#EFE6D3" opacity=".7"/>
+    <path id="path9" d="M150 610 C380 470 560 760 800 620 C1040 480 1180 760 1420 620 C1600 515 1700 560 1780 600" fill="none" stroke="url(#G)" stroke-width="3"/>
+    <path d="M150 632 C380 492 560 782 800 642 C1040 502 1180 782 1420 642 C1600 537 1700 582 1780 622" fill="none" stroke="url(#G)" stroke-width="1" opacity=".5"/>
+    <g fill="#F8F3E8" stroke="#C59B4E" stroke-width="3">
+      <circle cx="1770" cy="596" r="15"/><circle cx="1470" cy="595" r="15"/><circle cx="1150" cy="660" r="15"/><circle cx="830" cy="606" r="15"/><circle cx="500" cy="616" r="15"/><circle cx="185" cy="590" r="15"/>
+    </g>
+    <g fill="#143A2A"><circle cx="1770" cy="596" r="6"/><circle cx="1470" cy="595" r="6"/><circle cx="1150" cy="660" r="6"/><circle cx="830" cy="606" r="6"/><circle cx="500" cy="616" r="6"/><circle cx="185" cy="590" r="6"/></g>
+  </svg>
+  <div class="ttl"><div class="kicker">08 — Project Delivery Approach</div><h2>منهجية تنفيذ المشاريع</h2><div class="sub">Six stages from scope to handover</div></div>
+  <div class="step" style="left:1635px;top:330px"><span class="n">01</span><b>دراسة نطاق العمل والمتطلبات</b><small>Scope &amp; Requirements</small><p>مراجعة العقد والمواصفات وجدول الكميات.</p></div>
+  <div class="step" style="left:1335px;top:680px"><span class="n">02</span><b>التخطيط والبرنامج التنفيذي</b><small>Planning &amp; Program</small><p>برنامج زمني وتوزيع الموارد والمراحل.</p></div>
+  <div class="step" style="left:1015px;top:390px"><span class="n">03</span><b>تجهيز الموقع والموارد</b><small>Mobilization</small><p>تجهيز الموقع والمعدات والمواد والفرق.</p></div>
+  <div class="step" style="left:695px;top:680px"><span class="n">04</span><b>التنفيذ وضبط الجودة</b><small>Execution &amp; QC</small><p>تنفيذ مرحلي مع ضبط المواد وجودة العمل.</p></div>
+  <div class="step" style="left:365px;top:340px"><span class="n">05</span><b>الاختبارات والاستلام</b><small>Testing &amp; Handover</small><p>تشغيل تجريبي وإغلاق الملاحظات حتى الاستلام.</p></div>
+  <div class="step" style="left:50px;top:660px"><span class="n">06</span><b>الدعم والصيانة حسب العقد</b><small>Support &amp; Maintenance</small><p>رعاية وصيانة بعد التسليم وفق شروط العقد.</p></div>
+  <div class="folio" style="right:120px"><b>09</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P10 PROJECT MANAGEMENT ================= -->
+<section class="page p10">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><clipPath id="c10"><path d="M0 0 H760 C880 220 980 420 900 620 C830 800 900 960 980 1080 H0 Z"/></clipPath></defs>
+    <g clip-path="url(#c10)"><image href="img/h_431.jpg" x="-300" y="0" width="1440" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M772 -10 C892 220 992 420 912 620 C842 800 912 960 992 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="cap" style="left:60px;bottom:48px">Site mobilization · Umm Al-Hamam, Qassim</div>
+  <div class="ttl"><div class="kicker">09 — Project Management</div><h2>إدارة المشاريع</h2><div class="sub">Planned, controlled and documented</div></div>
+  <div class="text">
+    <div class="pr"><i></i><div><b>التخطيط قبل التنفيذ</b><p>برنامج زمني معتمد يربط الكميات بالموارد ومراحل العمل.</p></div></div>
+    <div class="pr"><i></i><div><b>إدارة الموقع والموارد</b><p>تنظيم الموقع والمعدات والمواد وفرق العمل بما يتوافق مع متطلبات المشروع.</p></div></div>
+    <div class="pr"><i></i><div><b>متابعة الإنجاز</b><p>قياس التقدم الفعلي مقارنة بالبرنامج، ورفع المستخلصات وفق الكميات المنفذة.</p></div></div>
+    <div class="pr"><i></i><div><b>التنسيق مع المالك والاستشاري</b><p>التعامل مع الملاحظات وإغلاقها، والالتزام بالشروط والمواصفات المتعاقد عليها.</p></div></div>
+    <div class="pr"><i></i><div><b>الاستلام والتوثيق</b><p>محاضر استلام وشهادات إنجاز تصدر من الجهات المالكة.</p></div></div>
+  </div>
+  <div class="out"><div class="lbl">مخرجات موثّقة · Documented outputs</div><span>البرنامج الزمني</span><span>المستخلصات</span><span>محاضر الاستلام</span><span>شهادات الإنجاز</span><span>خطابات الشكر</span></div>
+  <div class="folio" style="right:120px"><b>10</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P11 QUALITY · HSE · SUSTAINABILITY ================= -->
+<section class="page p11 dark">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <radialGradient id="bg11" cx=".85" cy=".1" r="1"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient>
+      <clipPath id="c11"><path d="M0 0 H1100 C1000 120 860 260 640 300 C420 340 180 320 0 380 Z"/></clipPath>
+      <linearGradient id="f11" x1="0" y1="0" x2="1" y2="0"><stop offset=".55" stop-color="#0F2E20" stop-opacity="0"/><stop offset="1" stop-color="#0F2E20" stop-opacity=".6"/></linearGradient>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#bg11)"/>
+    <image href="img/rayat-najd-emblem-light.svg" x="1460" y="560" width="620" height="620" opacity=".04"/>
+    <g clip-path="url(#c11)"><image href="img/h_426.jpg" x="0" y="-180" width="1100" height="620" preserveAspectRatio="xMidYMid slice"/><rect width="1100" height="400" fill="url(#f11)"/></g>
+    <path d="M1112 -10 C1012 120 868 270 642 312 C420 352 180 332 -10 392" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="ttl"><div class="kicker">10 — Quality, HSE &amp; Sustainability</div><h2>الجودة والسلامة والاستدامة</h2></div>
+  <div class="cols">
+    <div><h3>الجودة<small>Quality</small></h3><p>نعتمد مبدأ التخطيط قبل التنفيذ، وضبط المواد والأعمال، ومتابعة الملاحظات حتى الإغلاق والاستلام.</p><p class="body-en" style="margin-top:12px">Planned execution, control of materials and workmanship, and systematic close-out through handover.</p></div>
+    <div><h3>السلامة والصحة المهنية<small>Health &amp; Safety</small></h3><p>تُدار الأعمال الميدانية وفق متطلبات المشروع وإجراءات السلامة المعتمدة، مع التركيز على الوقاية وتنظيم الموقع ومعدات الوقاية المناسبة.</p></div>
+    <div><h3>الاستدامة<small>Sustainability</small></h3><p>نسعى إلى ترشيد الموارد وتقليل الهدر واختيار الحلول العملية التي تحسّن كفاءة التشغيل ودورة حياة الأعمال، كالري بالتنقيط والأنواع المحلية.</p></div>
+  </div>
+  <div class="iso">
+    <div class="m"><div class="ring">ISO<br>9001<em>2015</em></div><div><b>نظام إدارة الجودة</b><span>Quality Management</span></div></div>
+    <div class="m"><div class="ring">ISO<br>14001<em>2015</em></div><div><b>نظام الإدارة البيئية</b><span>Environmental Management</span></div></div>
+    <div class="m"><div class="ring">ISO<br>45001<em>2018</em></div><div><b>الصحة والسلامة المهنية</b><span>Occupational Health &amp; Safety</span></div></div>
+    <div style="margin-inline-start:auto;text-align:left;font-size:15px;color:rgba(233,227,211,.7);line-height:1.6">سارية حتى 02/03/2028<br><span style="font-family:Inter;font-size:12.5px;letter-spacing:.08em">ARS Assessment · UAF accredited</span></div>
+  </div>
+  <div class="folio" style="left:120px;bottom:40px"><b>11</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P12 OPERATIONAL CAPABILITIES ================= -->
+<section class="page p12">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><clipPath id="c12"><path d="M0 880 C420 820 820 900 1200 860 C1520 826 1740 800 1920 820 V1080 H0 Z"/></clipPath></defs>
+    <g clip-path="url(#c12)"><image href="img/p_5280.jpg" x="0" y="420" width="1920" height="1280" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M-10 880 C420 820 820 900 1200 860 C1520 826 1740 800 1930 820" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="ttl"><div class="kicker">11 — Operational Capabilities</div><h2>القدرات التشغيلية</h2></div>
+  <div class="c3">
+    <div>
+      <h3>نطاق جغرافي واسع<small>Geographic reach</small></h3>
+      <div style="display:flex;align-items:flex-end;gap:16px;margin-top:10px"><span class="big">8</span><span style="font-size:20px;color:var(--muted);padding-bottom:14px">مناطق نُفّذت فيها مشاريع موثّقة</span></div>
+      <ul class="regions"><li>الرياض</li><li>القصيم</li><li>مكة المكرمة</li><li>الجوف</li><li>الحدود الشمالية</li><li>المنطقة الشرقية</li><li>الباحة</li><li>عسير (بيشة)</li></ul>
+    </div>
+    <div>
+      <h3>مشاتل وموارد ذاتية<small>Own nurseries &amp; resources</small></h3>
+      <p class="body-ar" style="font-size:19px;margin-top:14px">مشتلان في منطقة الرياض (الحائر والمنصورية) يوفّران مخزونًا من النخيل والأشجار الجاهزة للتوريد، بما يدعم سرعة الاستجابة لجداول الكميات الكبيرة.</p>
+      <p class="body-en" style="margin-top:10px">Two nurseries in the Riyadh region (Al-Hair and Al-Mansouriyah) hold ready palm and tree stock for fast response to large BOQs.</p>
+    </div>
+    <div>
+      <h3>شواهد على الطاقة التنفيذية<small>Delivery capacity</small></h3>
+      <div class="kv">
+        <div><b>233,350 م</b><span>شبكة ري منفّذة — محطة التمريات، الجوف</span></div>
+        <div><b>230,000</b><span>شتلة — الجموم وخليص، مكة المكرمة</span></div>
+        <div><b>15,511 م</b><span>سور شبك — متنزه الفج الكريمي، مكة المكرمة</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="cap" style="right:120px;bottom:44px">Al-Mansouriyah nursery · Riyadh</div>
+  <div class="folio" style="left:120px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)"><b style="color:#fff">12</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P13 PORTFOLIO OVERVIEW ================= -->
+<section class="page p13 dark">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><radialGradient id="bg13" cx=".15" cy=".2" r="1"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient></defs>
+    <rect width="1920" height="1080" fill="url(#bg13)"/>
+    <path d="M0 140 C500 60 1000 220 1920 110" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".35"/>
+  </svg>
+  <div class="ttl"><div class="kicker">12 — Projects &amp; Achievements</div><h2>المشاريع والإنجازات</h2><div class="sub">Five-year project record</div></div>
+  <div class="figs">
+    <div class="fig"><b>27</b><span>مشروعًا</span><small>حالية وسابقة خلال خمس سنوات</small></div>
+    <div class="fig"><b>77.9<span style="display:inline;font-size:22px;font-family:Tajawal;color:var(--gold-l);margin-inline-start:8px">مليون ﷼</span></b><span>إجمالي قيمة العقود</span><small>77,927,513.50 ريال سعودي</small></div>
+    <div class="fig"><b>20</b><span>مليون ﷼</span><small>أكبر عقد منفرد — تنسيق مجرى شعيب وادي الحصان</small></div>
+    <div class="fig"><b style="direction:ltr;text-align:right;white-space:nowrap;font-size:52px">2020–2025</b><span>فترة بدء العقود</span><small>عقود تمتد حتى 2027</small></div>
+  </div>
+  <svg class="chart" viewBox="0 0 900 560">
+    <g font-family="Inter" font-size="15" fill="rgba(233,227,211,.7)">
+      <line x1="40" y1="470" x2="880" y2="470" stroke="rgba(223,186,115,.5)"/>
+      <!-- max 36.91M -> 400px -->
+      <rect x="70"  y="434.2" width="90" height="35.8"  fill="#2D7352"/>
+      <rect x="205" y="380"   width="90" height="90"    fill="#2D7352"/>
+      <rect x="340" y="455.9" width="90" height="14.1"  fill="#2D7352"/>
+      <rect x="475" y="259.6" width="90" height="210.4" fill="#408E67"/>
+      <rect x="610" y="375.9" width="90" height="94.1"  fill="#2D7352"/>
+      <rect x="745" y="70"    width="90" height="400"   fill="url(#G)"/>
+      <g text-anchor="middle"><text x="115" y="500">2020</text><text x="250" y="500">2021</text><text x="385" y="500">2022</text><text x="520" y="500">2023</text><text x="655" y="500">2024</text><text x="790" y="500">2025</text></g>
+      <g text-anchor="middle" fill="#fff" font-weight="600" font-size="17"><text x="115" y="422">3.3</text><text x="250" y="368">8.3</text><text x="385" y="444">1.3</text><text x="520" y="248">19.4</text><text x="655" y="364">8.7</text><text x="790" y="58">36.9</text></g>
+    </g>
+    
+  </svg>
+  <div class="abs" style="left:110px;top:840px;width:900px;text-align:center;font-size:17px;color:rgba(233,227,211,.75)">قيمة العقود حسب سنة البدء — مليون ريال</div>
+  <div class="clients"><b>من الجهات المالكة والمتعاقدة:</b>المركز الوطني لتنمية الغطاء النباتي ومكافحة التصحر · الشركة الوطنية للإسكان · مؤسسة تنمية الغطاء النباتي الأهلية «مروج» · شركة زهران للصيانة والتشغيل · شركة سمو العقارية · شركة اتحاد العزم للمقاولات · شركة الجزيرة للمقاولات · شركة الإبداع السعودي للاستشارات الهندسية · شركة العنادي · شركة موارد الآلات · شركة رزيق الجدراوي للمقاولات · شركة الصنوبر الحديثة للمقاولات</div>
+  <div class="src" style="left:120px;bottom:48px">المصدر: ملخص المشاريع الحالية والسابقة خلال خمس سنوات — وثيقة صادرة عن المؤسسة</div>
+  <div class="folio" style="right:120px;bottom:40px"><b>13</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P14 FEATURE: UMM AL-HAMAM & UMM SHALFAH ================= -->
+<section class="page feat p14">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="c14a"><path d="M0 0 H1100 C1060 200 1000 340 860 430 C700 530 420 560 220 640 C120 680 40 720 0 760 Z"/></clipPath>
+      <clipPath id="c14b"><circle cx="420" cy="860" r="190"/></clipPath>
+      <clipPath id="c14c"><circle cx="830" cy="760" r="150"/></clipPath>
+    </defs>
+    <g clip-path="url(#c14a)"><image href="img/h_414.jpg" x="0" y="-160" width="1140" height="1000" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M1112 -10 C1072 200 1012 346 868 440 C706 542 420 574 220 654 C120 694 40 734 -10 776" fill="none" stroke="url(#G)" stroke-width="4"/>
+    <g clip-path="url(#c14b)"><image href="img/h_426.jpg" x="230" y="670" width="380" height="380" preserveAspectRatio="xMidYMid slice"/></g>
+    <circle cx="420" cy="860" r="190" fill="none" stroke="url(#G)" stroke-width="3"/>
+    <g clip-path="url(#c14c)"><image href="img/s_8016.jpg" x="680" y="610" width="300" height="300" preserveAspectRatio="xMidYMid slice"/></g>
+    <circle cx="830" cy="760" r="150" fill="none" stroke="url(#G)" stroke-width="3"/>
+  </svg>
+  <div class="cap" style="left:60px;top:40px">Umm Al-Hamam · Al Asyah, Qassim — aerial</div>
+  <div class="ttl" style="width:760px"><div class="kicker">Featured Project · 01</div><h2 style="font-size:50px">تشجير واستزراع فيضتي أم حمام وأم شلفح</h2><div class="sub">Umm Al-Hamam &amp; Umm Shalfah · Al Asyah, Qassim</div></div>
+  <div class="abs" style="right:120px;top:400px;width:720px">
+    <div class="meta"><span class="pill">تشجير واستزراع</span><span class="pill">رعاية وصيانة</span><span class="pill">ري بالتنقيط</span></div>
+    <p class="body-ar" style="margin-top:22px">تشجير واستزراع فيضتي أم حمام وأم شلفح في محافظة الأسياح بمنطقة القصيم، بالأنواع المحلية وخطوط الري بالتنقيط، مع أعمال الرعاية والصيانة اللاحقة للمشروعين.</p>
+    <p class="body-en" style="margin-top:12px">Afforestation and replanting of the Umm Al-Hamam and Umm Shalfah depressions in Al Asyah, Qassim, with native species and drip irrigation, followed by care and maintenance of both sites.</p>
+    <div class="item" style="margin-top:26px;border-top:1px solid rgba(197,155,78,.3)"><b>شهادة شكر وتقدير</b><p>من المركز الوطني لتنمية الغطاء النباتي ومكافحة التصحر — منطقة القصيم، لتنفيذ مشروع تشجير ورعاية منتزه أم حمام.</p></div>
+  </div>
+  <div class="thumb" style="left:1110px;top:830px;width:270px;height:190px;transform:rotate(-3deg)"><img src="img/docs/ncvc-appreciation-certificate.jpg"></div>
+  <div class="cap" style="left:250px;bottom:20px;color:var(--muted);text-shadow:none">Umm Al-Hamam · Umm Shalfah — field photos</div>
+  <div class="folio" style="right:120px"><b>14</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P15 FEATURE: NCVC RANGELANDS + AL-OWAISI ================= -->
+<section class="page feat p15 onphoto">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><linearGradient id="sh15" x1="0" y1="0" x2="0" y2="1"><stop offset=".25" stop-color="#0F2E20" stop-opacity=".2"/><stop offset=".62" stop-color="#0F2E20" stop-opacity=".93"/></linearGradient></defs>
+    <image href="img/f_v4_6.jpg" x="0" y="-60" width="1920" height="900" preserveAspectRatio="xMidYMid slice"/>
+    <rect width="1920" height="1080" fill="#0F2E20" y="560"/>
+    <rect width="1920" height="1080" fill="url(#sh15)"/>
+    <path d="M-10 520 C500 470 1100 600 1930 500" fill="none" stroke="url(#G)" stroke-width="3" opacity=".85"/>
+  </svg>
+  <div class="cap" style="left:60px;top:40px">Field footage · NCVC projects</div>
+  <div class="ttl"><div class="kicker">Featured Projects · 02</div><h2>مشاريع المركز الوطني لتنمية الغطاء النباتي</h2><div class="sub">National Center for Vegetation Cover Development &amp; Combating Desertification</div></div>
+  <div class="abs" style="right:120px;top:600px;width:820px">
+    <div class="item"><b>إعادة تأهيل المراعي المتدهورة في البيئات المختلفة بنثر البذور والاستزراع — المرحلة الثانية</b><p>3,000 هكتار · قيمة العقد 8,610,050 ريال · مدة العقد 12 شهرًا من 17/04/2024 إلى 17/04/2025 · شهادات إنجاز صادرة من الإدارة العامة للمراعي.</p></div>
+    <div class="item"><b>أعمال خدمات الري والرعاية — العويصي، منطقة الحدود الشمالية</b><p>بيان إنجاز ومستخلصات معتمدة من المركز الوطني لتنمية الغطاء النباتي.</p></div>
+  </div>
+  <div class="thumb" style="left:520px;top:600px;width:250px;height:340px;transform:rotate(3deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-01.jpg"></div>
+  <div class="thumb" style="left:200px;top:620px;width:250px;height:340px;transform:rotate(-4deg)"><img src="img/docs/ncvc-completion-statement-alowaisi-irrigation-northern-borders.jpg"></div>
+  <div class="folio" style="right:120px;bottom:40px"><b>15</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P16 FEATURE: ZAHRAN PROGRAMME ================= -->
+<section class="page feat p16">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="c16"><path d="M0 0 H760 C820 180 720 330 760 500 C800 680 700 860 740 1080 H0 Z"/></clipPath>
+    </defs>
+    <g clip-path="url(#c16)">
+      <image href="img/f_v5_3.jpg" x="-160" y="0" width="1100" height="540" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/f_v5_4.jpg" x="-160" y="540" width="1100" height="540" preserveAspectRatio="xMidYMid slice"/>
+      <rect x="0" y="537" width="900" height="6" fill="#C59B4E"/>
+    </g>
+    <path d="M772 -10 C832 180 732 330 772 500 C812 680 712 860 752 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="cap" style="left:50px;top:40px">Al-Tumayrat station · Al Jouf</div>
+  <div class="ttl" style="width:900px"><div class="kicker">Featured Projects · 03</div><h2>برنامج تشجير المتنزهات — مكة المكرمة والجوف</h2><div class="sub">For Zahran Operation &amp; Maintenance (ZOM)</div></div>
+  <div class="abs" style="right:120px;top:330px;width:900px;columns:2;column-gap:44px">
+    <div class="item" style="break-inside:avoid"><b>مشروع تشجير مسيج التمريات — الجوف</b><p>شبكة ري 233,350 مترًا وخمسة خزانات · <em>3,625,250 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>تشجير منتزه المخيمات البيئية — مكة المكرمة</b><p>230,000 شتلة في موقعي الجموم وخليص · <em>1,840,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>تشجير المنتزه البيئي للمخيمات</b><p>شبكة ري وأربعة خزانات وفق مواصفات المركز الوطني · <em>4,450,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>منتزه الطائف الوطني</b><p>توريد وحفر وزراعة 150,000 شتلة · <em>1,200,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>منتزه الطائف الوطني بسيسد</b><p>خزانات ومضخات وزراعة 26,000 شتلة · <em>405,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>منتزه وادي حلي — القنفذة</b><p>120,000 شتلة وشبكة ري وأعمال سياج · <em>1,200,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>متنزه الفج الكريمي — مكة المكرمة</b><p>توريد وتركيب سور شبك بطول 15,511 مترًا · <em>1,605,388.50 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>إزالة الأشجار والشجيرات البرية ونقلها</b><p>نقل 120 شجرة وفق مواصفات وجدول كميات نيوم · <em>900,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>الاتفاقية الإطارية — الساحل الغربي</b><p>توريد وتنفيذ أعمال الزراعة والري من 2023 حتى 2027 · <em>6,000,000 ﷼</em></p></div>
+    <div class="item" style="break-inside:avoid"><b>أشجار المانجروف — البحر الأحمر</b><p>تنفيذ الطريق مع الجسر المؤدي للمشتل بالمظيلف — شهادة إنجاز</p></div>
+  </div>
+  
+  <div class="src" style="right:120px;bottom:48px">القيم من ملخص المشاريع · شهادات إنجاز من شركة زهران بتاريخ 09/03/2023</div>
+  <div class="folio" style="left:830px;bottom:40px"><b>16</b><i></i>RAYAT NAJD</div>
+</section>
+
+<!-- ================= P17 FEATURE: ROSHN & DIRIYAH ================= -->
+<section class="page feat p17 dark">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <radialGradient id="bg17" cx=".9" cy=".9" r="1"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient>
+      <clipPath id="c17"><path d="M1920 0 V1080 H1240 C1180 900 1300 760 1260 600 C1220 420 1320 240 1280 0 Z"/></clipPath>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#bg17)"/>
+    <g clip-path="url(#c17)"><image href="img/n_24.jpg" x="1100" y="0" width="1000" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M1268 -10 C1308 240 1208 420 1248 600 C1288 760 1168 900 1228 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="cap" style="right:60px;bottom:44px">Palm stock · Al-Hair nursery</div>
+  <div class="abs" style="left:120px;top:96px;width:1040px;text-align:right">
+    <div class="kicker" style="text-align:right">Featured Projects · 04</div>
+    <h2 style="font-size:56px;font-weight:800;color:#fff;margin-top:14px">روشن والدرعية</h2>
+    <div style="font-family:Lora;font-style:italic;font-size:21px;color:rgba(237,230,212,.75);margin-top:6px;direction:ltr">ROSHN · Diriyah — supply, planting &amp; relocation</div>
+  </div>
+  <div class="abs" style="left:120px;top:300px;width:1040px">
+    <div class="item"><b>توريد وزراعة أشجار برية مع شبكة الري — واجهة روشن، الرياض</b><p>لصالح مؤسسة تنمية الغطاء النباتي الأهلية «مروج» · تعميد رقم 44 · اكتمال الأعمال 21/11/2024 وفق الشروط والمواصفات المعتمدة.</p></div>
+    <div class="item"><b>توريد أشجار ونباتات مشروع روشن</b><p>للشركة الوطنية للإسكان وفق جدول الكميات · <em>5,800,000 ﷼</em> (2025) — وشهادة إنجاز توريد أشجار لمشروع روشن من شركة الصنوبر الحديثة للمقاولات.</p></div>
+    <div class="item"><b>توريد أشجار ونقل ورعاية النخيل — المزرعة الخاصة لهيئة الدرعية</b><p>20,000 من الأشجار والنباتات ونقل نخيل ورعاية 15,000 مع توريد المياه وورش المبيدات · <em>7,500,000 ﷼</em></p></div>
+    <div class="item"><b>نقل النخيل وتنظيفه ومعالجته — من حي السمحان إلى الدرعية</b><p>شهادة إنجاز من شركة العنادي · <em>386,135 ﷼</em></p></div>
+    <div class="item"><b>أعمال الهدم لمشروع البجيري — الدرعية</b><p>إزالة ونقل وتسليم أعمال Transplanting وتوريد وزراعة شتلات وأشجار — شهادة إنجاز من شركة موارد الآلات.</p></div>
+  </div>
+  <div class="thumb" style="left:1330px;top:250px;width:250px;height:340px;transform:rotate(-3deg)"><img src="img/docs/vegetation-cover-association-completion-letter-roshn-facade-assignment-44.jpg"></div>
+  <div class="thumb" style="left:1560px;top:470px;width:230px;height:310px;transform:rotate(4deg)"><img src="img/docs/alanadee-completion-certificate-alsamhan-residential-development.jpg"></div>
+  <div class="folio" style="left:120px;bottom:40px"><b>17</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P18 FEATURE: LANDSCAPE & CIVIL ================= -->
+<section class="page feat p18">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><clipPath id="c18"><path d="M0 0 H1920 V250 C1500 330 1100 230 760 290 C460 344 200 330 0 300 Z"/></clipPath>
+      <linearGradient id="sh18" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#0F2E20" stop-opacity=".8"/><stop offset=".6" stop-color="#0F2E20" stop-opacity="0"/></linearGradient></defs>
+    <g clip-path="url(#c18)"><image href="img/p_5292.jpg" x="0" y="-480" width="1920" height="1280" preserveAspectRatio="xMidYMid slice"/><rect width="1920" height="340" fill="url(#sh18)"/></g>
+    <path d="M-10 302 C200 332 460 356 760 302 C1100 242 1500 342 1930 252" fill="none" stroke="url(#G)" stroke-width="4"/>
+  </svg>
+  <div class="ttl" style="top:60px"><div class="kicker" style="color:var(--gold-l)">Featured Projects · 05</div><h2 style="color:#fff;font-size:52px">تنسيق المواقع والأعمال المدنية المساندة</h2></div>
+  <div class="abs" style="right:120px;left:120px;top:380px;display:grid;grid-template-columns:1fr 1fr;gap:0 80px">
+    <div class="item"><b>تنفيذ أحواض تجميع السيول وتطوير شعيب غدير وادي الحصان</b><p>التنسيق الكامل لمجرى الشعيب وأعمال شبكات الري والزراعة والإنارة والموقع العام وفق اشتراطات وادي السلي — شركة سمو العقارية · <em>20,000,000 ﷼</em></p></div>
+    <div class="item"><b>أعمال التشجير والزراعة والري — السلي (فرشة البطنان)</b><p>شركة تدبير المحدودة · <em>5,200,000 ﷼</em></p></div>
+    <div class="item"><b>توريد وتنفيذ الشبك الحديدي والأسوار والبوابات — مواقع أثرية وتراثية</b><p>مقاول باطن لشركة الإبداع السعودي لصالح وزارة الثقافة – هيئة التراث: مواقع في الرياض والمنطقة الشرقية والباحة وبيشة · <em>3,200,000 ﷼</em>.</p></div>
+    <div class="item"><b>مشروع سدرة — المرحلة الأولى</b><p>توريد النباتات والأشجار ونخيل الواشنطونيا ونخيل التمر — شركة رزيق الجدراوي · قيمة العقد <em>1,350,000 ﷼</em> · استلام 15/09/2024.</p></div>
+    <div class="item"><b>أعمال التسوير لمشروع واجهة الدمام</b><p>تسوير بطول 590 مترًا — الشركة الوطنية للإسكان (أمر شراء وشهادة إنجاز 2022).</p></div>
+    <div class="item"><b>تشجير مركز صحي خصيبة — الأسياح</b><p>شهادة شكر وتقدير من مستشفى الأسياح العام (تجمع القصيم الصحي) على المشاركة المجتمعية.</p></div>
+  </div>
+  <div class="thumb" style="left:130px;top:760px;width:180px;height:248px;transform:rotate(-4deg)"><img src="img/docs/ebdaa-completion-certificate-riyadh-eastern-sites.jpg"></div>
+  <div class="thumb" style="left:340px;top:745px;width:180px;height:248px;transform:rotate(2deg)"><img src="img/docs/algedrawi-contracting-completion-certificate-sidra-phase1-plants-supply.jpg"></div>
+  <div class="thumb" style="left:550px;top:765px;width:180px;height:248px;transform:rotate(-2deg)"><img src="img/docs/nhc-completion-certificate-dammam-facade-fencing.jpg"></div>
+  <div class="cap" style="left:60px;top:30px">Al-Mansouriyah nursery</div>
+  <div class="folio" style="right:120px"><b>18</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P19 REGISTER 1 ================= -->
+<section class="page reg p19">
+  <svg class="bg" viewBox="0 0 1920 1080"><path d="M1920 0 V160 C1500 220 1200 120 800 170 C500 208 200 190 0 160 V0 Z" fill="#EFE6D3"/><path d="M-10 162 C200 192 500 210 800 172 C1200 122 1500 222 1930 162" fill="none" stroke="url(#G)" stroke-width="2.5"/></svg>
+  <div class="ttl" style="top:60px"><div class="kicker">13 — Project Register (1/2)</div><h2 style="font-size:46px">سجل المشاريع خلال خمس سنوات</h2></div>
+  <table>
+    <thead><tr><th>م</th><th>المشروع</th><th>المالك</th><th>القيمة (ر.س)</th><th>الفترة</th></tr></thead>
+    <tbody>
+      <tr><td>01</td><td>تنفيذ أحواض تجميع السيول وتطوير شعيب غدير وادي الحصان</td><td class="o">شركة سمو العقارية</td><td class="v">20,000,000.00</td><td class="d">03/2025 – 09/2025</td></tr>
+      <tr><td>02</td><td>إعادة تأهيل المراعي المتدهورة بنثر البذور والاستزراع (المرحلة الثانية)</td><td class="o">المركز الوطني لتنمية الغطاء النباتي</td><td class="v">8,610,050.00</td><td class="d">03/2024 – 04/2025</td></tr>
+      <tr><td>03</td><td>توريد أشجار ونباتات ونقل ورعاية النخيل — المزرعة الخاصة لهيئة الدرعية</td><td class="o">شركة اتحاد العزم للمقاولات</td><td class="v">7,500,000.00</td><td class="d">01/2025 – 10/2025</td></tr>
+      <tr><td>04</td><td>الاتفاقية الإطارية لتوريد المواد والمعدات لأعمال التشجير والزراعة — الساحل الغربي</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">6,000,000.00</td><td class="d">12/2023 – 12/2027</td></tr>
+      <tr><td>05</td><td>توريد أشجار ونباتات مشروع روشن</td><td class="o">الشركة الوطنية للإسكان</td><td class="v">5,800,000.00</td><td class="d">01/2025 – 07/2025</td></tr>
+      <tr><td>06</td><td>أعمال التشجير والزراعة والري (السلي – فرشة البطنان)</td><td class="o">شركة تدبير المحدودة</td><td class="v">5,200,000.00</td><td class="d">11/2021 – 01/2023</td></tr>
+      <tr><td>07</td><td>مشروع تشجير المنتزه البيئي للمخيمات وفق مواصفات المركز الوطني</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">4,450,000.00</td><td class="d">01/2023 – 05/2023</td></tr>
+      <tr><td>08</td><td>مشروع تشجير مسيج التمريات — منطقة الجوف</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">3,625,250.00</td><td class="d">01/2023 – 06/2023</td></tr>
+      <tr><td>09</td><td>توريد أشجار ونباتات مشروع القدية</td><td class="o">شركة الجزيرة للمقاولات</td><td class="v">3,224,000.00</td><td class="d">02/2025 – 06/2025</td></tr>
+      <tr><td>10</td><td>عقد توريد وتنفيذ الشبك الحديدي والأسوار والبوابات</td><td class="o">شركة الإبداع السعودي</td><td class="v">3,200,000.00</td><td class="d">09/2023 – 05/2024</td></tr>
+      <tr><td>11</td><td>تشجير منتزه المخيمات البيئية — الجموم وخليص، منطقة مكة المكرمة</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">1,840,000.00</td><td class="d">02/2023 – 06/2023</td></tr>
+      <tr><td>12</td><td>منتزه الفج الكريمي — توريد وتركيب سور شبك بطول 15,511 مترًا</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">1,605,388.50</td><td class="d">09/2021 – 11/2021</td></tr>
+      <tr><td>13</td><td>مشروع وادي الهدا بالرياض — توريد النباتات والأشجار والنخيل</td><td class="o">شركة رزيق الجدراوي للمقاولات</td><td class="v">1,350,000.00</td><td class="d">11/2020 – 05/2021</td></tr>
+      <tr><td>14</td><td>تشجير منتزه الطائف الوطني — 150,000 شتلة</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">1,200,000.00</td><td class="d">03/2021 – 06/2021</td></tr>
+    </tbody>
+  </table>
+  <div class="folio" style="right:120px"><b>19</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P20 REGISTER 2 ================= -->
+<section class="page reg p20">
+  <svg class="bg" viewBox="0 0 1920 1080"><path d="M1920 0 V160 C1500 220 1200 120 800 170 C500 208 200 190 0 160 V0 Z" fill="#EFE6D3"/><path d="M-10 162 C200 192 500 210 800 172 C1200 122 1500 222 1930 162" fill="none" stroke="url(#G)" stroke-width="2.5"/></svg>
+  <div class="ttl" style="top:60px"><div class="kicker">13 — Project Register (2/2)</div><h2 style="font-size:46px">سجل المشاريع خلال خمس سنوات</h2></div>
+  <table>
+    <thead><tr><th>م</th><th>المشروع</th><th>المالك</th><th>القيمة (ر.س)</th><th>الفترة</th></tr></thead>
+    <tbody>
+      <tr><td>15</td><td>تشجير وادي حلي — 120,000 شتلة</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">1,200,000.00</td><td class="d">02/2020 – 06/2020</td></tr>
+      <tr><td>16</td><td>إزالة الأشجار والشجيرات البرية ونقلها وإعادة زراعتها</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">900,000.00</td><td class="d">08/2022 – 11/2022</td></tr>
+      <tr><td>17</td><td>توريد وتركيب حجر بازلت أردني — مشروع فلل الزهراني</td><td class="o">شركة الجودة للمقاولات</td><td class="v">541,750.00</td><td class="d">09/2020 – 10/2020</td></tr>
+      <tr><td>18</td><td>مشروع تشجير منتزه الطائف الوطني بسيسد</td><td class="o">شركة زهران للصيانة والتشغيل</td><td class="v">405,000.00</td><td class="d">12/2022 – 04/2023</td></tr>
+      <tr><td>19</td><td>نقل النخيل وتنظيفه ومعالجته</td><td class="o">شركة العنادي للمقاولات</td><td class="v">386,135.00</td><td class="d">01/2025 – 04/2025</td></tr>
+      <tr><td>20</td><td>توريد المياه اللازمة للري بمشروع البجيري</td><td class="o">شركة نسما وشركاهم</td><td class="v">300,000.00</td><td class="d">03/2021 – 05/2021</td></tr>
+      <tr><td>21</td><td>مشروع فلل الزهراني بحي الورود — إحلال التربة والزراعة والري</td><td class="o">شركة الجودة للمقاولات</td><td class="v">234,600.00</td><td class="d">03/2023 – 07/2023</td></tr>
+      <tr><td>22</td><td>ملحق عقد توريد وتنفيذ شبكة الري لفيلا 1–3 — حي الورود</td><td class="o">شركة الجودة للمقاولات</td><td class="v">85,215.00</td><td class="d">10/2020 – 12/2020</td></tr>
+      <tr><td>23</td><td>أعمال الهدم لمشروع البجيري — الدرعية</td><td class="o">شركة موارد الآلات للتجارة</td><td class="v">81,765.00</td><td class="d">11/2020 – 01/2021</td></tr>
+      <tr><td>24</td><td>إزالة سور شبك وإعادة التركيب</td><td class="o">الشركة الوطنية للإسكان</td><td class="v">75,900.00</td><td class="d">03/2024 – 05/2024</td></tr>
+      <tr><td>25</td><td>توريد وتنفيذ الزراعة لفيلا السليمانية واستراحة الثمامة</td><td class="o">شركة الجودة للمقاولات</td><td class="v">56,695.00</td><td class="d">08/2023 – 09/2023</td></tr>
+      <tr><td>26</td><td>توريد وتنفيذ شبكة الري لفيلا 1–3 — حي الورود</td><td class="o">شركة الجودة للمقاولات</td><td class="v">44,265.00</td><td class="d">09/2020 – 10/2020</td></tr>
+      <tr><td>27</td><td>صيانة سور مباني</td><td class="o">الشركة الوطنية للإسكان</td><td class="v">11,500.00</td><td class="d">09/2023 – 10/2023</td></tr>
+      <tr class="tot"><td></td><td colspan="2">إجمالي قيمة المشاريع خلال الخمس سنوات الأخيرة</td><td class="v" style="font-size:19px">77,927,513.50</td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="src" style="right:120px;bottom:48px">المصدر: ملخص المشاريع الحالية والسابقة خلال خمس سنوات — المؤسسة · عقود المشاريع موثّقة باسم مؤسسة رايات نجد ومتاحة للاطلاع</div>
+  <div class="folio" style="left:120px"><b>20</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P21 LICENCES ================= -->
+<section class="page p21">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <path d="M0 0 H900 C1000 300 860 700 980 1080 H0 Z" fill="#EFE6D3"/>
+    <path d="M900 -10 C1000 300 860 700 980 1090" fill="none" stroke="url(#G)" stroke-width="3.5"/>
+  </svg>
+  <div class="thumb" style="left:110px;top:120px;width:300px;height:212px;transform:rotate(-4deg)"><img src="img/docs/rayat-najd-commercial-registration.jpg"></div>
+  <div class="thumb" style="left:450px;top:90px;width:250px;height:350px;transform:rotate(3deg)"><img src="img/docs/rayat-najd-vat-registration-certificate.jpg"></div>
+  <div class="thumb" style="left:130px;top:420px;width:250px;height:350px;transform:rotate(2deg)"><img src="img/docs/rayat-najd-municipality-license.jpg"></div>
+  <div class="thumb" style="left:430px;top:500px;width:250px;height:350px;transform:rotate(-3deg)"><img src="img/docs/rayat-najd-iso-quality-management-certificate.jpg"></div>
+  <div class="thumb" style="left:640px;top:600px;width:200px;height:280px;transform:rotate(5deg)"><img src="img/docs/rayat-najd-chamber-of-commerce-certificate.jpg"></div>
+  <div class="ttl"><div class="kicker">14 — Licences &amp; Registrations</div><h2>التراخيص والتسجيلات</h2></div>
+  <div class="lic">
+    <div><b>السجل التجاري<small>Commercial Registration</small></b><span class="st">نشط</span><p>وزارة التجارة · الرقم الوطني الموحد 7004164385 · سجل 1010450312 · صدر 23/05/2018</p></div>
+    <div><b>شهادة التسجيل في ضريبة القيمة المضافة<small>VAT</small></b><span class="st">مسجّل</span><p>هيئة الزكاة والضريبة والجمارك · الرقم الضريبي 310207303600003</p></div>
+    <div><b>رخصة نشاط تجاري — بلدي<small>Municipal Licence</small></b><span class="st">حتى 1449/05/03 هـ</span><p>أمانة منطقة الرياض · رقم الرخصة 470521359417</p></div>
+    <div><b>عضوية الغرفة التجارية بالرياض<small>Riyadh Chamber</small></b><span class="st">حتى 16/03/2027</span><p>رقم العضوية 450412</p></div>
+    <div><b>ISO 9001:2015 · ISO 14001:2015 · ISO 45001:2018<small>Management Systems</small></b><span class="st">حتى 02/03/2028</span><p>الجودة والبيئة والصحة والسلامة المهنية — ARS Assessment، معتمدة من UAF · خاضعة لتدقيقات المراقبة الدورية</p></div>
+  </div>
+  <div class="src" style="right:120px;bottom:48px">نُسخ الوثائق الكاملة متاحة عند الطلب</div>
+  <div class="folio" style="right:1110px"><b>21</b><i></i>RAYAT NAJD</div>
+</section>
+
+<!-- ================= P22 COMPLETION LETTERS ================= -->
+<section class="page p22 dark">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><radialGradient id="bg22" cx=".5" cy="0" r="1.1"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient></defs>
+    <rect width="1920" height="1080" fill="url(#bg22)"/>
+    <path d="M0 610 C500 560 1300 660 1920 590" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".4"/>
+  </svg>
+  <div class="ttl"><div class="kicker">15 — Completion &amp; Appreciation Letters</div><h2>شهادات الإنجاز والشكر</h2></div>
+  <div class="tl" style="right:120px;top:280px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/vegetation-cover-association-completion-letter-roshn-facade-assignment-44.jpg"></div><b>خطاب إنجاز — واجهة روشن</b><span>مؤسسة تنمية الغطاء النباتي الأهلية «مروج»</span></div>
+  <div class="tl" style="right:420px;top:300px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-01.jpg"></div><b>إعادة تأهيل المراعي — المرحلة الثانية</b><span>المركز الوطني لتنمية الغطاء النباتي</span></div>
+  <div class="tl" style="right:720px;top:280px"><div class="thumb" style="transform:rotate(-1deg)"><img src="img/docs/zahran-om-completion-certificates-3-projects.jpg"></div><b>شهادات إنجاز — 3 مشاريع</b><span>شركة زهران للصيانة والتشغيل</span></div>
+  <div class="tl" style="right:1020px;top:300px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/ebdaa-completion-certificate-riyadh-eastern-sites.jpg"></div><b>أعمال تسوير مواقع تراثية</b><span>شركة الإبداع السعودي</span></div>
+  <div class="tl" style="right:1320px;top:280px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/algedrawi-contracting-completion-certificate-sidra-phase1-plants-supply.jpg"></div><b>مشروع سدرة — المرحلة الأولى</b><span>شركة رزيق الجدراوي</span></div>
+  <div class="abs" style="right:120px;left:120px;top:790px;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;border-top:1px solid rgba(223,186,115,.45);padding-top:22px;font-size:17px;color:#E2DBC8;line-height:1.55">
+    <div><b style="color:var(--gold-l)">شكر وتقدير</b><br>المركز الوطني لتنمية الغطاء النباتي — القصيم (منتزه أم حمام)</div>
+    <div><b style="color:var(--gold-l)">شهادات إنجاز</b><br>الشركة الوطنية للإسكان (واجهة الدمام) · شركة العنادي (السمحان)</div>
+    <div><b style="color:var(--gold-l)">شهادات إنجاز</b><br>شركة موارد الآلات (البجيري) · شركة الصنوبر الحديثة (روشن)</div>
+    <div><b style="color:var(--gold-l)">شكر وتقدير</b><br>مستشفى الأسياح العام — مركز صحي خصيبة</div>
+  </div>
+  <div class="folio" style="left:120px;bottom:40px"><b>22</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P23 WHY RAYAT NAJD ================= -->
+<section class="page p23 onphoto">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs><linearGradient id="sh23" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F2E20" stop-opacity=".78"/><stop offset=".5" stop-color="#0F2E20" stop-opacity=".9"/><stop offset="1" stop-color="#0F2E20" stop-opacity=".96"/></linearGradient></defs>
+    <image href="img/p_5311.jpg" x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>
+    <rect width="1920" height="1080" fill="url(#sh23)"/>
+    <path d="M-10 260 C500 200 1100 320 1930 230" fill="none" stroke="url(#G)" stroke-width="2.5" opacity=".9"/>
+  </svg>
+  <div class="ttl" style="top:80px"><div class="kicker">16 — Why Rayat Najd</div><h2>لماذا رايات نجد؟</h2></div>
+  <div class="grid">
+    <div><span class="n">01</span><b>سجل موثّق</b><small>Documented record</small><p>27 مشروعًا خلال خمس سنوات بقيمة 77.9 مليون ريال، مع شهادات إنجاز وشكر من الجهات المالكة.</p></div>
+    <div><span class="n">02</span><b>خبرة مع جهات كبرى</b><small>Major clients</small><p>المركز الوطني لتنمية الغطاء النباتي، والشركة الوطنية للإسكان، ومشاريع روشن والدرعية.</p></div>
+    <div><span class="n">03</span><b>مشاتل خاصة</b><small>Own nurseries</small><p>مخزون نخيل وأشجار في مشتلي الحائر والمنصورية يدعم التوريد السريع للكميات الكبيرة.</p></div>
+    <div><span class="n">04</span><b>تنفيذ متكامل</b><small>End-to-end delivery</small><p>من التوريد والزراعة والري إلى النقل والتسوير والرعاية والصيانة تحت مسؤولية واحدة.</p></div>
+    <div><span class="n">05</span><b>أنظمة إدارة معتمدة</b><small>ISO certified</small><p>ISO 9001 و14001 و45001 سارية حتى 2028.</p></div>
+    <div><span class="n">06</span><b>حضور في عدة مناطق</b><small>Multi-region</small><p>مشاريع منفّذة في ثماني مناطق، من القصيم والجوف إلى مكة المكرمة والمنطقة الشرقية.</p></div>
+  </div>
+  <div class="folio" style="right:120px;bottom:40px"><b>23</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= P24 CONTACT / BACK COVER ================= -->
+<section class="page p24 dark">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <radialGradient id="bg24" cx=".7" cy=".35" r=".9"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient>
+      <clipPath id="c24"><path d="M0 0 H700 C620 210 810 470 620 720 C500 880 260 930 0 900 Z"/></clipPath>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#bg24)"/>
+    <g clip-path="url(#c24)"><image href="img/p_5310.jpg" x="-300" y="0" width="1300" height="920" preserveAspectRatio="xMidYMid slice"/></g>
+    <path d="M715 -10 C635 210 828 470 636 722 C512 888 260 942 -10 912" fill="none" stroke="url(#G)" stroke-width="5"/>
+    <path d="M748 -10 C668 212 860 474 664 732 C536 900 270 960 -10 934" fill="none" stroke="url(#G)" stroke-width="1.5" opacity=".6"/>
+    <path d="M0 1080 V990 C500 1030 1200 960 1920 1000 V1080 Z" fill="#0B2418"/>
+    <path d="M0 988 C500 1028 1200 958 1920 998" fill="none" stroke="url(#G)" stroke-width="2.5"/>
+  </svg>
+  <div class="center">
+    <img src="img/rayat-najd-emblem-light.svg" alt="">
+    <h2>مؤسسة رايات نجد للمقاولات</h2>
+    <div class="en">RAYAT NAJD CONTRACTING EST.</div>
+    <div style="font-size:26px;color:#E2DBC8;margin-top:22px">نبني حاضرًا .. لمستقبل أفضل</div>
+  </div>
+  <div class="contacts">
+    <div><small>الهاتف والواتساب</small><b>055 755 5716</b><span>+966 55 755 5716</span></div>
+    <div><small>الموقع الإلكتروني</small><b>rayatnajd.com</b><span>www.rayatnajd.com</span></div>
+    <div><small>البريد الإلكتروني</small><b>info@rayatnajd.com</b><span>Email</span></div>
+  </div>
+  <div class="addr">الرياض — المملكة العربية السعودية<span>Riyadh · Kingdom of Saudi Arabia</span></div>
+  <div class="abs" style="left:60px;bottom:28px;font-family:Inter;font-size:12.5px;letter-spacing:.2em;color:rgba(255,255,255,.55)">CR 1010450312 · VAT 310207303600003</div>
+  <div class="abs" style="right:120px;bottom:30px;font-family:Lora;font-style:italic;font-size:22px;color:var(--gold-l)">24</div>
 </section>
 
 </body>
