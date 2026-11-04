@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Rayat Najd — Company Profile (Pages 1–4)</title>
+<style>
+@font-face{font-family:Tajawal;font-weight:300;src:url(fonts/Tajawal/Tajawal-Light.ttf)}
+@font-face{font-family:Tajawal;font-weight:400;src:url(fonts/Tajawal/Tajawal-Regular.ttf)}
+@font-face{font-family:Tajawal;font-weight:500;src:url(fonts/Tajawal/Tajawal-Medium.ttf)}
+@font-face{font-family:Tajawal;font-weight:700;src:url(fonts/Tajawal/Tajawal-Bold.ttf)}
+@font-face{font-family:Tajawal;font-weight:800;src:url(fonts/Tajawal/Tajawal-ExtraBold.ttf)}
+:root{
+  --forest:#143A2A; --forest-2:#1E4D38; --forest-3:#0F2E20; --leaf:#2D7352;
+  --gold:#C59B4E; --gold-l:#DFBA73; --gold-d:#A57A2C;
+  --ivory:#F8F3E8; --ivory-2:#EFE6D3; --ink:#1F2A24; --muted:#5E6B62;
+}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#d9d4c8}
+body{font-family:Tajawal,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--ivory);page-break-after:always;break-after:page}
+.en{font-family:Inter,sans-serif;direction:ltr;text-align:left}
+.serif{font-family:Lora,serif}
+.abs{position:absolute}
+svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
+.folio{position:absolute;bottom:42px;display:flex;align-items:center;gap:18px;font-family:Inter;font-size:13px;letter-spacing:.22em;color:var(--muted);direction:ltr}
+.folio b{font-family:Lora;font-style:italic;font-weight:500;font-size:22px;letter-spacing:0;color:var(--gold-d)}
+.folio i{display:block;width:60px;height:1px;background:var(--gold)}
+.kicker{font-family:Inter;font-weight:600;font-size:15px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-d);direction:ltr}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold-l) 50%,var(--gold) 80%,transparent)}
+
+/* ---------- PAGE 1 : COVER ---------- */
+.p1 .brand{position:absolute;right:110px;top:105px;width:880px;text-align:center}
+.p1 .emblem{width:215px;height:215px;margin:0 auto 22px;display:block;filter:drop-shadow(0 10px 22px rgba(20,58,42,.18))}
+.p1 h1{font-weight:800;font-size:62px;white-space:nowrap;line-height:1.1;color:var(--forest)}
+.p1 .en-name{font-family:Inter;font-weight:600;font-size:31px;letter-spacing:.2em;color:var(--gold-d);margin-top:16px;direction:ltr}
+.p1 .descr{font-weight:500;font-size:22px;color:var(--leaf);margin-top:14px}
+.p1 .tag{display:flex;align-items:center;justify-content:center;gap:26px;margin-top:34px}
+.p1 .tag i{flex:0 0 110px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold))}
+.p1 .tag i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
+.p1 .tag span{font-size:34px;font-weight:500;color:var(--forest);letter-spacing:.02em}
+.p1 .tag-en{font-family:Inter;font-size:16px;letter-spacing:.3em;color:var(--muted);margin-top:12px;direction:ltr}
+.p1 .values{display:flex;justify-content:center;margin-top:40px}
+.p1 .values div{padding:0 34px;border-inline-start:1px solid rgba(197,155,78,.6);text-align:center}
+.p1 .values div:first-child{border:0}
+.p1 .values b{display:block;font-size:25px;font-weight:700;color:var(--forest)}
+.p1 .values small{display:block;font-family:Inter;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);margin-top:6px}
+.p1 .band-text{position:absolute;right:120px;bottom:70px;text-align:right;color:#fff}
+.p1 .band-text h2{font-size:52px;font-weight:700;line-height:1}
+.p1 .band-text p{font-family:Inter;font-size:19px;letter-spacing:.42em;color:var(--gold-l);margin-top:14px;direction:ltr;text-align:right}
+.p1 .year{position:absolute;left:760px;bottom:72px;font-family:Lora;font-style:italic;font-size:34px;color:var(--gold-l)}
+.p1 .contact{position:absolute;left:70px;bottom:44px;display:flex;gap:28px;direction:ltr;font-family:Inter;font-size:16px;color:#fff;letter-spacing:.04em}
+.p1 .contact span{display:flex;align-items:center;gap:9px}
+.p1 .contact em{font-style:normal;color:var(--gold-l)}
+
+/* ---------- PAGE 2 : EXECUTIVE ---------- */
+.p2 .col{position:absolute;right:120px;top:120px;width:760px}
+.p2 h2{font-size:60px;font-weight:800;color:var(--forest);line-height:1.15;margin-top:18px}
+.p2 h2 em{font-style:normal;color:var(--gold-d)}
+.p2 .lead{font-size:25px;line-height:1.85;color:#2c3a32;margin-top:30px;font-weight:400}
+.p2 .lead-en{font-family:Lora;font-size:19px;line-height:1.7;color:var(--muted);margin-top:22px;font-style:italic}
+.p2 .facts{position:absolute;right:120px;top:735px;width:760px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.p2 .fact{padding:6px 26px 0;border-inline-start:1px solid rgba(197,155,78,.55)}
+.p2 .fact:first-child{border:0;padding-inline-start:0}
+.p2 .fact b{display:block;font-family:Lora;font-weight:500;font-size:46px;color:var(--forest);line-height:1}
+.p2 .fact span{display:block;font-size:19px;font-weight:700;color:var(--forest);margin-top:12px}
+.p2 .fact small{display:block;font-family:Inter;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);margin-top:5px;direction:ltr;text-align:right}
+.p2 .caption{position:absolute;left:70px;bottom:110px;color:#fff;width:720px;text-align:left}
+.p2 .caption b{display:block;font-size:22px;font-weight:700}
+.p2 .caption span{display:block;font-family:Inter;font-size:14px;letter-spacing:.08em;opacity:.85;margin-top:6px;direction:ltr;text-align:left}
+.p2 .clients{position:absolute;left:70px;right:960px;bottom:0;height:0}
+
+/* ---------- PAGE 3 : ABOUT ---------- */
+.p3{background:var(--forest)}
+.p3 .head{position:absolute;right:120px;top:110px;width:820px;color:#fff}
+.p3 .head h2{font-size:72px;font-weight:800;line-height:1.1;margin-top:18px}
+.p3 .head h2 span{color:var(--gold-l)}
+.p3 .ar{position:absolute;right:120px;top:300px;width:820px;color:#E9E3D3;font-size:24px;line-height:1.9}
+.p3 .ar p+p{margin-top:18px}
+.p3 .enb{position:absolute;right:120px;top:640px;width:820px;color:rgba(233,227,211,.78);font-family:Lora;font-style:italic;font-size:18px;line-height:1.7}
+.p3 .card{position:absolute;right:120px;bottom:90px;width:820px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(223,186,115,.5);padding-top:24px}
+.p3 .card div{padding-inline-end:16px}
+.p3 .card small{display:block;font-size:16px;color:var(--gold-l);font-weight:500}
+.p3 .card b{display:block;font-size:24px;color:#fff;font-weight:700;margin-top:8px;white-space:nowrap}
+.p3 .card em{display:block;font-family:Inter;font-style:normal;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:4px;direction:ltr;text-align:right}
+.p3 .src{position:absolute;right:120px;bottom:48px;font-size:14px;color:rgba(233,227,211,.55)}
+.p3 .folio{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.p3 .photo-cap{position:absolute;left:96px;top:86px;font-family:Inter;font-size:13px;letter-spacing:.2em;color:rgba(255,255,255,.8);direction:ltr;text-transform:uppercase}
+
+/* ---------- PAGE 4 : VISION ---------- */
+.p4 .title{position:absolute;right:120px;top:84px;color:#fff;text-align:right}
+.p4 .title h2{font-size:66px;font-weight:800;line-height:1.1;margin-top:14px}
+.p4 .title .kicker{color:var(--gold-l)}
+.p4 .vm{position:absolute;top:500px;right:120px;left:120px;display:grid;grid-template-columns:1fr 1fr;gap:110px}
+.p4 .vm h3{display:flex;align-items:baseline;gap:18px;font-size:40px;font-weight:800;color:var(--forest)}
+.p4 .vm h3 small{font-family:Lora;font-style:italic;font-weight:500;font-size:22px;color:var(--gold-d)}
+.p4 .vm p{font-size:24px;line-height:1.85;color:#2c3a32;margin-top:14px}
+.p4 .vm p.e{font-family:Lora;font-style:italic;font-size:17.5px;line-height:1.65;color:var(--muted);margin-top:10px;direction:ltr;text-align:left}
+.p4 .values{position:absolute;right:120px;left:120px;bottom:110px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(197,155,78,.6)}
+.p4 .values div{padding:26px 30px 0;border-inline-start:1px solid rgba(197,155,78,.35);position:relative}
+.p4 .values div:first-child{border-inline-start:0;padding-inline-start:0}
+.p4 .values .n{font-family:Lora;font-style:italic;font-size:20px;color:var(--gold-d)}
+.p4 .values b{display:block;font-size:30px;font-weight:800;color:var(--forest);margin-top:6px}
+.p4 .values small{display:block;font-family:Inter;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-top:6px;direction:ltr;text-align:right}
+.p4 .values p{font-size:18px;line-height:1.6;color:var(--muted);margin-top:10px}
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 — COVER ================= -->
+<section class="page p1">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#DFBA73"/><stop offset=".35" stop-color="#C59B4E"/><stop offset=".7" stop-color="#E8CA8C"/><stop offset="1" stop-color="#A57A2C"/>
+      </linearGradient>
+      <linearGradient id="g-forest" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#0F2E20"/><stop offset=".55" stop-color="#1E4D38"/><stop offset="1" stop-color="#143A2A"/>
+      </linearGradient>
+      <radialGradient id="g-glow" cx=".72" cy=".3" r=".6">
+        <stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#F3EBDA"/>
+      </radialGradient>
+      <linearGradient id="g-photofade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset=".72" stop-color="#F8F3E8" stop-opacity="0"/><stop offset="1" stop-color="#F8F3E8" stop-opacity=".55"/>
+      </linearGradient>
+      <clipPath id="c-photo1"><path d="M0 0 H900 C820 210 1010 470 820 720 C700 880 430 930 0 900 Z"/></clipPath>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#g-glow)"/>
+    <!-- soft secondary wave -->
+    <path d="M0 640 C380 560 640 980 1100 860 C1450 770 1650 690 1920 720 V1080 H0 Z" fill="#EFE6D3" opacity=".7"/>
+    <g clip-path="url(#c-photo1)">
+      <image href="img/cover.jpg" x="-200" y="-150" width="1500" height="1000" preserveAspectRatio="xMidYMid slice"/>
+      <rect width="1920" height="1080" fill="url(#g-photofade)"/>
+    </g>
+    <!-- gold ribbons following the photo edge -->
+    <path d="M915 -10 C835 210 1028 470 836 722 C712 888 430 942 -10 912" fill="none" stroke="url(#g-gold)" stroke-width="5"/>
+    <path d="M948 -10 C868 212 1060 474 864 732 C736 900 440 960 -10 934" fill="none" stroke="url(#g-gold)" stroke-width="1.5" opacity=".7"/>
+    <!-- bottom forest band -->
+    <path d="M0 1080 V958 C420 1010 760 930 1060 880 C1390 826 1660 830 1920 800 V1080 Z" fill="url(#g-forest)"/>
+    <path d="M0 950 C420 1002 760 922 1060 872 C1390 818 1660 822 1920 792" fill="none" stroke="url(#g-gold)" stroke-width="4"/>
+    <path d="M0 936 C430 986 770 904 1070 856 C1400 802 1670 806 1920 776" fill="none" stroke="url(#g-gold)" stroke-width="1.2" opacity=".55"/>
+  </svg>
+
+  <div class="brand">
+    <img class="emblem" src="img/rayat-najd-emblem.svg" alt="">
+    <h1>مؤسسة رايات نجد للمقاولات</h1>
+    <div class="en-name">RAYAT NAJD CONTRACTING EST.</div>
+    <div class="descr">التشجير · تنسيق المواقع · الاستدامة البيئية</div>
+    <div class="tag"><i></i><span>نبني حاضرًا .. لمستقبل أفضل</span><i></i></div>
+    <div class="tag-en">BUILDING TODAY… FOR A BETTER TOMORROW</div>
+    <div class="values">
+      <div><b>الجودة</b><small>Quality</small></div>
+      <div><b>الالتزام</b><small>Commitment</small></div>
+      <div><b>الخبرة</b><small>Experience</small></div>
+      <div><b>التنمية المستدامة</b><small>Sustainable Development</small></div>
+    </div>
+  </div>
+
+  <div class="band-text">
+    <h2>الملف التعريفي للشركة</h2>
+    <p>COMPANY PROFILE</p>
+  </div>
+  <div class="year">2026</div>
+  <div class="contact">
+    <span><em>W</em> www.rayatnajd.com</span>
+    <span><em>T</em> 055 755 5716</span>
+    <span><em>E</em> info@rayatnajd.com</span>
+  </div>
+</section>
+
+<!-- ================= PAGE 2 — EXECUTIVE SUMMARY ================= -->
+<section class="page p2">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="c-photo2"><path d="M0 0 H820 C960 160 1000 360 900 560 C800 760 880 920 1000 1080 H0 Z"/></clipPath>
+      <linearGradient id="g-shade2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset=".55" stop-color="#0F2E20" stop-opacity="0"/><stop offset="1" stop-color="#0F2E20" stop-opacity=".78"/>
+      </linearGradient>
+      <linearGradient id="g-gold2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#DFBA73"/><stop offset=".5" stop-color="#C59B4E"/><stop offset="1" stop-color="#A57A2C"/>
+      </linearGradient>
+    </defs>
+    <path d="M1920 0 V1080 H1300 C1500 920 1700 880 1920 860" fill="#EFE6D3" opacity=".55"/>
+    <g clip-path="url(#c-photo2)">
+      <image href="img/s_8050.jpg" x="-120" y="-30" width="1240" height="1140" preserveAspectRatio="xMidYMid slice"/>
+      <rect width="1100" height="1080" fill="url(#g-shade2)"/>
+    </g>
+    <path d="M832 -10 C972 160 1012 360 912 560 C812 760 892 920 1012 1090" fill="none" stroke="url(#g-gold2)" stroke-width="4"/>
+    <path d="M860 -10 C1000 162 1040 362 940 562 C840 762 922 922 1042 1090" fill="none" stroke="url(#g-gold2)" stroke-width="1.2" opacity=".6"/>
+  </svg>
+
+  <div class="col">
+    <div class="kicker" style="text-align:right">01 — Executive Overview</div>
+    <h2>شريك تنفيذي لمشاريع<br><em>التشجير</em> والمواقع الخضراء</h2>
+    <p class="lead">مؤسسة سعودية مقرها الرياض، تعمل منذ عام 2018 في المقاولات وتنفيذ أعمال التشجير وتنمية الغطاء النباتي وتنسيق المواقع وتوريد الأشجار والنخيل وشبكات الري، لصالح جهات حكومية وشركات تطوير ومقاولين رئيسيين.</p>
+    <p class="lead-en" dir="ltr" style="text-align:left">A Riyadh-based Saudi establishment operating since 2018 in contracting, afforestation, vegetation-cover development, landscaping, tree &amp; palm supply and irrigation networks — delivering for government entities, developers and main contractors.</p>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><b>2018</b><span>سنة التأسيس</span><small>Established</small></div>
+    <div class="fact"><b>27</b><span>مشروعًا خلال 5 سنوات</span><small>Projects · 5 years</small></div>
+    <div class="fact"><b>77.9<span style="display:inline;font-size:22px;margin:0 6px 0 0;font-family:Tajawal">مليون ﷼</span></b><span>إجمالي قيمة العقود</span><small>Contract value · SAR</small></div>
+  </div>
+  <div class="abs" style="right:120px;top:905px;font-size:14px;color:var(--muted)">المصدر: ملخص المشاريع الحالية والسابقة خلال خمس سنوات — وثيقة صادرة عن مؤسسة رايات نجد</div>
+
+  <div class="caption">
+    <b>مشروع تشجير واستزراع فيضة أم شلفح — الأسياح، القصيم</b>
+    <span>Umm Shalfah afforestation project · Al Asyah, Qassim</span>
+  </div>
+  <div class="folio" style="right:120px"><b>02</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= PAGE 3 — ABOUT US ================= -->
+<section class="page p3">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="c-photo3"><path d="M0 0 H860 C900 0 930 120 880 300 C820 520 960 700 900 880 C860 1000 760 1080 700 1080 H0 Z"/></clipPath>
+      <linearGradient id="g-gold3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#E8CA8C"/><stop offset=".5" stop-color="#C59B4E"/><stop offset="1" stop-color="#A57A2C"/>
+      </linearGradient>
+      <linearGradient id="g-p3" x1="1" y1="0" x2="0" y2="0">
+        <stop offset="0" stop-color="#143A2A" stop-opacity=".55"/><stop offset=".35" stop-color="#143A2A" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="g-p3bg" cx=".8" cy=".2" r=".9"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#g-p3bg)"/>
+    <!-- emblem watermark -->
+    <image href="img/rayat-najd-emblem-light.svg" x="1380" y="-120" width="700" height="700" opacity=".05"/>
+    <g clip-path="url(#c-photo3)">
+      <image href="img/p_5283.jpg" x="-420" y="-360" width="1620" height="1440" preserveAspectRatio="xMidYMid slice"/>
+      <rect width="940" height="1080" fill="url(#g-p3)"/>
+    </g>
+    <path d="M872 -10 C912 0 942 120 892 300 C832 520 972 700 912 880 C872 1000 772 1090 712 1090" fill="none" stroke="url(#g-gold3)" stroke-width="4"/>
+    <path d="M900 -10 C940 0 970 122 920 302 C860 522 1000 702 940 882 C900 1002 800 1092 740 1092" fill="none" stroke="url(#g-gold3)" stroke-width="1.2" opacity=".5"/>
+  </svg>
+
+  <div class="photo-cap" style="text-shadow:0 1px 6px rgba(0,0,0,.6)">Rayat Najd nursery · Al-Mansouriyah</div>
+
+  <div class="head">
+    <div class="kicker" style="text-align:right;color:var(--gold-l)">02 — About Us</div>
+    <h2>من نحن</h2>
+  </div>
+  <div class="ar">
+    <p>مؤسسة رايات نجد للمقاولات مؤسسة سعودية تقدم أعمالًا متكاملة وفق منهج يرتكز على الجودة والالتزام والتنفيذ المنظم، وتجمع هويتها بين البناء وتطوير المواقع والعناية بالبيئة العمرانية.</p>
+    <p>تتخصص المؤسسة في مشاريع التشجير وتنمية الغطاء النباتي، وتوريد الأشجار والنخيل ونقلها، وتنسيق المواقع، وشبكات الري، وأعمال التشغيل والصيانة، مدعومة بمشاتل خاصة في منطقة الرياض.</p>
+  </div>
+  <div class="enb" dir="ltr" style="text-align:left">Rayat Najd Contracting Est. is a Saudi establishment delivering integrated works through a disciplined approach built on quality, commitment and organized execution — specialising in afforestation, vegetation-cover development, tree &amp; palm supply and relocation, landscaping, irrigation networks and operation &amp; maintenance, supported by its own nurseries in the Riyadh region.</div>
+
+  <div class="card">
+    <div><small>الكيان</small><b>مؤسسة</b><em>Entity · Establishment</em></div>
+    <div><small>الرقم الوطني الموحد</small><b>7004164385</b><em>Unified National No.</em></div>
+    <div><small>تاريخ الإصدار</small><b>23/05/2018</b><em>Issue Date</em></div>
+    <div><small>المقر</small><b>الرياض</b><em>Head Office · Riyadh</em></div>
+  </div>
+  <div class="src">المصدر: شهادة السجل التجاري — وزارة التجارة</div>
+  <div class="folio" style="left:980px"><b>03</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= PAGE 4 — VISION · MISSION · VALUES ================= -->
+<section class="page p4">
+  <svg class="bg" viewBox="0 0 1920 1080">
+    <defs>
+      <clipPath id="c-photo4"><path d="M0 0 H1920 V300 C1640 420 1340 330 1040 380 C720 434 420 470 0 400 Z"/></clipPath>
+      <linearGradient id="g-shade4" x1="1" y1="0" x2="0" y2="0">
+        <stop offset="0" stop-color="#0F2E20" stop-opacity=".85"/><stop offset=".55" stop-color="#0F2E20" stop-opacity=".15"/><stop offset="1" stop-color="#0F2E20" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="g-gold4" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#A57A2C"/><stop offset=".5" stop-color="#E8CA8C"/><stop offset="1" stop-color="#C59B4E"/>
+      </linearGradient>
+    </defs>
+    <g clip-path="url(#c-photo4)">
+      <image href="img/s_8037.jpg" x="0" y="-260" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>
+      <rect width="1920" height="480" fill="url(#g-shade4)"/>
+    </g>
+    <path d="M-10 402 C420 472 720 436 1040 382 C1340 332 1640 422 1930 300" fill="none" stroke="url(#g-gold4)" stroke-width="4"/>
+    <path d="M-10 424 C420 494 730 458 1050 404 C1350 354 1650 444 1930 322" fill="none" stroke="url(#g-gold4)" stroke-width="1.2" opacity=".55"/>
+    <path d="M0 1080 V1010 C500 1060 1300 990 1920 1030 V1080 Z" fill="#EFE6D3"/>
+  </svg>
+
+  <div class="title">
+    <div class="kicker">03 — Vision · Mission · Values</div>
+    <h2>الرؤية والرسالة والقيم</h2>
+  </div>
+  <div class="abs en" style="left:70px;top:330px;font-size:13px;letter-spacing:.2em;color:#fff;text-transform:uppercase;opacity:.85">Umm Shalfah afforestation · aerial</div>
+
+  <div class="vm">
+    <div>
+      <h3>رؤيتنا <small>Our Vision</small></h3>
+      <p>أن نكون جهة موثوقة في قطاع المقاولات، مع التركيز على جودة التنفيذ والاستدامة وبناء علاقات طويلة الأمد مع العملاء.</p>
+      <p class="e">To be a trusted contracting provider recognised for execution quality, sustainability and long-term client relationships.</p>
+    </div>
+    <div>
+      <h3>رسالتنا <small>Our Mission</small></h3>
+      <p>تنفيذ الأعمال بمهنية وكفاءة، وإدارة الموارد والمواقع بصورة منظمة، مع الالتزام بمتطلبات الجودة والسلامة والبرنامج الزمني للمشروع.</p>
+      <p class="e">To execute works professionally and efficiently, manage resources and sites systematically, and honour quality, safety and project schedules.</p>
+    </div>
+  </div>
+
+  <div class="values">
+    <div><span class="n">01</span><b>الجودة</b><small>Quality</small><p>ضبط المواد والأعمال حتى الاستلام.</p></div>
+    <div><span class="n">02</span><b>الالتزام</b><small>Commitment</small><p>احترام الشروط والمواصفات والمدد.</p></div>
+    <div><span class="n">03</span><b>الخبرة</b><small>Experience</small><p>تنفيذ ميداني في بيئات متنوعة.</p></div>
+    <div><span class="n">04</span><b>التنمية المستدامة</b><small>Sustainable Development</small><p>ترشيد الموارد وتقليل الهدر.</p></div>
+  </div>
+  <div class="folio" style="right:120px"><b>04</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+</body>
+</html>
