@@ -109,6 +109,16 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 .v2030{display:block}
 .medal{border-radius:50%;background:radial-gradient(circle at 50% 40%,#FFFDF7,#F1E8D6);box-shadow:0 0 0 3px #C59B4E,0 0 0 9px rgba(197,155,78,.25),0 20px 50px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .medal img{mix-blend-mode:multiply}
+
+.gal{position:absolute;left:120px;right:120px;top:270px;bottom:110px;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(3,1fr);gap:16px;direction:ltr}
+.gal figure{position:relative;margin:0;border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(15,46,32,.18);outline:1.5px solid rgba(197,155,78,.55);outline-offset:-1.5px}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;right:12px;bottom:10px;font-size:15px;font-weight:700;color:#fff;background:rgba(15,46,32,.72);padding:4px 12px;border-radius:20px;direction:rtl}
+.dark .gal figure{box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.p22b .tl{position:absolute;text-align:center;width:220px}
+.p22b .tl .thumb{position:relative;width:220px;height:300px}
+.p22b .tl b{display:block;font-size:15px;font-weight:700;color:var(--forest);margin-top:12px;line-height:1.35}
+.p22b .tl span{display:block;font-size:13px;color:var(--muted);margin-top:3px}
 </style>
 </head>
 <body>
@@ -135,7 +145,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <!-- soft secondary wave -->
     <path d="M0 640 C380 560 640 980 1100 860 C1450 770 1650 690 1920 720 V1080 H0 Z" fill="#EFE6D3" opacity=".7"/>
     <g clip-path="url(#c-photo1)">
-      <image href="img/cover.jpg" x="-200" y="-150" width="1500" height="1000" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/g_13.jpg" x="-120" y="-60" width="1300" height="975" preserveAspectRatio="xMidYMid slice"/>
       <rect width="1920" height="1080" fill="url(#g-photofade)"/>
     </g>
     <!-- gold ribbons following the photo edge -->
@@ -232,14 +242,14 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <rect width="1920" height="1080" fill="url(#g-p3bg)"/>
     <!-- emblem watermark -->
     <g clip-path="url(#c-photo3)">
-      <image href="img/p_5283.jpg" x="-420" y="-360" width="1620" height="1440" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/g_28.jpg" x="0" y="-80" width="940" height="1253" preserveAspectRatio="xMidYMid slice"/>
       <rect width="940" height="1080" fill="url(#g-p3)"/>
     </g>
     <path d="M872 -10 C912 0 942 120 892 300 C832 520 972 700 912 880 C872 1000 772 1090 712 1090" fill="none" stroke="url(#g-gold3)" stroke-width="4"/>
     <path d="M900 -10 C940 0 970 122 920 302 C860 522 1000 702 940 882 C900 1002 800 1092 740 1092" fill="none" stroke="url(#g-gold3)" stroke-width="1.2" opacity=".5"/>
   </svg>
 
-  <div class="photo-cap" style="text-shadow:0 1px 6px rgba(0,0,0,.6)">Rayat Najd nursery · Al-Mansouriyah</div>
+  <div class="photo-cap" style="text-shadow:0 1px 6px rgba(0,0,0,.6)">Rayat Najd · palm stock</div>
 
   <div class="head">
     <div class="kicker" style="text-align:right;color:var(--gold-l)">02 — About Us</div>
@@ -492,7 +502,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
       <clipPath id="cv"><path d="M0 0 H640 C780 200 700 420 800 600 C900 780 820 950 720 1080 H0 Z"/></clipPath>
       <linearGradient id="shv" x1="0" y1="0" x2="0" y2="1"><stop offset=".6" stop-color="#0F2E20" stop-opacity="0"/><stop offset="1" stop-color="#0F2E20" stop-opacity=".7"/></linearGradient>
     </defs>
-    <g clip-path="url(#cv)"><image href="img/n_22.jpg" x="-420" y="0" width="1400" height="1080" preserveAspectRatio="xMidYMid slice"/><rect width="900" height="1080" fill="url(#shv)"/></g>
+    <g clip-path="url(#cv)"><image href="img/g_16.jpg" x="-200" y="0" width="1080" height="1080" preserveAspectRatio="xMidYMid slice"/><rect width="900" height="1080" fill="url(#shv)"/></g>
     <path d="M652 -10 C792 200 712 420 812 600 C912 780 832 950 732 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
     <path d="M682 -10 C822 202 742 422 842 602 C942 782 862 952 762 1092" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".55"/>
   </svg>
@@ -518,7 +528,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     </div>
   </div>
   <div class="src" style="right:120px;bottom:48px">المصدر: سعوديبيديا — الرياض الخضراء (أُعلن عام 2019)</div>
-  <div class="cap" style="left:60px;bottom:48px">Al-Hair nursery · Riyadh</div>
+  <div class="cap" style="left:60px;bottom:48px">Urban greening · Rayat Najd works</div>
   <div class="folio" style="left:860px"><b>05</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
 </section>
 
@@ -526,11 +536,11 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 <section class="page p5">
   <svg class="bg" viewBox="0 0 1920 1080">
     <defs><clipPath id="c5"><path d="M0 0 H700 C860 170 760 380 860 560 C960 740 860 930 760 1080 H0 Z"/></clipPath></defs>
-    <g clip-path="url(#c5)"><image href="img/h_419.jpg" x="-260" y="0" width="1440" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
+    <g clip-path="url(#c5)"><image href="img/g_19.jpg" x="-300" y="0" width="1440" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
     <path d="M712 -10 C872 170 772 380 872 560 C972 740 872 930 772 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
     <path d="M742 -10 C902 172 802 382 902 562 C1002 742 902 932 802 1092" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".55"/>
   </svg>
-  <div class="cap" style="left:60px;bottom:48px">Umm Al-Hamam afforestation · Al Asyah, Qassim</div>
+  <div class="cap" style="left:60px;bottom:48px">Landscaping works · Rayat Najd</div>
   <div class="ttl"><div class="kicker">05 — Business Sectors</div><h2>قطاعات الأعمال</h2><div class="tagl">حلول تشجير متكاملة ومبتكرة تخدم البيئة والمجتمع.</div></div>
   <div class="list">
     <div class="row"><span class="n">01</span><div><b>التشجير وتنمية الغطاء النباتي<em>Afforestation</em></b><p>زراعة الأنواع المحلية، إعادة تأهيل المراعي، الرعاية والسقيا للمشاريع البيئية.</p></div></div>
@@ -572,13 +582,13 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
       <clipPath id="c7a"><path d="M0 0 H900 C930 140 860 300 760 400 C640 520 420 560 240 520 C120 494 40 470 0 470 Z"/></clipPath>
       <clipPath id="c7b"><path d="M70 600 C200 520 470 520 620 600 C770 680 820 860 740 980 C680 1070 520 1090 330 1060 C160 1034 40 960 30 830 C22 730 30 650 70 600 Z"/></clipPath>
     </defs>
-    <g clip-path="url(#c7a)"><image href="img/n_22.jpg" x="-80" y="-60" width="1100" height="620" preserveAspectRatio="xMidYMid slice"/></g>
+    <g clip-path="url(#c7a)"><image href="img/g_10.jpg" x="0" y="-80" width="960" height="1707" preserveAspectRatio="xMidYMid slice"/></g>
     <path d="M912 -10 C942 140 872 304 772 406 C650 528 420 572 236 532 C120 506 40 482 -10 482" fill="none" stroke="url(#G)" stroke-width="3.5"/>
-    <g clip-path="url(#c7b)"><image href="img/p_5280.jpg" x="20" y="520" width="830" height="570" preserveAspectRatio="xMidYMid slice"/></g>
+    <g clip-path="url(#c7b)"><image href="img/g_14.jpg" x="20" y="340" width="830" height="1107" preserveAspectRatio="xMidYMid slice"/></g>
     <path d="M70 600 C200 520 470 520 620 600 C770 680 820 860 740 980 C680 1070 520 1090 330 1060 C160 1034 40 960 30 830 C22 730 30 650 70 600 Z" fill="none" stroke="url(#G)" stroke-width="2"/>
   </svg>
-  <div class="cap" style="left:60px;top:430px">Al-Hair nursery · Riyadh</div>
-  <div class="cap" style="left:840px;top:1000px">Al-Mansouriyah nursery</div>
+  <div class="cap" style="left:60px;top:430px">Palm stock · Rayat Najd nurseries</div>
+  <div class="cap" style="left:840px;top:1000px;color:var(--muted);text-shadow:none">Trees ready for supply</div>
   <div class="ttl"><div class="kicker">07 — Trees, Palms &amp; Nurseries</div><h2>توريد الأشجار والنخيل</h2><div class="sub">Supplied from our own nurseries</div><div class="tagl">نعتز بتوفير أفضل أنواع النخيل التي تناسب بيئتنا المحلية، لتضفي طابعًا أصيلًا وجمالًا فريدًا على مشاريعكم.</div></div>
   <div class="text">
     <p class="body-ar">نوفّر للمشاريع نخيل الواشنطونيا ونخيل التمر والأشجار المحلية المتحمّلة للجفاف كالسدر والسمر والغاف والطلح، مع أعمال النقل والزراعة والرعاية وفق جداول الكميات والمواصفات المعتمدة.</p>
@@ -601,9 +611,9 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     </defs>
     <rect width="1920" height="1080" fill="url(#bg8)"/>
     <g clip-path="url(#c8)">
-      <image href="img/rel_4.jpg" x="0" y="-80" width="660" height="640" preserveAspectRatio="xMidYMid slice"/>
-      <image href="img/h_387.jpg" x="660" y="-40" width="620" height="600" preserveAspectRatio="xMidYMid slice"/>
-      <image href="img/p_5284.jpg" x="1280" y="-40" width="640" height="600" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/g_39.jpg" x="0" y="-160" width="660" height="880" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/g_07.jpg" x="660" y="-160" width="620" height="827" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/g_04.jpg" x="1280" y="0" width="640" height="560" preserveAspectRatio="xMidYMid slice"/>
       <rect x="656" y="0" width="5" height="600" fill="#C59B4E"/><rect x="1276" y="0" width="5" height="600" fill="#C59B4E"/>
       <rect width="1920" height="200" fill="#0F2E20" opacity=".35"/>
     </g>
@@ -659,7 +669,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
       <linearGradient id="f11" x1="0" y1="0" x2="1" y2="0"><stop offset=".55" stop-color="#0F2E20" stop-opacity="0"/><stop offset="1" stop-color="#0F2E20" stop-opacity=".6"/></linearGradient>
     </defs>
     <rect width="1920" height="1080" fill="url(#bg11)"/>
-    <g clip-path="url(#c11)"><image href="img/h_426.jpg" x="0" y="-180" width="1100" height="620" preserveAspectRatio="xMidYMid slice"/><rect width="1100" height="400" fill="url(#f11)"/></g>
+    <g clip-path="url(#c11)"><image href="img/g_08.jpg" x="0" y="-560" width="1100" height="1467" preserveAspectRatio="xMidYMid slice"/><rect width="1100" height="400" fill="url(#f11)"/></g>
     <path d="M1112 -10 C1012 120 868 270 642 312 C420 352 180 332 -10 392" fill="none" stroke="url(#G)" stroke-width="4"/>
   </svg>
   <div class="ttl"><div class="kicker">10 — Quality, HSE &amp; Sustainability</div><h2>الجودة والسلامة والاستدامة</h2><div class="tagl">نلتزم بأعلى معايير الجودة والاستدامة في جميع مشاريعنا بالمملكة.</div></div>
@@ -832,10 +842,10 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
       <clipPath id="c17"><path d="M1920 0 V1080 H1240 C1180 900 1300 760 1260 600 C1220 420 1320 240 1280 0 Z"/></clipPath>
     </defs>
     <rect width="1920" height="1080" fill="url(#bg17)"/>
-    <g clip-path="url(#c17)"><image href="img/n_24.jpg" x="1100" y="0" width="1000" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
+    <g clip-path="url(#c17)"><image href="img/g_20.jpg" x="1160" y="0" width="810" height="1080" preserveAspectRatio="xMidYMid slice"/></g>
     <path d="M1268 -10 C1308 240 1208 420 1248 600 C1288 760 1168 900 1228 1090" fill="none" stroke="url(#G)" stroke-width="4"/>
   </svg>
-  <div class="cap" style="right:60px;bottom:44px">Palm stock · Al-Hair nursery</div>
+  <div class="cap" style="right:60px;bottom:44px">Date palms · Rayat Najd works</div>
   <div class="abs" style="left:120px;top:96px;width:1040px;text-align:right">
     <div class="kicker" style="text-align:right">Featured Projects · 04</div>
     <h2 style="font-size:56px;font-weight:800;color:#fff;margin-top:14px">روشن والدرعية</h2><div class="tagl" style="text-align:right">يعد النخيل رمزًا للأصالة في المملكة، ويتحمل الظروف المناخية القاسية.</div>
@@ -858,7 +868,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
   <svg class="bg" viewBox="0 0 1920 1080">
     <defs><clipPath id="c18"><path d="M0 0 H1920 V250 C1500 330 1100 230 760 290 C460 344 200 330 0 300 Z"/></clipPath>
       <linearGradient id="sh18" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#0F2E20" stop-opacity=".8"/><stop offset=".6" stop-color="#0F2E20" stop-opacity="0"/></linearGradient></defs>
-    <g clip-path="url(#c18)"><image href="img/p_5292.jpg" x="0" y="-480" width="1920" height="1280" preserveAspectRatio="xMidYMid slice"/><rect width="1920" height="340" fill="url(#sh18)"/></g>
+    <g clip-path="url(#c18)"><image href="img/g_37.jpg" x="0" y="-300" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/><rect width="1920" height="340" fill="url(#sh18)"/></g>
     <path d="M-10 302 C200 332 460 356 760 302 C1100 242 1500 342 1930 252" fill="none" stroke="url(#G)" stroke-width="4"/>
   </svg>
   <div class="ttl" style="top:60px"><div class="kicker" style="color:var(--gold-l)">Featured Projects · 05</div><h2 style="color:#fff;font-size:52px">تنسيق المواقع والأعمال المدنية المساندة</h2><div class="tagl">مواقع وحدائق تضفي طابعًا أصيلًا وجمالًا فريدًا على مشاريعكم.</div></div>
@@ -873,7 +883,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
   <div class="thumb" style="left:130px;top:760px;width:180px;height:248px;transform:rotate(-4deg)"><img src="img/docs/ebdaa-completion-certificate-riyadh-eastern-sites.jpg"></div>
   <div class="thumb" style="left:340px;top:745px;width:180px;height:248px;transform:rotate(2deg)"><img src="img/docs/algedrawi-contracting-completion-certificate-sidra-phase1-plants-supply.jpg"></div>
   <div class="thumb" style="left:550px;top:765px;width:180px;height:248px;transform:rotate(-2deg)"><img src="img/docs/nhc-completion-certificate-dammam-facade-fencing.jpg"></div>
-  <div class="cap" style="left:60px;top:30px">Al-Mansouriyah nursery</div>
+  <div class="cap" style="left:60px;top:30px">Landscaping works · Rayat Najd</div>
   <div class="folio" style="right:120px"><b>18</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
 </section>
 
@@ -938,9 +948,9 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
   </svg>
   <div class="thumb" style="left:110px;top:120px;width:300px;height:212px;transform:rotate(-4deg)"><img src="img/docs/rayat-najd-commercial-registration.jpg"></div>
   <div class="thumb" style="left:450px;top:90px;width:250px;height:350px;transform:rotate(3deg)"><img src="img/docs/rayat-najd-vat-registration-certificate.jpg"></div>
-  <div class="thumb" style="left:130px;top:420px;width:250px;height:350px;transform:rotate(2deg)"><img src="img/docs/rayat-najd-municipality-license.jpg"></div>
+  <div class="thumb" style="left:130px;top:420px;width:250px;height:350px;transform:rotate(2deg)"><img src="img/docs/new-municipality.jpg"></div>
   <div class="thumb" style="left:430px;top:500px;width:250px;height:350px;transform:rotate(-3deg)"><img src="img/docs/rayat-najd-iso-quality-management-certificate.jpg"></div>
-  <div class="thumb" style="left:640px;top:600px;width:200px;height:280px;transform:rotate(5deg)"><img src="img/docs/rayat-najd-chamber-of-commerce-certificate.jpg"></div>
+  <div class="thumb" style="left:640px;top:600px;width:200px;height:280px;transform:rotate(5deg)"><img src="img/docs/new-chamber.jpg"></div>
   <div class="ttl"><div class="kicker">14 — Licences &amp; Registrations</div><h2>التراخيص والتسجيلات</h2><div class="tagl">منشأة سعودية نظامية بسجلات وتراخيص وشهادات جودة سارية.</div></div>
   <div class="lic">
     <div><b>السجل التجاري<small>Commercial Registration</small></b><span class="st">نشط</span><p>وزارة التجارة · الرقم الوطني الموحد 7004164385 · سجل 1010450312 · صدر 23/05/2018</p></div>
@@ -960,7 +970,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <rect width="1920" height="1080" fill="url(#bg22)"/>
     <path d="M0 610 C500 560 1300 660 1920 590" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".4"/>
   </svg>
-  <div class="ttl"><div class="kicker">15 — Completion &amp; Appreciation Letters</div><h2>شهادات الإنجاز والشكر</h2><div class="tagl">ثقة الجهات الحكومية والخاصة موثّقة بشهادات الإنجاز والشكر.</div></div>
+  <div class="ttl"><div class="kicker">15 — Completion &amp; Appreciation Letters (1/2)</div><h2>شهادات الإنجاز والشكر</h2><div class="tagl">ثقة الجهات الحكومية والخاصة موثّقة بشهادات الإنجاز والشكر.</div></div>
   <div class="tl" style="right:120px;top:280px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/vegetation-cover-association-completion-letter-roshn-facade-assignment-44.jpg"></div><b>خطاب إنجاز — واجهة روشن</b><span>مؤسسة تنمية الغطاء النباتي الأهلية «مروج»</span></div>
   <div class="tl" style="right:420px;top:300px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-01.jpg"></div><b>إعادة تأهيل المراعي — المرحلة الثانية</b><span>المركز الوطني لتنمية الغطاء النباتي</span></div>
   <div class="tl" style="right:720px;top:280px"><div class="thumb" style="transform:rotate(-1deg)"><img src="img/docs/zahran-om-completion-certificates-3-projects.jpg"></div><b>شهادات إنجاز — 3 مشاريع</b><span>شركة زهران للصيانة والتشغيل</span></div>
@@ -975,6 +985,30 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
   <div class="folio" style="left:120px;bottom:40px"><b>22</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
 </section>
 
+
+<!-- ================= P22B MORE LETTERS ================= -->
+<section class="page p22b">
+  <svg class="bg" viewBox="0 0 1920 1080"><path d="M0 1080 V1000 C500 1050 1300 980 1920 1020 V1080 Z" fill="#EFE6D3"/><path d="M0 110 C600 40 1300 170 1920 90" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".5"/></svg>
+  <div class="ttl" style="top:60px"><div class="kicker">15 — Completion &amp; Appreciation Letters (2/2)</div><h2 style="font-size:50px">مزيد من شهادات الإنجاز</h2><div class="tagl">كل مشروع ننفّذه يُختم بشهادة إنجاز من المالك.</div></div>
+  <div class="tl" style="right:120px;top:270px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/tadbeer-irrigation.jpg"></div><b>استلام شبكة الري — السلي</b><span>شركة تدبير المحدودة · 03/07/2022</span></div><div class="tl" style="right:460px;top:270px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/tadbeer-planting.jpg"></div><b>استلام 50 ألف حفر وزراعة</b><span>شركة تدبير المحدودة · 06/12/2022</span></div><div class="tl" style="right:800px;top:270px"><div class="thumb" style="transform:rotate(-1deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-02.jpg"></div><b>إعادة تأهيل المراعي — شهادة 2</b><span>المركز الوطني لتنمية الغطاء النباتي</span></div><div class="tl" style="right:1140px;top:270px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-03.jpg"></div><b>إعادة تأهيل المراعي — شهادة 3</b><span>المركز الوطني لتنمية الغطاء النباتي</span></div><div class="tl" style="right:1480px;top:270px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/ebdaa-baha.jpg"></div><b>تسوير مواقع الباحة وبيشة</b><span>شركة الإبداع السعودي</span></div><div class="tl" style="right:120px;top:650px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/source-machinery.jpg"></div><b>أعمال مشروع البجيري — الدرعية</b><span>شركة موارد الآلات</span></div><div class="tl" style="right:460px;top:650px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/pine-roshn.jpg"></div><b>توريد أشجار — مشروع روشن</b><span>شركة الصنوبر الحديثة للمقاولات</span></div><div class="tl" style="right:800px;top:650px"><div class="thumb" style="transform:rotate(1deg)"><img src="img/docs/alanadee-completion-certificate-alsamhan-residential-development.jpg"></div><b>نقل النخيل — السمحان</b><span>شركة العنادي</span></div><div class="tl" style="right:1140px;top:650px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/nhc-completion-certificate-dammam-facade-fencing.jpg"></div><b>تسوير واجهة الدمام</b><span>الشركة الوطنية للإسكان</span></div><div class="tl" style="right:1480px;top:650px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/asyah-hospital.jpg"></div><b>شكر وتقدير — مركز صحي خصيبة</b><span>مستشفى الأسياح العام</span></div>
+  <div class="folio" style="left:120px"><b>23</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= PG1 GALLERY ================= -->
+<section class="page pg1">
+  <div class="ttl" style="top:60px"><div class="kicker">16 — Photo Gallery (1/2)</div><h2 style="font-size:50px">معرض الصور — تنسيق المواقع والتشجير الحضري</h2><div class="tagl">مواقع وحدائق تضفي طابعًا أصيلًا وجمالًا فريدًا على مشاريعكم.</div></div>
+  <div class="gal"><figure style="grid-area:1/1/3/3"><img src="img/g_18.jpg"><figcaption>حدائق ومسطحات خضراء</figcaption></figure><figure style="grid-area:1/3/2/5"><img src="img/g_22.jpg"><figcaption>تشجير الطرق والجزر الوسطية</figcaption></figure><figure style="grid-area:1/5/2/7"><img src="img/g_24.jpg"><figcaption>تنسيق المواقع</figcaption></figure><figure style="grid-area:2/3/3/4"><img src="img/g_30.jpg"><figcaption>تشجير الميادين</figcaption></figure><figure style="grid-area:2/4/3/5"><img src="img/g_06.jpg"><figcaption>مسطحات وأشجار ظل</figcaption></figure><figure style="grid-area:2/5/3/7"><img src="img/g_31.jpg"><figcaption>نخيل الواجهات</figcaption></figure><figure style="grid-area:3/1/4/2"><img src="img/g_01.jpg"><figcaption>تشجير مداخل المباني</figcaption></figure><figure style="grid-area:3/2/4/3"><img src="img/g_12.jpg"><figcaption>زراعة الثيل</figcaption></figure><figure style="grid-area:3/3/4/7"><img src="img/g_21.jpg"><figcaption>الرصف والأحجار</figcaption></figure></div>
+  <div class="folio" style="right:120px"><b>24</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
+<!-- ================= PG2 GALLERY ================= -->
+<section class="page pg2 dark">
+  <svg class="bg" viewBox="0 0 1920 1080"><defs><radialGradient id="bgg2" cx=".5" cy="0" r="1.1"><stop offset="0" stop-color="#1E4D38"/><stop offset="1" stop-color="#0F2E20"/></radialGradient></defs><rect width="1920" height="1080" fill="url(#bgg2)"/></svg>
+  <div class="ttl" style="top:60px"><div class="kicker">16 — Photo Gallery (2/2)</div><h2 style="font-size:50px">معرض الصور — المشاتل والأعمال الميدانية</h2><div class="tagl">نعمل انطلاقًا من مشاتلنا في الرياض لخدمة مختلف مدن المملكة.</div></div>
+  <div class="gal"><figure style="grid-area:1/1/3/3"><img src="img/g_33.jpg"><figcaption>نقل الأشجار الكبيرة</figcaption></figure><figure style="grid-area:1/3/2/4"><img src="img/g_03.jpg"><figcaption>حقول النخيل</figcaption></figure><figure style="grid-area:1/4/2/5"><img src="img/g_26.jpg"><figcaption>أشجار جاهزة للتوريد</figcaption></figure><figure style="grid-area:1/5/2/6"><img src="img/g_15.jpg"><figcaption>نخيل الواشنطونيا</figcaption></figure><figure style="grid-area:1/6/2/7"><img src="img/g_36.jpg"><figcaption>أشجار الظل</figcaption></figure><figure style="grid-area:2/3/3/5"><img src="img/g_09.jpg"><figcaption>أعمال شبكات الري</figcaption></figure><figure style="grid-area:2/5/3/7"><img src="img/g_11.jpg"><figcaption>تمديدات الري</figcaption></figure><figure style="grid-area:3/1/4/2"><img src="img/g_34.jpg"><figcaption>أشجار بأحجام كبيرة</figcaption></figure><figure style="grid-area:3/2/4/3"><img src="img/g_27.jpg"><figcaption>صفوف الأشجار في المشتل</figcaption></figure><figure style="grid-area:3/3/4/5"><img src="img/g_17.jpg"><figcaption>أعمال الأسوار</figcaption></figure><figure style="grid-area:3/5/4/6"><img src="img/g_00.jpg"><figcaption>نخيل مزروع</figcaption></figure><figure style="grid-area:3/6/4/7"><img src="img/g_25.jpg"><figcaption>شتلات في أوعية</figcaption></figure></div>
+  <div class="folio" style="left:120px"><b>25</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+</section>
+
 <!-- ================= P23 WHY RAYAT NAJD ================= -->
 <section class="page p23 onphoto">
   <svg class="bg" viewBox="0 0 1920 1080">
@@ -983,7 +1017,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <rect width="1920" height="1080" fill="url(#sh23)"/>
     <path d="M-10 260 C500 200 1100 320 1930 230" fill="none" stroke="url(#G)" stroke-width="2.5" opacity=".9"/>
   </svg>
-  <div class="ttl" style="top:80px"><div class="kicker">16 — Why Rayat Najd</div><h2>لماذا رايات نجد؟</h2><div class="tagl">الخيار الأول والوجهة الموثوقة لمشاريع التشجير والغطاء النباتي.</div></div>
+  <div class="ttl" style="top:80px"><div class="kicker">17 — Why Rayat Najd</div><h2>لماذا رايات نجد؟</h2><div class="tagl">الخيار الأول والوجهة الموثوقة لمشاريع التشجير والغطاء النباتي.</div></div>
   <div class="grid">
     <div><span class="n">01</span><b>سجل موثّق</b><small>Documented record</small><p>27 مشروعًا خلال خمس سنوات بقيمة 77.9 مليون ريال، مع شهادات إنجاز وشكر من الجهات المالكة.</p></div>
     <div><span class="n">02</span><b>خبرة مع جهات كبرى</b><small>Major clients</small><p>المركز الوطني لتنمية الغطاء النباتي، والشركة الوطنية للإسكان، ومشاريع روشن والدرعية.</p></div>
@@ -992,7 +1026,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <div><span class="n">05</span><b>أنظمة إدارة معتمدة</b><small>ISO certified</small><p>ISO 9001 و14001 و45001 سارية حتى 2028.</p></div>
     <div><span class="n">06</span><b>حضور في عدة مناطق</b><small>Multi-region</small><p>مشاريع منفّذة في ثماني مناطق، من القصيم والجوف إلى مكة المكرمة والمنطقة الشرقية.</p></div>
   </div>
-  <div class="folio" style="right:120px;bottom:40px"><b>23</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
+  <div class="folio" style="right:120px;bottom:40px"><b>26</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>
 </section>
 
 <!-- ================= P24 CONTACT / BACK COVER ================= -->
@@ -1003,7 +1037,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
       <clipPath id="c24"><path d="M0 0 H700 C620 210 810 470 620 720 C500 880 260 930 0 900 Z"/></clipPath>
     </defs>
     <rect width="1920" height="1080" fill="url(#bg24)"/>
-    <g clip-path="url(#c24)"><image href="img/p_5310.jpg" x="-300" y="0" width="1300" height="920" preserveAspectRatio="xMidYMid slice"/></g>
+    <g clip-path="url(#c24)"><image href="img/g_05.jpg" x="0" y="-100" width="760" height="1111" preserveAspectRatio="xMidYMid slice"/></g>
     <path d="M715 -10 C635 210 828 470 636 722 C512 888 260 942 -10 912" fill="none" stroke="url(#G)" stroke-width="5"/>
     <path d="M748 -10 C668 212 860 474 664 732 C536 900 270 960 -10 934" fill="none" stroke="url(#G)" stroke-width="1.5" opacity=".6"/>
     <path d="M0 1080 V990 C500 1030 1200 960 1920 1000 V1080 Z" fill="#0B2418"/>
@@ -1023,7 +1057,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
   <img class="v2030" src="img/vision2030-white.png" alt="رؤية المملكة 2030" onerror="this.remove()" style="position:absolute;left:760px;bottom:110px;height:90px">
   <div class="addr">الرياض — المملكة العربية السعودية<span>Riyadh · Kingdom of Saudi Arabia</span></div>
   <div class="abs" style="left:60px;bottom:28px;font-family:Inter;font-size:12.5px;letter-spacing:.2em;color:rgba(255,255,255,.55)">CR 1010450312 · VAT 310207303600003</div>
-  <div class="abs" style="right:120px;bottom:30px;font-family:Lora;font-style:italic;font-size:22px;color:var(--gold-l)">24</div>
+  <div class="abs" style="right:120px;bottom:30px;font-family:Lora;font-style:italic;font-size:22px;color:var(--gold-l)">27</div>
 </section>
 
 </body>
