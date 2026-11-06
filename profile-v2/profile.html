@@ -12,13 +12,13 @@
 :root{
   --forest:#143A2A; --forest-2:#1E4D38; --forest-3:#0F2E20; --leaf:#2D7352;
   --gold:#C59B4E; --gold-l:#DFBA73; --gold-d:#A57A2C;
-  --ivory:#F8F3E8; --ivory-2:#EFE6D3; --ink:#1F2A24; --muted:#5E6B62;
+  --ivory:#F5FAF6; --ivory-2:#E3F0E6; --ink:#1F2A24; --muted:#5E6B62;
 }
 @page{margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#d9d4c8}
 body{font-family:Tajawal,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--ivory);page-break-after:always;break-after:page}
+.page{position:relative;width:1920px;height:1080px;overflow:hidden;background:linear-gradient(135deg,#F7FCF8 0%,#E6F2E9 48%,#F4EDD6 100%);page-break-after:always;break-after:page}
 .en{font-family:Inter,sans-serif;direction:ltr;text-align:left}
 .serif{font-family:Lora,serif}
 .abs{position:absolute}
@@ -107,7 +107,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 .tagl{font-size:24px;font-weight:500;color:var(--leaf);margin-top:12px;line-height:1.5;max-width:900px;margin-inline-start:auto}
 .dark .tagl,.onphoto .tagl,.p4 .tagl,.p3 .tagl,.p18 .tagl{color:var(--gold-l)}
 .v2030{display:block}
-.medal{border-radius:50%;background:radial-gradient(circle at 50% 40%,#FFFDF7,#F1E8D6);box-shadow:0 0 0 3px #C59B4E,0 0 0 9px rgba(197,155,78,.25),0 20px 50px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.medal{border-radius:50%;background:radial-gradient(circle at 50% 40%,#FFFFFF,#E6F2E9);box-shadow:0 0 0 3px #C59B4E,0 0 0 9px rgba(197,155,78,.25),0 20px 50px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .medal img{mix-blend-mode:multiply}
 
 .gal{position:absolute;left:120px;right:120px;top:270px;bottom:110px;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(3,1fr);gap:16px;direction:ltr}
@@ -128,7 +128,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 .pp .card{height:138px;background:#fff;border-radius:16px;box-shadow:0 8px 22px rgba(15,46,32,.10);outline:1px solid rgba(197,155,78,.45);outline-offset:-1px;display:flex;align-items:center;justify-content:center;padding:14px 18px;position:relative;overflow:hidden}
 .pp .card::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,#A57A2C,#E8CA8C,#C59B4E)}
 .pp .card img{max-width:100%;max-height:100%;object-fit:contain}
-.pp .card.name{background:linear-gradient(160deg,#FFFDF7,#F3EBDA);flex-direction:column;text-align:center}
+.pp .card.name{background:linear-gradient(160deg,#FFFFFF,#E7F2EA 60%,#F5EED9);flex-direction:column;text-align:center}
 .pp .card.name b{font-size:19px;font-weight:800;color:var(--forest);line-height:1.35}
 .pp .card.name span{font-size:12.5px;color:var(--gold-d);margin-top:6px;font-weight:500}
 .amt{filter:blur(5px);-webkit-filter:blur(5px);user-select:none;display:inline-block}
@@ -147,16 +147,16 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
         <stop offset="0" stop-color="#0F2E20"/><stop offset=".55" stop-color="#1E4D38"/><stop offset="1" stop-color="#143A2A"/>
       </linearGradient>
       <radialGradient id="g-glow" cx=".72" cy=".3" r=".6">
-        <stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#F3EBDA"/>
+        <stop offset="0" stop-color="#FAFEFB"/><stop offset=".6" stop-color="#E8F3EB"/><stop offset="1" stop-color="#F3EAD0"/>
       </radialGradient>
       <linearGradient id="g-photofade" x1="0" y1="0" x2="1" y2="0">
-        <stop offset=".72" stop-color="#F8F3E8" stop-opacity="0"/><stop offset="1" stop-color="#F8F3E8" stop-opacity=".55"/>
+        <stop offset=".72" stop-color="#F7FCF8" stop-opacity="0"/><stop offset="1" stop-color="#F7FCF8" stop-opacity=".55"/>
       </linearGradient>
       <clipPath id="c-photo1"><path d="M0 0 H900 C820 210 1010 470 820 720 C700 880 430 930 0 900 Z"/></clipPath>
     </defs>
     <rect width="1920" height="1080" fill="url(#g-glow)"/>
     <!-- soft secondary wave -->
-    <path d="M0 640 C380 560 640 980 1100 860 C1450 770 1650 690 1920 720 V1080 H0 Z" fill="#EFE6D3" opacity=".7"/>
+    <path d="M0 640 C380 560 640 980 1100 860 C1450 770 1650 690 1920 720 V1080 H0 Z" fill="url(#softband)" opacity=".7"/>
     <g clip-path="url(#c-photo1)">
       <image href="img/g_13.jpg" x="-120" y="-60" width="1300" height="975" preserveAspectRatio="xMidYMid slice"/>
       <rect width="1920" height="1080" fill="url(#g-photofade)"/>
@@ -209,7 +209,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
         <stop offset="0" stop-color="#DFBA73"/><stop offset=".5" stop-color="#C59B4E"/><stop offset="1" stop-color="#A57A2C"/>
       </linearGradient>
     </defs>
-    <path d="M1920 0 V1080 H1300 C1500 920 1700 880 1920 860" fill="#EFE6D3" opacity=".55"/>
+    <path d="M1920 0 V1080 H1300 C1500 920 1700 880 1920 860" fill="url(#softband)" opacity=".55"/>
     <g clip-path="url(#c-photo2)">
       <image href="img/s_8050.jpg" x="-120" y="-30" width="1240" height="1140" preserveAspectRatio="xMidYMid slice"/>
       <rect width="1100" height="1080" fill="url(#g-shade2)"/>
@@ -255,14 +255,14 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     <rect width="1920" height="1080" fill="url(#g-p3bg)"/>
     <!-- emblem watermark -->
     <g clip-path="url(#c-photo3)">
-      <image href="img/g_28.jpg" x="0" y="-80" width="940" height="1253" preserveAspectRatio="xMidYMid slice"/>
+      <image href="img/n_06.jpg" x="-780" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>
       <rect width="940" height="1080" fill="url(#g-p3)"/>
     </g>
     <path d="M872 -10 C912 0 942 120 892 300 C832 520 972 700 912 880 C872 1000 772 1090 712 1090" fill="none" stroke="url(#g-gold3)" stroke-width="4"/>
     <path d="M900 -10 C940 0 970 122 920 302 C860 522 1000 702 940 882 C900 1002 800 1092 740 1092" fill="none" stroke="url(#g-gold3)" stroke-width="1.2" opacity=".5"/>
   </svg>
 
-  <div class="photo-cap" style="text-shadow:0 1px 6px rgba(0,0,0,.6)">Rayat Najd · palm stock</div>
+  <div class="photo-cap" style="text-shadow:0 1px 6px rgba(0,0,0,.6)">Rayat Najd nurseries · Riyadh</div>
 
   <div class="head">
     <div class="kicker" style="text-align:right;color:var(--gold-l)">02 — About Us</div>
@@ -275,7 +275,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
   <div class="enb" dir="ltr" style="text-align:left">Rayat Najd Contracting Est. is a Saudi establishment delivering integrated works through a disciplined approach built on quality, commitment and organized execution — specialising in afforestation, vegetation-cover development, tree &amp; palm supply and relocation, landscaping, irrigation networks and operation &amp; maintenance, supported by its own nurseries in the Riyadh region.</div>
 
   <div class="card">
-    <div><small>الكيان</small><b>مؤسسة</b><em>Entity · Establishment</em></div>
+    <div><small>مساحة المشاتل</small><b>+50,000 م²</b><em>Nursery area</em></div>
     <div><small>الرقم الوطني الموحد</small><b>7004164385</b><em>Unified National No.</em></div>
     <div><small>تاريخ الإصدار</small><b>23/05/2018</b><em>Issue Date</em></div>
     <div><small>المقر</small><b>الرياض</b><em>Head Office · Riyadh</em></div>
@@ -302,7 +302,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
     </g>
     <path d="M-10 402 C420 472 720 436 1040 382 C1340 332 1640 422 1930 300" fill="none" stroke="url(#g-gold4)" stroke-width="4"/>
     <path d="M-10 424 C420 494 730 458 1050 404 C1350 354 1650 444 1930 322" fill="none" stroke="url(#g-gold4)" stroke-width="1.2" opacity=".55"/>
-    <path d="M0 1080 V1010 C500 1060 1300 990 1920 1030 V1080 Z" fill="#EFE6D3"/>
+    <path d="M0 1080 V1010 C500 1060 1300 990 1920 1030 V1080 Z" fill="url(#softband)"/>
   </svg>
 
   <div class="title">
@@ -335,7 +335,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 
 <style>
 /* ===== shared (pages 5–24) ===== */
-.dark{background:var(--forest);color:#EDE6D4}
+.dark{background:linear-gradient(135deg,#1F5A40 0%,#143A2A 45%,#0C2619 100%);color:#EDE6D4}
 .ttl{position:absolute;right:120px;top:96px;text-align:right}
 .ttl .kicker{text-align:right}
 .ttl h2{font-size:60px;font-weight:800;color:var(--forest);line-height:1.12;margin-top:14px}
@@ -409,7 +409,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 .p10 .pr p{font-size:17.5px;color:var(--muted);margin-top:3px;line-height:1.5}
 .p10 .out{position:absolute;right:120px;bottom:110px;width:800px}
 .p10 .out .lbl{font-size:17px;font-weight:700;color:var(--gold-d);margin-bottom:10px}
-.p10 .out span{display:inline-block;font-size:16px;color:var(--forest);border:1px solid rgba(197,155,78,.6);border-radius:30px;padding:6px 16px;margin:0 0 8px 8px;background:rgba(255,255,255,.5)}
+.p10 .out span{display:inline-block;font-size:16px;color:var(--forest);border:1px solid rgba(197,155,78,.6);border-radius:30px;padding:6px 16px;margin:0 0 8px 8px;background:rgba(255,255,255,.6)}
 
 /* P11 QHSE */
 .p11 .cols{position:absolute;right:120px;left:120px;top:440px;display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
@@ -503,6 +503,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 
 <svg width="0" height="0" style="position:absolute">
   <defs>
+    <linearGradient id="softband" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D6E9DB"/><stop offset=".6" stop-color="#E3F0E6"/><stop offset="1" stop-color="#EFE3BF"/></linearGradient>
     <linearGradient id="G" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DFBA73"/><stop offset=".35" stop-color="#C59B4E"/><stop offset=".7" stop-color="#E8CA8C"/><stop offset="1" stop-color="#A57A2C"/></linearGradient>
   </defs>
 </svg>
@@ -646,7 +647,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 <!-- ================= P9 METHODOLOGY ================= -->
 <section class="page p9">
   <svg class="bg" viewBox="0 0 1920 1080"><g transform="translate(0,-30)">
-    <path d="M0 860 C380 760 600 980 1100 880 C1450 810 1650 720 1920 760 V1080 H0 Z" fill="#EFE6D3" opacity=".7"/>
+    <path d="M0 860 C380 760 600 980 1100 880 C1450 810 1650 720 1920 760 V1080 H0 Z" fill="url(#softband)" opacity=".7"/>
     <path id="path9" d="M150 610 C380 470 560 760 800 620 C1040 480 1180 760 1420 620 C1600 515 1700 560 1780 600" fill="none" stroke="url(#G)" stroke-width="3"/>
     <path d="M150 632 C380 492 560 782 800 642 C1040 502 1180 782 1420 642 C1600 537 1700 582 1780 622" fill="none" stroke="url(#G)" stroke-width="1" opacity=".5"/>
     <g fill="#F8F3E8" stroke="#C59B4E" stroke-width="3">
@@ -902,7 +903,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 
 <!-- ================= P19 REGISTER 1 ================= -->
 <section class="page reg p19">
-  <svg class="bg" viewBox="0 0 1920 1080"><path d="M1920 0 V160 C1500 220 1200 120 800 170 C500 208 200 190 0 160 V0 Z" fill="#EFE6D3"/><path d="M-10 162 C200 192 500 210 800 172 C1200 122 1500 222 1930 162" fill="none" stroke="url(#G)" stroke-width="2.5"/></svg>
+  <svg class="bg" viewBox="0 0 1920 1080"><path d="M1920 0 V160 C1500 220 1200 120 800 170 C500 208 200 190 0 160 V0 Z" fill="url(#softband)"/><path d="M-10 162 C200 192 500 210 800 172 C1200 122 1500 222 1930 162" fill="none" stroke="url(#G)" stroke-width="2.5"/></svg>
   <div class="ttl" style="top:34px"><div class="kicker">13 — Project Register (1/2)</div><h2 style="font-size:46px">سجل المشاريع خلال خمس سنوات</h2><div class="tagl">سجل حافل بالمشاريع الوطنية لجهات حكومية وخاصة.</div></div>
   <table>
     <thead><tr><th>م</th><th>المشروع</th><th>المالك</th><th>القيمة (ر.س)</th><th>الفترة</th></tr></thead>
@@ -928,7 +929,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 
 <!-- ================= P20 REGISTER 2 ================= -->
 <section class="page reg p20">
-  <svg class="bg" viewBox="0 0 1920 1080"><path d="M1920 0 V160 C1500 220 1200 120 800 170 C500 208 200 190 0 160 V0 Z" fill="#EFE6D3"/><path d="M-10 162 C200 192 500 210 800 172 C1200 122 1500 222 1930 162" fill="none" stroke="url(#G)" stroke-width="2.5"/></svg>
+  <svg class="bg" viewBox="0 0 1920 1080"><path d="M1920 0 V160 C1500 220 1200 120 800 170 C500 208 200 190 0 160 V0 Z" fill="url(#softband)"/><path d="M-10 162 C200 192 500 210 800 172 C1200 122 1500 222 1930 162" fill="none" stroke="url(#G)" stroke-width="2.5"/></svg>
   <div class="ttl" style="top:34px"><div class="kicker">13 — Project Register (2/2)</div><h2 style="font-size:46px">سجل المشاريع خلال خمس سنوات</h2><div class="tagl">سجل حافل بالمشاريع الوطنية لجهات حكومية وخاصة.</div></div>
   <table>
     <thead><tr><th>م</th><th>المشروع</th><th>المالك</th><th>القيمة (ر.س)</th><th>الفترة</th></tr></thead>
@@ -957,7 +958,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 <!-- ================= PP PARTNERS ================= -->
 <section class="page pp">
   <svg class="bg" viewBox="0 0 1920 1080">
-    <defs><linearGradient id="ppg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8F3E8"/><stop offset="1" stop-color="#F1E8D6"/></linearGradient></defs>
+    <defs><linearGradient id="ppg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7FCF8"/><stop offset=".55" stop-color="#E4F1E7"/><stop offset="1" stop-color="#F3EAD0"/></linearGradient></defs>
     <rect width="1920" height="1080" fill="url(#ppg)"/>
     <path d="M0 1080 V1010 C500 1060 1300 990 1920 1030 V1080 Z" fill="#143A2A"/>
     <path d="M0 1008 C500 1058 1300 988 1920 1028" fill="none" stroke="url(#G)" stroke-width="3"/>
@@ -972,7 +973,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 <!-- ================= P21 LICENCES ================= -->
 <section class="page p21">
   <svg class="bg" viewBox="0 0 1920 1080">
-    <path d="M0 0 H900 C1000 300 860 700 980 1080 H0 Z" fill="#EFE6D3"/>
+    <path d="M0 0 H900 C1000 300 860 700 980 1080 H0 Z" fill="url(#softband)"/>
     <path d="M900 -10 C1000 300 860 700 980 1090" fill="none" stroke="url(#G)" stroke-width="3.5"/>
   </svg>
   <div class="thumb" style="left:110px;top:120px;width:300px;height:212px;transform:rotate(-4deg)"><img src="img/docs/rayat-najd-commercial-registration.jpg"></div>
@@ -1017,7 +1018,7 @@ svg.bg{position:absolute;inset:0;width:1920px;height:1080px}
 
 <!-- ================= P22B MORE LETTERS ================= -->
 <section class="page p22b">
-  <svg class="bg" viewBox="0 0 1920 1080"><path d="M0 1080 V1000 C500 1050 1300 980 1920 1020 V1080 Z" fill="#EFE6D3"/><path d="M0 110 C600 40 1300 170 1920 90" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".5"/></svg>
+  <svg class="bg" viewBox="0 0 1920 1080"><path d="M0 1080 V1000 C500 1050 1300 980 1920 1020 V1080 Z" fill="url(#softband)"/><path d="M0 110 C600 40 1300 170 1920 90" fill="none" stroke="url(#G)" stroke-width="1.2" opacity=".5"/></svg>
   <div class="ttl" style="top:60px"><div class="kicker">16 — Completion &amp; Appreciation Letters (2/2)</div><h2 style="font-size:50px">مزيد من شهادات الإنجاز</h2><div class="tagl">كل مشروع ننفّذه يُختم بشهادة إنجاز من المالك.</div></div>
   <div class="tl" style="right:120px;top:270px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/tadbeer-irrigation.jpg"></div><b>استلام شبكة الري — السلي</b><span>شركة تدبير المحدودة · 03/07/2022</span></div><div class="tl" style="right:460px;top:270px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/tadbeer-planting.jpg"></div><b>استلام 50 ألف حفر وزراعة</b><span>شركة تدبير المحدودة · 06/12/2022</span></div><div class="tl" style="right:800px;top:270px"><div class="thumb" style="transform:rotate(-1deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-02.jpg"></div><b>إعادة تأهيل المراعي — شهادة 2</b><span>المركز الوطني لتنمية الغطاء النباتي</span></div><div class="tl" style="right:1140px;top:270px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/ncvc-completion-certificate-rangelands-rehabilitation-phase2-03.jpg"></div><b>إعادة تأهيل المراعي — شهادة 3</b><span>المركز الوطني لتنمية الغطاء النباتي</span></div><div class="tl" style="right:1480px;top:270px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/ebdaa-baha.jpg"></div><b>تسوير مواقع الباحة وبيشة</b><span>شركة الإبداع السعودي</span></div><div class="tl" style="right:120px;top:650px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/source-machinery.jpg"></div><b>أعمال مشروع البجيري — الدرعية</b><span>شركة موارد الآلات</span></div><div class="tl" style="right:460px;top:650px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/pine-roshn.jpg"></div><b>توريد أشجار — مشروع روشن</b><span>شركة الصنوبر الحديثة للمقاولات</span></div><div class="tl" style="right:800px;top:650px"><div class="thumb" style="transform:rotate(1deg)"><img src="img/docs/alanadee-completion-certificate-alsamhan-residential-development.jpg"></div><b>نقل النخيل — السمحان</b><span>شركة العنادي</span></div><div class="tl" style="right:1140px;top:650px"><div class="thumb" style="transform:rotate(-2deg)"><img src="img/docs/nhc-completion-certificate-dammam-facade-fencing.jpg"></div><b>تسوير واجهة الدمام</b><span>الشركة الوطنية للإسكان</span></div><div class="tl" style="right:1480px;top:650px"><div class="thumb" style="transform:rotate(2deg)"><img src="img/docs/asyah-hospital.jpg"></div><b>شكر وتقدير — مركز صحي خصيبة</b><span>مستشفى الأسياح العام</span></div>
   <div class="folio" style="left:120px"><b>24</b><i></i>RAYAT NAJD · COMPANY PROFILE</div>

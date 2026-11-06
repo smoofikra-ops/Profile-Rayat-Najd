@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رايات نجد — الملف التعريفي</title>
+<meta name="description" content="الملف التعريفي لمؤسسة رايات نجد للمقاولات — التشجير وتنسيق المواقع والاستدامة البيئية">
+<meta property="og:title" content="رايات نجد — الملف التعريفي">
+<meta property="og:description" content="الملف التعريفي لمؤسسة رايات نجد للمقاولات">
+<meta property="og:image" content="pages/p01.webp">
+<style>
+@font-face{font-family:Tajawal;font-weight:500;src:url(fonts/Tajawal-Medium.ttf)}
+@font-face{font-family:Tajawal;font-weight:700;src:url(fonts/Tajawal-Bold.ttf)}
+:root{
+  /* Layout: fixed toolbar on top, page stage fills the rest, page always fit-to-page (contain) */
+  --forest:#143A2A; --forest-2:#0F2E20; --gold:#C59B4E; --gold-l:#DFBA73; --ivory:#F8F3E8;
+  --stage:#1b2a22; --ink:#fff; --muted:rgba(255,255,255,.68);
+  --bar-h:60px; --foot-h:54px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--stage);color:var(--ink);font-family:Tajawal,"Segoe UI",Tahoma,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
+button,a.btn{font:inherit}
+/* ---------- top bar ---------- */
+.bar{position:fixed;inset:0 0 auto;height:calc(var(--bar-h) + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) max(12px,env(safe-area-inset-right,0px)) 0 max(12px,env(safe-area-inset-left,0px));
+  background:linear-gradient(180deg,var(--forest),var(--forest-2));border-bottom:1px solid rgba(197,155,78,.45);display:flex;align-items:center;gap:10px;z-index:20}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;flex:0 1 auto}
+.brand img{height:40px;width:40px;border-radius:50%;background:var(--ivory);object-fit:contain;padding:2px;border:1.5px solid var(--gold)}
+.brand>div{min-width:0;overflow:hidden}
+.brand b{display:block;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:block;font-size:11.5px;color:var(--gold-l);font-weight:500}
+.grow{flex:1}
+.actions{display:flex;gap:6px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 13px;border-radius:10px;border:1px solid rgba(223,186,115,.55);background:rgba(255,255,255,.06);color:#fff;text-decoration:none;cursor:pointer;font-size:14.5px;font-weight:700;white-space:nowrap}
+.btn:hover{background:rgba(255,255,255,.14)}
+.btn:focus-visible,.icon:focus-visible{outline:2px solid var(--gold-l);outline-offset:2px}
+.btn.wa{background:#1f8f4e;border-color:#2fb36a}
+.btn.wa:hover{background:#23a259}
+.btn.gold{background:linear-gradient(180deg,#D8B26A,#B88A3E);border-color:#E8CA8C;color:#14261c}
+.btn svg,.icon svg{width:18px;height:18px;flex:none}
+/* ---------- stage ---------- */
+.stage{position:fixed;left:0;right:0;top:calc(var(--bar-h) + env(safe-area-inset-top,0px));bottom:calc(var(--foot-h) + env(safe-area-inset-bottom,0px));overflow:auto;display:grid;place-items:center;touch-action:pan-x pan-y pinch-zoom}
+.sheet{position:relative;box-shadow:0 18px 50px rgba(0,0,0,.45);background:#fff;cursor:zoom-in;margin:12px}
+.sheet img.page{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.hot{position:absolute;display:block;border-radius:6px}
+.hot:hover{background:rgba(223,186,115,.18);outline:1px solid rgba(223,186,115,.6)}
+/* ---------- footer controls ---------- */
+.foot{position:fixed;inset:auto 0 0;height:calc(var(--foot-h) + env(safe-area-inset-bottom,0px));padding:0 max(12px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(12px,env(safe-area-inset-left,0px));
+  background:rgba(15,46,32,.96);border-top:1px solid rgba(197,155,78,.35);display:flex;align-items:center;justify-content:center;gap:8px;z-index:20}
+.icon{width:40px;height:40px;border-radius:10px;border:1px solid rgba(223,186,115,.45);background:rgba(255,255,255,.05);color:#fff;display:inline-grid;place-items:center;cursor:pointer}
+.icon:hover{background:rgba(255,255,255,.14)}
+.icon[disabled]{opacity:.35;cursor:default}
+.counter{display:flex;align-items:center;gap:6px;font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums;direction:ltr}
+.counter input{width:46px;height:34px;border-radius:8px;border:1px solid rgba(223,186,115,.5);background:rgba(255,255,255,.08);color:#fff;text-align:center;font:inherit;font-weight:700}
+.zoomlbl{min-width:52px;text-align:center;font-size:13.5px;color:var(--gold-l);font-variant-numeric:tabular-nums;direction:ltr}
+.sep{width:1px;height:26px;background:rgba(223,186,115,.35);margin:0 4px}
+/* ---------- thumbnails drawer ---------- */
+.drawer{position:fixed;top:calc(var(--bar-h) + env(safe-area-inset-top,0px));bottom:calc(var(--foot-h) + env(safe-area-inset-bottom,0px));right:0;width:min(300px,86vw);background:rgba(12,36,25,.97);border-inline-start:1px solid rgba(197,155,78,.4);overflow:auto;padding:12px;z-index:19;transform:translateX(105%);transition:transform .25s}
+.drawer.open{transform:none}
+.drawer button{display:block;width:100%;background:none;border:2px solid transparent;border-radius:8px;padding:0;margin:0 0 10px;cursor:pointer;position:relative}
+.drawer button img{display:block;width:100%;aspect-ratio:16/9;border-radius:6px}
+.drawer button span{position:absolute;left:6px;bottom:6px;background:rgba(15,46,32,.85);color:var(--gold-l);font-size:12px;padding:1px 7px;border-radius:10px}
+.drawer button.cur{border-color:var(--gold-l)}
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;background:rgba(6,16,11,.97);z-index:50;display:none;overflow:hidden;touch-action:none}
+.lb.open{display:block}
+.lb img{position:absolute;left:0;top:0;transform-origin:0 0;user-select:none;-webkit-user-drag:none;cursor:grab;max-width:none}
+.lb .lbbar{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));display:flex;gap:8px;justify-content:space-between;align-items:center;z-index:2}
+.lb .grp{display:flex;gap:8px;align-items:center;background:rgba(15,46,32,.85);border:1px solid rgba(197,155,78,.4);padding:6px;border-radius:12px}
+.lb .hint{position:absolute;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:var(--muted);font-size:13.5px}
+/* ---------- responsive ---------- */
+.lbl{display:inline}
+@media (max-width:980px){ .lbl.opt{display:none} .btn{padding:0 10px} }
+@media (max-width:720px){
+  :root{--bar-h:56px}
+  .brand b{display:none}.brand small{display:none}
+  .actions .lbl{display:none} .btn{width:40px;padding:0;justify-content:center}
+  .foot{gap:5px}.icon{width:38px;height:38px}.sep{display:none}
+}
+@media (max-height:500px) and (orientation:landscape){
+  :root{--bar-h:46px;--foot-h:46px}
+  .brand b,.brand small{display:none}.brand img{height:34px;width:34px}
+  .actions .lbl{display:none}.btn{width:38px;height:34px;padding:0;justify-content:center}
+  .icon{width:34px;height:34px}
+}
+@media (max-width:420px){ #zoomOut,#zoomIn,.zoomlbl{display:none} }
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+
+.catfab{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(var(--foot-h) + env(safe-area-inset-bottom,0px) + 16px);z-index:25;display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px 0 16px;border-radius:30px;
+  background:linear-gradient(135deg,#2D7352 0%,#1E4D38 55%,#C59B4E 140%);border:1.5px solid #DFBA73;color:#fff;text-decoration:none;font-weight:700;font-size:16.5px;box-shadow:0 10px 28px rgba(0,0,0,.45)}
+.catfab:hover{filter:brightness(1.1)}
+.catfab:focus-visible{outline:2px solid var(--gold-l);outline-offset:3px}
+.catfab svg{width:22px;height:22px;flex:none;color:#F3D99B}
+@media (max-width:720px){.catfab{height:44px;font-size:15px;padding:0 16px 0 12px;bottom:calc(var(--foot-h) + env(safe-area-inset-bottom,0px) + 12px)}}
+@media (max-height:500px) and (orientation:landscape){.catfab{height:38px;font-size:14px}}
+@media print{.catfab{display:none!important}}
+/* ---------- print (fallback when the browser prints this page) ---------- */
+#printPages{display:none}
+@media print{
+  @page{size:338.67mm 190.5mm;margin:0}
+  html,body{height:auto;overflow:visible;background:#fff}
+  .bar,.foot,.stage,.drawer,.lb{display:none!important}
+  #printPages{display:block}
+  #printPages img{display:block;width:338.67mm;height:190.5mm;object-fit:contain;page-break-after:always;break-after:page}
+  #printPages img:last-child{page-break-after:auto;break-after:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="brand"><img src="brandmark/logo.png" alt="رايات نجد"><div><b>رايات نجد للتشجير والاستدامة البيئية</b><small>الملف التعريفي 2026</small></div></div>
+  <div class="grow"></div>
+  <nav class="actions" aria-label="إجراءات">
+    <a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener" title="طلب عرض سعر عبر واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2s-1 .2-3.3-.7a11.7 11.7 0 0 1-4.6-4.1c-.4-.5-1-1.6-1-2.7a3 3 0 0 1 1-2.2.9.9 0 0 1 .6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6a8.5 8.5 0 0 0 1.6 2 7.8 7.8 0 0 0 2.3 1.4c.3.1.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3a2.3 2.3 0 0 1-.2 1.3Z"/></svg><span class="lbl">طلب عرض سعر</span></a>
+    <a class="btn" id="callBtn" href="#" title="اتصال مباشر"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span class="lbl opt" id="callLbl"></span></a>
+    <a class="btn" id="webBtn" href="#" target="_blank" rel="noopener" title="الموقع الرسمي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="lbl opt">الموقع</span></a>
+    <a class="btn gold" id="dlBtn" href="#" download title="تحميل الملف PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg><span class="lbl">تحميل PDF</span></a>
+    <button class="btn" id="printBtn" type="button" title="طباعة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg><span class="lbl">طباعة</span></button>
+  </nav>
+</header>
+
+<main class="stage" id="stage" aria-live="polite">
+  <div class="sheet" id="sheet"><img class="page" id="pageImg" alt=""></div>
+</main>
+
+<aside class="drawer" id="drawer" aria-label="الصفحات"></aside>
+
+<footer class="foot">
+  <button class="icon" id="thumbsBtn" type="button" title="كل الصفحات" aria-label="كل الصفحات"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button>
+  <span class="sep"></span>
+  <button class="icon" id="prevBtn" type="button" title="الصفحة السابقة" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button>
+  <div class="counter"><input id="pageInput" inputmode="numeric" aria-label="رقم الصفحة"><span>/ <span id="pageTotal"></span></span></div>
+  <button class="icon" id="nextBtn" type="button" title="الصفحة التالية" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg></button>
+  <span class="sep"></span>
+  <button class="icon" id="zoomOut" type="button" title="تصغير" aria-label="تصغير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/></svg></button>
+  <span class="zoomlbl" id="zoomLbl">ملء</span>
+  <button class="icon" id="zoomIn" type="button" title="تكبير" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+  <button class="icon" id="fitBtn" type="button" title="ملء الصفحة" aria-label="ملء الصفحة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
+  <button class="icon" id="openLb" type="button" title="عرض مكبّر" aria-label="عرض مكبّر"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></button>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض مكبّر">
+  <img id="lbImg" alt="">
+  <div class="lbbar">
+    <div class="grp">
+      <button class="icon" id="lbClose" type="button" title="رجوع" aria-label="رجوع"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <span class="zoomlbl" id="lbZoom">100%</span>
+    </div>
+    <div class="grp">
+      <button class="icon" id="lbPrev" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button>
+      <button class="icon" id="lbOut" type="button" aria-label="تصغير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/></svg></button>
+      <button class="icon" id="lbIn" type="button" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+      <button class="icon" id="lbNext" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg></button>
+    </div>
+  </div>
+  <div class="hint">اسحب للتنقل داخل الصفحة · انقر مرتين للتكبير · Esc أو زر الرجوع للعودة</div>
+</div>
+
+<a class="catfab" href="/catalog/" title="كتالوج المنتجات"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12M12 12c0-4 3-7 7-7 0 4-3 7-7 7Zm0 0c0-4-3-7-7-7 0 4 3 7 7 7Z"/><path d="M5 22h14"/></svg><span>كتالوج المنتجات</span></a>
+
+<div id="printPages" aria-hidden="true"></div>
+
+<script src="links.js"></script>
+<script>
+(function(){
+  /* ---- single config: contact data + files ---- */
+  var CFG = {
+    pages: 28,
+    phoneLocal: '0557555716', phoneIntl: '966557555716',
+    website: 'https://www.rayatnajd.com/',
+    pdfDigital: 'files/Rayat-Najd-Company-Profile.pdf',
+    pdfPrint: 'files/Rayat-Najd-Company-Profile-PRINT.pdf',
+    waText: 'السلام عليكم، اطلعت على الملف التعريفي لرايات نجد وأرغب في طلب عرض سعر.'
+  };
+  var LINKS = window.__LINKS__ || [];
+  var $ = function(id){ return document.getElementById(id); };
+  var pad = function(n){ return String(n).padStart(2,'0'); };
+  var src = function(n){ return 'pages/p'+pad(n)+'.webp'; };
+
+  $('waBtn').href = 'https://wa.me/'+CFG.phoneIntl+'?text='+encodeURIComponent(CFG.waText);
+  $('callBtn').href = 'tel:+'+CFG.phoneIntl;
+  $('callLbl').textContent = CFG.phoneLocal;
+  $('webBtn').href = CFG.website;
+  $('dlBtn').href = CFG.pdfDigital;
+  $('pageTotal').textContent = CFG.pages;
+
+  var cur = 1, zoom = 1, natW = 2560, natH = 1440;
+  var stage = $('stage'), sheet = $('sheet'), img = $('pageImg');
+
+  /* ---- fit-to-page: size the sheet to the largest box that fits (contain), keeping the image's real ratio ---- */
+  function fitSize(){
+    var cs = getComputedStyle(stage);
+    var aw = stage.clientWidth - 24, ah = stage.clientHeight - 24;
+    var r = natW / natH;
+    var w = Math.min(aw, ah * r);
+    return { w: Math.max(50, w), h: Math.max(50, w / r) };
+  }
+  function layout(){
+    var f = fitSize();
+    sheet.style.width = (f.w * zoom) + 'px';
+    sheet.style.height = (f.h * zoom) + 'px';
+    stage.style.placeItems = zoom > 1 ? 'start' : 'center';
+    $('zoomLbl').textContent = zoom === 1 ? 'ملء' : Math.round(zoom*100)+'%';
+  }
+  function hotspots(){
+    sheet.querySelectorAll('.hot').forEach(function(a){ a.remove(); });
+    (LINKS[cur-1] || []).forEach(function(l){
+      var a = document.createElement('a');
+      a.className = 'hot'; a.href = l.href;
+      if (/^https?:/.test(l.href)) { a.target = '_blank'; a.rel = 'noopener'; }
+      a.style.left = (l.x*100)+'%'; a.style.top = (l.y*100)+'%';
+      a.style.width = (l.w*100)+'%'; a.style.height = (l.h*100)+'%';
+      a.setAttribute('aria-label', l.href);
+      a.addEventListener('click', function(e){ e.stopPropagation(); });
+      sheet.appendChild(a);
+    });
+  }
+  function go(n, keepZoom){
+    n = Math.min(CFG.pages, Math.max(1, n|0));
+    cur = n; if (!keepZoom) zoom = 1;
+    img.src = src(n); img.alt = 'صفحة '+n+' من '+CFG.pages;
+    $('pageInput').value = n;
+    $('prevBtn').disabled = n === 1; $('nextBtn').disabled = n === CFG.pages;
+    document.querySelectorAll('.drawer button').forEach(function(b,i){ b.classList.toggle('cur', i+1===n); });
+    hotspots(); layout(); stage.scrollTop = 0; stage.scrollLeft = 0;
+    try { history.replaceState(null, '', '#p'+n); } catch(e){}
+    if (n < CFG.pages) { var pre = new Image(); pre.src = src(n+1); }
+  }
+  img.addEventListener('load', function(){ if (img.naturalWidth){ natW = img.naturalWidth; natH = img.naturalHeight; layout(); } });
+
+  function setZoom(z){ zoom = Math.min(4, Math.max(1, Math.round(z*100)/100)); layout(); }
+  $('zoomIn').onclick = function(){ setZoom(zoom + .25); };
+  $('zoomOut').onclick = function(){ setZoom(zoom - .25); };
+  $('fitBtn').onclick = function(){ setZoom(1); };
+  stage.addEventListener('wheel', function(e){ if (e.ctrlKey){ e.preventDefault(); setZoom(zoom * (e.deltaY < 0 ? 1.1 : 0.9)); } }, { passive:false });
+
+  /* RTL reading: "next" moves to the left */
+  $('prevBtn').onclick = function(){ go(cur-1); };
+  $('nextBtn').onclick = function(){ go(cur+1); };
+  $('pageInput').addEventListener('change', function(){ go(parseInt(this.value,10)||1); this.blur(); });
+  window.addEventListener('hashchange', function(){ var h=/^#p(\d+)$/.exec(location.hash); if (h && parseInt(h[1],10)!==cur) go(parseInt(h[1],10)); });
+  window.addEventListener('resize', layout);
+
+  /* thumbnails */
+  var dr = $('drawer');
+  for (var i=1;i<=CFG.pages;i++){ (function(n){
+    var b = document.createElement('button'); b.type='button'; b.setAttribute('aria-label','صفحة '+n);
+    b.innerHTML = '<img loading="lazy" alt="" src="thumbs/t'+pad(n)+'.webp"><span>'+n+'</span>';
+    b.onclick = function(){ go(n); dr.classList.remove('open'); };
+    dr.appendChild(b);
+  })(i); }
+  $('thumbsBtn').onclick = function(){ dr.classList.toggle('open'); };
+
+  /* swipe on the stage (only when not zoomed) */
+  var sx=null, sy=null;
+  stage.addEventListener('touchstart', function(e){ if (e.touches.length===1 && zoom===1){ sx=e.touches[0].clientX; sy=e.touches[0].clientY; } else sx=null; }, {passive:true});
+  stage.addEventListener('touchend', function(e){ if (sx===null) return; var dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if (Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.5){ go(dx>0 ? cur+1 : cur-1); } sx=null; }, {passive:true});
+
+  /* ---- lightbox with zoom + pan (pointer events, pinch) ---- */
+  var lb=$('lb'), li=$('lbImg'), s=1, tx=0, ty=0, minS=1, ptrs={}, lastDist=0, dragging=false, px=0, py=0;
+  function lbFit(){
+    var vw=lb.clientWidth, vh=lb.clientHeight, w=li.naturalWidth||natW, h=li.naturalHeight||natH;
+    minS = Math.min(vw/w, vh/h); s = minS; tx=(vw-w*s)/2; ty=(vh-h*s)/2; lbApply();
+  }
+  function clamp(){
+    var vw=lb.clientWidth, vh=lb.clientHeight, w=(li.naturalWidth||natW)*s, h=(li.naturalHeight||natH)*s;
+    tx = w<=vw ? (vw-w)/2 : Math.min(0, Math.max(vw-w, tx));
+    ty = h<=vh ? (vh-h)/2 : Math.min(0, Math.max(vh-h, ty));
+  }
+  function lbApply(){ clamp(); li.style.transform='translate('+tx+'px,'+ty+'px) scale('+s+')'; $('lbZoom').textContent=Math.round(s/minS*100)+'%'; }
+  function zoomAt(ns, cx, cy){ ns=Math.min(minS*6, Math.max(minS, ns)); tx=cx-(cx-tx)*(ns/s); ty=cy-(cy-ty)*(ns/s); s=ns; lbApply(); }
+  function openLb(){
+    li.src = src(cur);
+    lb.classList.add('open');
+    try { history.pushState({lb:1}, '', '#p'+cur+'-zoom'); } catch(e){}
+    if (li.complete && li.naturalWidth) lbFit(); else li.onload = lbFit;
+    $('lbClose').focus();
+  }
+  function closeLb(fromPop){
+    if (!lb.classList.contains('open')) return;
+    lb.classList.remove('open');
+    if (!fromPop){ try { if (history.state && history.state.lb) history.back(); } catch(e){} }
+  }
+  sheet.addEventListener('click', openLb);
+  $('openLb').onclick = openLb;
+  $('lbClose').onclick = function(){ closeLb(false); };
+  $('lbIn').onclick = function(){ zoomAt(s*1.4, lb.clientWidth/2, lb.clientHeight/2); };
+  $('lbOut').onclick = function(){ zoomAt(s/1.4, lb.clientWidth/2, lb.clientHeight/2); };
+  $('lbPrev').onclick = function(){ go(cur-1); li.src=src(cur); li.onload=lbFit; };
+  $('lbNext').onclick = function(){ go(cur+1); li.src=src(cur); li.onload=lbFit; };
+  window.addEventListener('popstate', function(){ closeLb(true); });
+  lb.addEventListener('wheel', function(e){ e.preventDefault(); zoomAt(s*(e.deltaY<0?1.15:0.87), e.clientX, e.clientY); }, {passive:false});
+  li.addEventListener('dblclick', function(e){ zoomAt(s>minS*1.05 ? minS : minS*2.5, e.clientX, e.clientY); });
+  lb.addEventListener('pointerdown', function(e){ if (e.target.closest('.lbbar')) return; ptrs[e.pointerId]={x:e.clientX,y:e.clientY}; lb.setPointerCapture(e.pointerId); dragging=true; px=e.clientX; py=e.clientY; lastDist=0; });
+  lb.addEventListener('pointermove', function(e){
+    if (!ptrs[e.pointerId]) return; ptrs[e.pointerId]={x:e.clientX,y:e.clientY};
+    var ids=Object.keys(ptrs);
+    if (ids.length===2){ var a=ptrs[ids[0]], b=ptrs[ids[1]], d=Math.hypot(a.x-b.x,a.y-b.y);
+      if (lastDist) zoomAt(s*d/lastDist,(a.x+b.x)/2,(a.y+b.y)/2); lastDist=d; }
+    else if (dragging){ tx+=e.clientX-px; ty+=e.clientY-py; px=e.clientX; py=e.clientY; lbApply(); }
+  });
+  function up(e){ delete ptrs[e.pointerId]; if (Object.keys(ptrs).length<2) lastDist=0; if (!Object.keys(ptrs).length) dragging=false; }
+  lb.addEventListener('pointerup', up); lb.addEventListener('pointercancel', up);
+  window.addEventListener('resize', function(){ if (lb.classList.contains('open')) lbFit(); });
+
+  /* keyboard */
+  document.addEventListener('keydown', function(e){
+    if (e.target.tagName==='INPUT') return;
+    if (e.key==='Escape'){ if (lb.classList.contains('open')) closeLb(false); else dr.classList.remove('open'); }
+    else if (e.key==='ArrowLeft'){ go(cur+1); if (lb.classList.contains('open')){ li.src=src(cur); li.onload=lbFit; } }
+    else if (e.key==='ArrowRight'){ go(cur-1); if (lb.classList.contains('open')){ li.src=src(cur); li.onload=lbFit; } }
+    else if (e.key==='+'||e.key==='='){ setZoom(zoom+.25); }
+    else if (e.key==='-'){ setZoom(zoom-.25); }
+  });
+
+  /* ---- print: use the dedicated print PDF; fallback to printing the page images ---- */
+  var pp = $('printPages');
+  function fillPrintPages(){ if (pp.childElementCount) return; for (var n=1;n<=CFG.pages;n++){ var im=document.createElement('img'); im.src=src(n); im.alt=''; pp.appendChild(im);} }
+  window.addEventListener('beforeprint', fillPrintPages);
+  $('printBtn').onclick = function(){
+    var fr = document.getElementById('printFrame');
+    if (fr) fr.remove();
+    fr = document.createElement('iframe'); fr.id='printFrame';
+    fr.style.cssText='position:fixed;width:1px;height:1px;opacity:0;border:0;left:-10px;top:-10px';
+    fr.src = CFG.pdfPrint;
+    var done=false;
+    fr.onload = function(){
+      setTimeout(function(){
+        try { fr.contentWindow.focus(); fr.contentWindow.print(); done=true; }
+        catch(e){ window.open(CFG.pdfPrint, '_blank'); done=true; }
+      }, 600);
+    };
+    document.body.appendChild(fr);
+    setTimeout(function(){ if(!done) window.open(CFG.pdfPrint, '_blank'); }, 6000);
+  };
+
+  var m = /^#p(\d+)/.exec(location.hash);
+  go(m ? parseInt(m[1],10) : 1);
+})();
+</script>
+</body>
+</html>
